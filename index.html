@@ -72,33 +72,41 @@
       --glacial-teal: rgba(47, 141, 163, 0.28);
       --blush-accent: rgba(242, 198, 212, 0.36);
       --glass-border: rgba(255, 255, 255, 0.94);
+
+      --rosewater: #fff5f8;
+      --powder-pink: #f7d9e4;
+      --petal-pink: #eca8bf;
+      --rose-pink: #d98dab;
+      --plum-pink: #a95e7d;
+      --pink-pearl: #fbecef;
     }
 
     body {
       background-color: #eef4f7;
       background-image:
-        radial-gradient(at 18% 8%, rgba(106, 183, 201, 0.32) 0px, transparent 48%),
-        radial-gradient(at 86% 12%, rgba(242, 198, 212, 0.30) 0px, transparent 45%),
-        radial-gradient(at 52% 45%, rgba(255, 255, 255, 0.92) 0px, transparent 60%),
-        radial-gradient(at 14% 78%, rgba(164, 214, 226, 0.32) 0px, transparent 52%),
-        radial-gradient(at 88% 86%, rgba(242, 198, 212, 0.32) 0px, transparent 48%),
-        linear-gradient(180deg, #e7f0f5 0%, #f4f8fa 38%, #ebf3f7 72%, #f7fafb 100%);
+        radial-gradient(at 8% 4%, rgba(242, 198, 212, 0.48) 0px, transparent 35%),
+        radial-gradient(at 92% 9%, rgba(217, 141, 171, 0.28) 0px, transparent 42%),
+        radial-gradient(at 62% 30%, rgba(255, 245, 248, 0.96) 0px, transparent 34%),
+        radial-gradient(at 18% 72%, rgba(106, 183, 201, 0.24) 0px, transparent 48%),
+        radial-gradient(at 88% 82%, rgba(236, 168, 191, 0.34) 0px, transparent 44%),
+        linear-gradient(180deg, #edf4f7 0%, #fff9fb 34%, #f3f8fa 68%, #fff5f8 100%);
       color: #12171a;
       font-family: 'Inter', system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    /* Subtle Rime Frost Edge Vignette */
     #screen-frost-vignette {
       position: fixed;
       inset: 0;
       z-index: 42;
       pointer-events: none;
       box-shadow:
-        inset 0 0 48px rgba(255, 255, 255, 0.85),
-        inset 0 0 110px rgba(106, 183, 201, 0.16),
-        inset 0 0 130px rgba(242, 198, 212, 0.12);
+        inset 0 0 42px rgba(255, 255, 255, 0.95),
+        inset 0 0 120px rgba(106, 183, 201, 0.14),
+        inset 0 0 155px rgba(217, 141, 171, 0.18),
+        inset 12px 0 70px rgba(247, 217, 228, 0.28),
+        inset -12px 0 70px rgba(236, 168, 191, 0.20);
       transition: box-shadow 0.5s ease;
     }
 
@@ -109,7 +117,6 @@
         inset 0 0 180px rgba(242, 198, 212, 0.25);
     }
 
-    /* Real-time Snowfall Canvas */
     #snow-canvas {
       position: fixed;
       inset: 0;
@@ -119,7 +126,6 @@
       pointer-events: none;
     }
 
-    /* Ultra-Tall Condensed Editorial Headings (AERIS Aesthetic) */
     .aeris-display {
       font-family: 'Oswald', sans-serif;
       font-weight: 300;
@@ -142,10 +148,10 @@
       font-weight: 500;
       letter-spacing: 0.26em;
       text-transform: uppercase;
-      color: #536570;
+      color: #775664;
+      text-shadow: 0 1px 12px rgba(242, 198, 212, 0.48);
     }
 
-    /* Organic Water-Droplet / Ice-Pebble Glass Cards (AERIS 4-Card Row) */
     .droplet-card {
       position: relative;
       background: linear-gradient(
@@ -171,64 +177,55 @@
 
     .droplet-card:nth-child(3) {
       border-radius: 46% 54% 44% 56% / 32% 40% 60% 68%;
-      background: linear-gradient(
-        155deg,
-        rgba(179, 224, 234, 0.82) 0%,
-        rgba(117, 193, 210, 0.66) 58%,
-        rgba(242, 198, 212, 0.42) 100%
-      );
+      background:
+        radial-gradient(circle at 82% 15%, rgba(255, 245, 248, 0.75), transparent 27%),
+        linear-gradient(155deg, rgba(247, 217, 228, 0.92), rgba(217, 141, 171, 0.68) 58%, rgba(169, 94, 125, 0.38));
       box-shadow:
-        inset 0 3px 8px rgba(255, 255, 255, 0.95),
-        inset 0 -10px 22px rgba(47, 141, 163, 0.35),
-        0 26px 48px -14px rgba(47, 141, 163, 0.28);
+        inset 0 4px 9px rgba(255, 255, 255, 0.98),
+        inset 0 -12px 24px rgba(169, 94, 125, 0.26),
+        0 28px 54px -14px rgba(169, 94, 125, 0.28);
     }
 
     .droplet-card:nth-child(4) {
       border-radius: 54% 46% 50% 50% / 36% 34% 66% 64%;
+      background: linear-gradient(155deg, rgba(255, 250, 252, 0.92), rgba(251, 236, 239, 0.72) 56%, rgba(242, 198, 212, 0.62));
     }
 
     .droplet-card:hover {
       transform: translateY(-6px) scale(1.015);
       box-shadow:
-        inset 0 4px 8px #ffffff,
-        inset 0 -10px 22px rgba(106, 183, 201, 0.35),
-        0 28px 52px -14px rgba(18, 56, 68, 0.24),
-        0 0 24px rgba(242, 198, 212, 0.35);
+        inset 0 4px 9px #ffffff,
+        inset 0 -12px 24px rgba(217, 141, 171, 0.38),
+        0 30px 56px -12px rgba(169, 94, 125, 0.24),
+        0 0 28px rgba(236, 168, 191, 0.48);
     }
 
-    /* Sculpted Frosted Glass Panels */
     .glacial-glass {
-      background: linear-gradient(
-        140deg,
-        rgba(255, 255, 255, 0.84) 0%,
-        rgba(229, 242, 246, 0.64) 55%,
-        rgba(249, 233, 239, 0.54) 100%
-      );
+      background:
+        radial-gradient(circle at 92% 12%, rgba(217, 141, 171, 0.20), transparent 28%),
+        radial-gradient(circle at 8% 88%, rgba(247, 217, 228, 0.38), transparent 30%),
+        linear-gradient(140deg, rgba(255, 255, 255, 0.88), rgba(232, 244, 248, 0.66) 58%, rgba(251, 236, 239, 0.72));
       backdrop-filter: blur(22px) saturate(145%);
       -webkit-backdrop-filter: blur(22px) saturate(145%);
-      border: 1.5px solid rgba(255, 255, 255, 0.96);
+      border: 1.5px solid rgba(255, 255, 255, 0.98);
       box-shadow:
-        inset 0 2px 1px rgba(255, 255, 255, 0.98),
-        inset 0 -4px 14px rgba(106, 183, 201, 0.18),
-        0 20px 46px -16px rgba(18, 56, 68, 0.14);
+        inset 0 2px 2px #ffffff,
+        inset 0 -7px 18px rgba(217, 141, 171, 0.12),
+        0 22px 48px -16px rgba(169, 94, 125, 0.14);
     }
 
     .glacial-glass-strong {
-      background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.95) 0%,
-        rgba(232, 244, 248, 0.86) 55%,
-        rgba(250, 236, 241, 0.78) 100%
-      );
+      background:
+        radial-gradient(circle at 100% 0%, rgba(217, 141, 171, 0.20), transparent 34%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(238, 247, 249, 0.88) 52%, rgba(251, 236, 239, 0.88));
       backdrop-filter: blur(28px) saturate(155%);
       -webkit-backdrop-filter: blur(28px) saturate(155%);
-      border: 1.5px solid #ffffff;
+      border: 1.5px solid #fffafd;
       box-shadow:
         inset 0 2px 1px #ffffff,
         0 24px 52px -14px rgba(18, 56, 68, 0.22);
     }
 
-    /* Top-Left Organic Ice-Lens Hero Portrait Mask (AERIS Girl in Bubble Frame) */
     .ice-lens-portrait {
       border-radius: 0 0 240px 0 / 0 0 260px 0;
       box-shadow:
@@ -239,16 +236,15 @@
       border-bottom: 3px solid rgba(255, 255, 255, 0.95);
     }
 
-    /* Organic Curved Experience Showcase (AERIS Waterfall Pool Shape) */
     .organic-showcase-frame {
       border-radius: 36px 140px 120px 36px / 36px 130px 140px 36px;
-      border: 2px solid rgba(255, 255, 255, 0.96);
+      border: 2px solid rgba(255, 250, 252, 0.98);
       box-shadow:
-        inset 0 2px 10px rgba(255, 255, 255, 0.8),
-        0 26px 56px -18px rgba(18, 56, 68, 0.24);
+        inset 0 2px 12px rgba(255, 255, 255, 0.88),
+        18px 24px 58px -18px rgba(169, 94, 125, 0.22),
+        -12px 12px 42px -20px rgba(106, 183, 201, 0.20);
     }
 
-    /* Pill Capsule Stack Thumbnails (AERIS Right Side Stacked Pills) */
     .capsule-thumb-pill {
       border-radius: 9999px;
       border: 2px solid rgba(255, 255, 255, 0.98);
@@ -264,9 +260,8 @@
         0 0 18px rgba(242, 198, 212, 0.45);
     }
 
-    /* AERIS Dark Obsidian Pill CTA */
     .btn-aeris-dark {
-      background: #14191c;
+      background: linear-gradient(135deg, #171a1c 0%, #2b1d24 58%, #9d6679 130%);
       color: #ffffff;
       border-radius: 9999px;
       font-size: 11px;
@@ -278,15 +273,18 @@
       justify-content: center;
       gap: 10px;
       transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
-      box-shadow: 0 12px 26px -8px rgba(18, 23, 26, 0.42);
+      box-shadow:
+        0 12px 28px -10px rgba(169, 94, 125, 0.40),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
     }
     .btn-aeris-dark:hover {
-      background: #1f333b;
+      background: linear-gradient(135deg, #12171a 0%, #5d7f89 55%, #b66d89 130%);
       transform: translateY(-1.5px);
-      box-shadow: 0 16px 32px -8px rgba(47, 141, 163, 0.42), 0 0 18px rgba(242, 198, 212, 0.35);
+      box-shadow:
+        0 16px 34px -8px rgba(169, 94, 125, 0.42),
+        0 0 22px rgba(242, 198, 212, 0.48);
     }
 
-    /* AERIS Outlined Pill Button */
     .btn-aeris-outline {
       background: rgba(255, 255, 255, 0.65);
       backdrop-filter: blur(12px);
@@ -305,11 +303,10 @@
     }
     .btn-aeris-outline:hover {
       background: #ffffff;
-      border-color: #2f8da3;
-      box-shadow: 0 8px 20px -6px rgba(47, 141, 163, 0.24);
+      border-color: #d98dab;
+      box-shadow: 0 8px 22px -6px rgba(217, 141, 171, 0.38);
     }
 
-    /* Circular Icon Button (AERIS Arrows) */
     .circle-arrow-btn {
       width: 34px;
       height: 34px;
@@ -326,16 +323,15 @@
       cursor: pointer;
     }
     .circle-arrow-btn:hover {
-      background: #12171a;
+      background: linear-gradient(135deg, #12171a, #a95e7d);
       color: #ffffff;
-      border-color: #12171a;
+      border-color: #d98dab;
       transform: scale(1.06);
     }
 
-    /* Left Vertical Rail Active Dot */
     .rail-link.active .rail-dot {
-      background-color: #2f8da3;
-      box-shadow: 0 0 0 4px rgba(106, 183, 201, 0.28);
+      background: linear-gradient(135deg, #6ab7c9, #d98dab);
+      box-shadow: 0 0 0 4px rgba(217, 141, 171, 0.28), 0 0 14px rgba(242, 198, 212, 0.55);
       transform: scale(1.25);
     }
     .rail-link.active .rail-text {
@@ -343,7 +339,6 @@
       font-weight: 600;
     }
 
-    /* Category Filter Pills */
     .cat-pill {
       padding: 7px 15px;
       border-radius: 9999px;
@@ -357,10 +352,12 @@
       cursor: pointer;
     }
     .cat-pill.active {
-      background: #12171a;
+      background: linear-gradient(135deg, #171a1c 0%, #2b1d24 58%, #9d6679 130%);
       color: #ffffff;
-      border-color: #12171a;
-      box-shadow: 0 8px 18px -6px rgba(18, 23, 26, 0.35);
+      border-color: rgba(242, 198, 212, 0.62);
+      box-shadow:
+        0 12px 28px -10px rgba(169, 94, 125, 0.40),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
     }
     .cat-pill:hover:not(.active) {
       background: #ffffff;
@@ -368,167 +365,23 @@
       border-color: #6ab7c9;
     }
 
-    /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 5px; height: 5px; }
     ::-webkit-scrollbar-track { background: #eaf1f5; }
     ::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, #6ab7c9, #e4a9be);
+      background: linear-gradient(180deg, #6ab7c9, #d98dab);
       border-radius: 9999px;
     }
 
-    /* Couture pink ice palette — layered, elegant, and deliberately restrained */
-    :root {
-      --rosewater: #fff5f8;
-      --powder-pink: #f7d9e4;
-      --petal-pink: #eca8bf;
-      --rose-pink: #d98dab;
-      --plum-pink: #a95e7d;
-      --pink-pearl: #fbecef;
-    }
-
-    body {
-      background-image:
-        radial-gradient(at 8% 4%, rgba(242, 198, 212, 0.48) 0px, transparent 35%),
-        radial-gradient(at 92% 9%, rgba(217, 141, 171, 0.28) 0px, transparent 42%),
-        radial-gradient(at 62% 30%, rgba(255, 245, 248, 0.96) 0px, transparent 34%),
-        radial-gradient(at 18% 72%, rgba(106, 183, 201, 0.24) 0px, transparent 48%),
-        radial-gradient(at 88% 82%, rgba(236, 168, 191, 0.34) 0px, transparent 44%),
-        linear-gradient(180deg, #edf4f7 0%, #fff9fb 34%, #f3f8fa 68%, #fff5f8 100%);
-    }
-
-    /* Delicate pink atmospheric blooms */
-    #screen-frost-vignette {
-      box-shadow:
-        inset 0 0 42px rgba(255, 255, 255, 0.95),
-        inset 0 0 120px rgba(106, 183, 201, 0.14),
-        inset 0 0 155px rgba(217, 141, 171, 0.18),
-        inset 12px 0 70px rgba(247, 217, 228, 0.28),
-        inset -12px 0 70px rgba(236, 168, 191, 0.20);
-    }
-
-    /* Pink marbling for major glass surfaces */
-    .glacial-glass {
-      background:
-        radial-gradient(circle at 92% 12%, rgba(217, 141, 171, 0.20), transparent 28%),
-        radial-gradient(circle at 8% 88%, rgba(247, 217, 228, 0.38), transparent 30%),
-        linear-gradient(140deg, rgba(255, 255, 255, 0.88), rgba(232, 244, 248, 0.66) 58%, rgba(251, 236, 239, 0.72));
-      border-color: rgba(255, 255, 255, 0.98);
-      box-shadow:
-        inset 0 2px 2px #ffffff,
-        inset 0 -7px 18px rgba(217, 141, 171, 0.12),
-        0 22px 48px -16px rgba(169, 94, 125, 0.14);
-    }
-
-    .glacial-glass-strong {
-      background:
-        radial-gradient(circle at 100% 0%, rgba(217, 141, 171, 0.20), transparent 34%),
-        linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(238, 247, 249, 0.88) 52%, rgba(251, 236, 239, 0.88));
-      border-color: #fffafd;
-    }
-
-    /* Pink couture treatment on editorial sections */
     #capsule,
     #reviews {
       background:
-        radial-gradient(ellipse at 82% 18%, rgba(242, 198, 212, 0.20), transparent 25%),
-        radial-gradient(ellipse at 12% 82%, rgba(236, 168, 191, 0.10), transparent 28%);
+        radial-gradient(ellipse at 82% 18%, rgba(242, 198, 212, 0.18), transparent 25%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(232, 244, 248, 0.62) 58%, rgba(251, 236, 239, 0.72)) !important;
+      border: 1px solid rgba(255, 255, 255, 0.92);
+      border-radius: 32px;
+      box-shadow: 0 22px 48px -24px rgba(169, 94, 125, 0.2);
     }
 
-    #capsule::before,
-    #experience::before,
-    #reviews::before,
-    #delivery::before {
-      content: "";
-      position: absolute;
-      pointer-events: none;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 1px solid rgba(217, 141, 171, 0.16);
-      box-shadow:
-        0 0 0 18px rgba(247, 217, 228, 0.08),
-        0 0 0 38px rgba(255, 255, 255, 0.12);
-      filter: blur(0.2px);
-    }
-
-    #capsule { position: relative; }
-    #capsule::before { right: 2%; top: 8%; }
-    #experience { position: relative; }
-    #experience::before { left: -105px; bottom: 4%; }
-    #reviews { position: relative; }
-    #reviews::before { right: -125px; top: 25%; }
-    #delivery { position: relative; }
-    #delivery::before { left: 3%; bottom: 12%; }
-
-    /* Richer droplet varieties */
-    .droplet-card:nth-child(1) {
-      background: linear-gradient(155deg, rgba(255, 255, 255, 0.90), rgba(247, 217, 228, 0.66) 60%, rgba(236, 168, 191, 0.42));
-    }
-
-    .droplet-card:nth-child(2) {
-      background: linear-gradient(155deg, rgba(255, 255, 255, 0.90), rgba(218, 238, 243, 0.66) 52%, rgba(217, 141, 171, 0.34));
-    }
-
-    .droplet-card:nth-child(3) {
-      background:
-        radial-gradient(circle at 82% 15%, rgba(255, 245, 248, 0.75), transparent 27%),
-        linear-gradient(155deg, rgba(247, 217, 228, 0.92), rgba(217, 141, 171, 0.68) 58%, rgba(169, 94, 125, 0.38));
-      box-shadow:
-        inset 0 4px 9px rgba(255, 255, 255, 0.98),
-        inset 0 -12px 24px rgba(169, 94, 125, 0.26),
-        0 28px 54px -14px rgba(169, 94, 125, 0.28);
-    }
-
-    .droplet-card:nth-child(4) {
-      background: linear-gradient(155deg, rgba(255, 250, 252, 0.92), rgba(251, 236, 239, 0.72) 56%, rgba(242, 198, 212, 0.62));
-    }
-
-    .droplet-card:hover {
-      box-shadow:
-        inset 0 4px 9px #ffffff,
-        inset 0 -12px 24px rgba(217, 141, 171, 0.38),
-        0 30px 56px -12px rgba(169, 94, 125, 0.24),
-        0 0 28px rgba(236, 168, 191, 0.48);
-    }
-
-    /* Pink accent typography and controls */
-    .aeris-eyebrow {
-      color: #775664;
-      text-shadow: 0 1px 12px rgba(242, 198, 212, 0.48);
-    }
-
-    .cat-pill.active,
-    .btn-aeris-dark {
-      background: linear-gradient(135deg, #171a1c 0%, #2b1d24 58%, #9d6679 130%);
-      border-color: rgba(242, 198, 212, 0.62);
-      box-shadow:
-        0 12px 28px -10px rgba(169, 94, 125, 0.40),
-        inset 0 1px 0 rgba(255, 255, 255, 0.12);
-    }
-
-    .btn-aeris-dark:hover {
-      background: linear-gradient(135deg, #12171a 0%, #5d7f89 55%, #b66d89 130%);
-      box-shadow:
-        0 16px 34px -8px rgba(169, 94, 125, 0.42),
-        0 0 22px rgba(242, 198, 212, 0.48);
-    }
-
-    .btn-aeris-outline:hover {
-      border-color: #d98dab;
-      box-shadow: 0 8px 22px -6px rgba(217, 141, 171, 0.38);
-    }
-
-    .circle-arrow-btn:hover {
-      background: linear-gradient(135deg, #12171a, #a95e7d);
-      border-color: #d98dab;
-    }
-
-    .rail-link.active .rail-dot {
-      background: linear-gradient(135deg, #6ab7c9, #d98dab);
-      box-shadow: 0 0 0 4px rgba(217, 141, 171, 0.28), 0 0 14px rgba(242, 198, 212, 0.55);
-    }
-
-    /* Pink pearl catalogue cards */
     #catalog-grid article {
       background:
         linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 250, 0.88) 58%, rgba(247, 217, 228, 0.58));
@@ -542,20 +395,10 @@
         0 0 24px rgba(242, 198, 212, 0.24);
     }
 
-    /* Refined pink-petal testimonial cards */
     #reviews-grid article {
       background:
         radial-gradient(circle at 92% 8%, rgba(236, 168, 191, 0.22), transparent 30%),
         linear-gradient(145deg, rgba(255, 255, 255, 0.90), rgba(248, 239, 243, 0.70));
-    }
-
-    /* Pink shimmer on art frames and thumbnails */
-    .organic-showcase-frame {
-      border-color: rgba(255, 250, 252, 0.98);
-      box-shadow:
-        inset 0 2px 12px rgba(255, 255, 255, 0.88),
-        18px 24px 58px -18px rgba(169, 94, 125, 0.22),
-        -12px 12px 42px -20px rgba(106, 183, 201, 0.20);
     }
 
     .capsule-thumb-pill:nth-child(1) {
@@ -571,27 +414,21 @@
       box-shadow: inset 0 2px 7px #ffffff, 0 16px 34px -12px rgba(169, 94, 125, 0.30);
     }
 
-    /* Mobile keeps the pink editorial palette crisp */
-    @media (max-width: 767px) {
-      #capsule::before,
-      #experience::before,
-      #reviews::before,
-      #delivery::before { width: 110px; height: 110px; }
-
-      .droplet-card:nth-child(3) {
-        background: linear-gradient(155deg, rgba(255, 248, 250, 0.94), rgba(236, 168, 191, 0.58) 58%, rgba(217, 141, 171, 0.42));
-      }
+    @keyframes capsuleCloudPop {
+      0% { opacity: 0; transform: translateY(26px) scale(0.9); filter: blur(10px); }
+      65% { opacity: 1; transform: translateY(-4px) scale(1.025); filter: blur(0); }
+      82% { transform: translateY(2px) scale(0.99); }
+      100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
     }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-      }
+    #capsule.is-visible > .grid > :first-child,
+    #capsule.is-visible .droplet-card {
+      animation: capsuleCloudPop 820ms cubic-bezier(.2,.8,.25,1) both;
     }
+    #capsule.is-visible .droplet-card:nth-child(2) { animation-delay: 100ms; }
+    #capsule.is-visible .droplet-card:nth-child(3) { animation-delay: 190ms; }
+    #capsule.is-visible .droplet-card:nth-child(4) { animation-delay: 280ms; }
+    #capsule.is-visible .droplet-card:nth-child(5) { animation-delay: 370ms; }
 
-    /* Compact glacial music player */
     #music-player {
       position: fixed;
       right: 18px;
@@ -610,31 +447,7 @@
       -webkit-backdrop-filter: blur(18px) saturate(145%);
       box-shadow: 0 16px 38px -16px rgba(18,56,68,.38), inset 0 1px 1px #fff;
     }
-    #music-toggle {
-      width: 38px;
-      height: 38px;
-      flex: 0 0 38px;
-      border: 0;
-      border-radius: 9999px;
-      background: #12171a;
-      color: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: transform .2s ease, background .2s ease;
-    }
-    #music-toggle:hover { transform: scale(1.05); background: #2f8da3; }
-    #music-player.playing #music-toggle { background: linear-gradient(135deg,#2f8da3,#a95e7d); }
-    .music-bars { display:flex; align-items:end; gap:2px; height:13px; }
-    .music-bars span { width:2px; height:4px; border-radius:999px; background:#2f8da3; }
-    #music-player.playing .music-bars span { animation: musicBar .8s ease-in-out infinite alternate; }
-    #music-player.playing .music-bars span:nth-child(2) { animation-delay:-.35s; }
-    #music-player.playing .music-bars span:nth-child(3) { animation-delay:-.55s; }
-    @keyframes musicBar { to { height:13px; } }
-    #music-volume { width:74px; accent-color:#a95e7d; cursor:pointer; }
-    .music-track { min-width:82px; }
-    .music-track span { display:block; }
+
     .top-nav-link {
       position: relative;
       color: #536570;
@@ -660,11 +473,7 @@
     .top-nav-link:focus-visible { color: #12171a; }
     .top-nav-link:hover::after,
     .top-nav-link:focus-visible::after { transform: scaleX(1); }
-    @media (max-width: 767px) {
-      #music-player { right:10px; bottom:10px; min-width:184px; }
-      #music-volume { width:58px; }
-      .top-nav-link { font-size: 9px; letter-spacing: .12em; }
-    }
+
     #rail-music-player {
       width: 100px;
       padding: 10px 8px 9px;
@@ -720,11 +529,12 @@
       transition: transform .2s ease, background .2s ease;
     }
     #rail-music-toggle:hover { transform: scale(1.08); background: rgba(18,23,26,.68); }
-    #rail-music-player .music-bars { height: 10px; justify-content: center; margin: 0 auto 6px; }
-    #rail-music-player .music-bars span { background: linear-gradient(to top,#2f8da3,#b86a8b); }
+    #rail-music-player .music-bars { height: 10px; justify-content: center; margin: 0 auto 6px; display: flex; align-items: end; gap: 2px; }
+    #rail-music-player .music-bars span { width: 2px; height: 4px; border-radius: 999px; background: linear-gradient(to top,#2f8da3,#b86a8b); }
     #rail-music-player.playing .music-bars span { animation: musicBar .65s ease-in-out infinite alternate; }
     #rail-music-player.playing .music-bars span:nth-child(2) { animation-delay: -.25s; }
     #rail-music-player.playing .music-bars span:nth-child(3) { animation-delay: -.45s; }
+    @keyframes musicBar { to { height: 10px; } }
     #rail-music-status {
       min-height: 10px;
       margin-bottom: 7px !important;
@@ -733,22 +543,109 @@
       opacity: .72;
     }
     #rail-music-volume { width: 76px; height: 3px; accent-color: #a95e7d; cursor: pointer; }
+
+    #capsule::before,
+    #experience::before,
+    #reviews::before,
+    #delivery::before {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 1px solid rgba(217, 141, 171, 0.16);
+      box-shadow:
+        0 0 0 18px rgba(247, 217, 228, 0.08),
+        0 0 0 38px rgba(255, 255, 255, 0.12);
+      filter: blur(0.2px);
+    }
+    #capsule { position: relative; }
+    #capsule::before { right: 2%; top: 8%; }
+    #experience { position: relative; }
+    #experience::before { left: -105px; bottom: 4%; }
+    #reviews { position: relative; }
+    #reviews::before { right: -125px; top: 25%; }
+    #delivery { position: relative; }
+    #delivery::before { left: 3%; bottom: 12%; }
+
+    @media (max-width: 767px) {
+      #capsule::before,
+      #experience::before,
+      #reviews::before,
+      #delivery::before { width: 110px; height: 110px; }
+
+      .droplet-card:nth-child(3) {
+        background: linear-gradient(155deg, rgba(255, 248, 250, 0.94), rgba(236, 168, 191, 0.58) 58%, rgba(217, 141, 171, 0.42));
+      }
+
+      #music-player { right:10px; bottom:10px; min-width:184px; }
+      .top-nav-link { font-size: 9px; letter-spacing: .12em; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    #capsule h2,
+    #capsule h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      letter-spacing: 0.015em;
+      line-height: 0.94;
+    }
+    #capsule h2 { font-size: clamp(3rem, 5vw, 4.25rem); }
+    #capsule h3 { font-size: clamp(1.7rem, 2.2vw, 2rem); }
+    #capsule p {
+      font-family: 'Inter', system-ui, sans-serif;
+      letter-spacing: 0.005em;
+    }
+    #capsule .aeris-eyebrow,
+    #capsule .droplet-card > span.font-mono {
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.12em;
+    }
+
+    #capsule .bg-ink { background-color: #171a1c; }
+    #capsule .text-ink { color: #12171a; }
+    #capsule .border-ink { border-color: rgba(18, 23, 26, 0.2); }
+    #capsule .border-wire { border-color: rgba(77, 93, 102, 0.2); }
+    #capsule .bg-stoneBg { background-color: rgba(255, 255, 255, 0.72); }
+    #capsule .bg-stoneCard { background-color: rgba(218, 238, 243, 0.72); }
+    #capsule .text-neutral-500,
+    #capsule .text-neutral-600 { color: #536570; }
+    #capsule .text-rose-600 { color: #a95e7d; }
+    #capsule [class~="bg-white/70"],
+    #capsule [class~="bg-white/80"],
+    #capsule [class~="bg-white/95"] {
+      background-color: rgba(255, 255, 255, 0.72);
+    }
+    #capsule .catalog-card,
+    #capsule #editorial-catalog-grid article {
+      border-color: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 14px 32px -22px rgba(169, 94, 125, 0.28);
+    }
+    #capsule button:not(.filter-pill) {
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .cutout-frame {
+      filter: drop-shadow(0 20px 28px rgba(0, 0, 0, 0.26));
+    }
   </style>
 </head>
 <body class="min-h-screen selection:bg-blushTint/60 selection:text-obsidian">
 
-  <!-- REAL-TIME AMBIENT SNOWFALL & ICE DUST CANVAS -->
   <canvas id="snow-canvas" aria-hidden="true"></canvas>
-
-  <!-- SCREEN-EDGE RIME FROST VIGNETTE -->
   <div id="screen-frost-vignette" aria-hidden="true"></div>
 
-  <!-- =======================================================================
-       MOBILE TOP BAR (Shown below lg breakpoint; desktop uses AERIS Left Rail)
-  ======================================================================= -->
+  <!-- MOBILE TOP BAR -->
   <header class="lg:hidden sticky top-0 z-40 glacial-glass px-4 py-3 flex items-center justify-between gap-3 border-b border-white">
     <a href="./index.html" class="flex items-center gap-2.5">
-      <!-- Sculptural Glacial Peak / Crown Emblem -->
       <svg class="w-8 h-6 text-obsidian" viewBox="0 0 48 32" fill="none" stroke="currentColor" stroke-width="1.6">
         <path d="M4 26 L16 10 L25 20 L34 7 L44 26" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M2 27 C14 23, 30 29, 46 25" stroke="#2f8da3" stroke-width="1.4" stroke-linecap="round"/>
@@ -770,7 +667,7 @@
     </div>
   </header>
 
-  <!-- HORIZONTAL PAGE NAVIGATION: PAIRED WITH THE EXISTING SECTION RAIL -->
+  <!-- HORIZONTAL NAVIGATION -->
   <nav aria-label="Main page navigation" class="sticky top-[58px] lg:top-0 z-40 border-b border-white/80 bg-white/75 backdrop-blur-2xl shadow-[0_8px_30px_-24px_rgba(169,94,125,.55)]">
     <div class="max-w-[1440px] mx-auto min-h-[58px] px-4 sm:px-7 lg:px-10 flex items-center justify-between gap-3">
       <a href="#home" class="hidden sm:flex items-center gap-2.5 shrink-0 group" aria-label="The Faux Fur Collection home">
@@ -795,16 +692,12 @@
     </div>
   </nav>
 
-  <!-- =======================================================================
-       MAIN AERIS ARCHITECTURAL SHELL: LEFT VERTICAL RAIL + ORGANIC CANVAS
-  ======================================================================= -->
+  <!-- MAIN SHELL -->
   <div class="max-w-[1440px] mx-auto flex relative">
 
-    <!-- 1. LEFT VERTICAL FIXED/STICKY NAVIGATION RAIL (Exact AERIS Structure) -->
+    <!-- LEFT RAIL -->
     <aside class="hidden lg:flex flex-col justify-between items-center w-[124px] shrink-0 sticky top-0 h-screen py-7 px-3 border-r border-white/80 bg-white/35 backdrop-blur-xl z-30">
-      <!-- Top-Left Sculptural Emblem & Condensed Brand Title -->
       <div id="rail-music-player" aria-label="Ambient music player">
-        <p class="font-mono text-[8px] tracking-[0.16em] text-slateInk uppercase mb-2"></p>
         <div class="rail-music-disc"><button id="rail-music-toggle" type="button" onclick="toggleRailMusic()" aria-label="Play ambient music" aria-pressed="false">▶</button></div>
         <div class="music-bars" aria-hidden="true"><span></span><span></span><span></span></div>
         <p id="rail-music-status" class="font-mono text-[8px] tracking-wider text-obsidian uppercase mb-2">PAUSED</p>
@@ -813,65 +706,43 @@
         <audio id="rail-music-audio" loop autoplay muted preload="auto" src="./mm.mp3"></audio>
       </div>
 
-      <!-- Vertical Dot-and-Label Navigation Rail -->
       <nav aria-label="Section Navigation" class="relative flex flex-col gap-5 my-auto py-4">
-        <!-- Vertical Hairline Connector -->
         <span class="absolute left-[4.5px] top-5 bottom-5 w-[1px] bg-slateInk/20 pointer-events-none"></span>
-
         <a href="#home" data-section="home" class="rail-link active flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
           <span class="rail-text">HOME</span>
         </a>
-        <a href="#capsule" data-section="capsule" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./About.html" data-section="capsule" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
-          <span class="rail-text">CAPSULE</span>
+          <span class="rail-text">About</span>
         </a>
-        <a href="#catalog" data-section="catalog" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./shop.html" data-section="catalog" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
-          <span class="rail-text">CATALOG</span>
+          <span class="rail-text">Shop</span>
         </a>
-        <a href="#experience" data-section="experience" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
-          <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
-          <span class="rail-text">THE SET</span>
-        </a>
-        <a href="#reviews" data-section="reviews" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./reviews.html" data-section="reviews" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
           <span class="rail-text">REVIEWS</span>
         </a>
-        <a href="#delivery" data-section="delivery" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./contact.html" data-section="delivery" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
-          <span class="rail-text">DELIVERY</span>
+          <span class="rail-text">Contact</span>
         </a>
       </nav>
 
-      <!-- Circular Glacier FX / Snowfall Toggle & Vertical Social/Concierge Icons -->
       <div class="flex flex-col items-center gap-4">
-        <button
-          id="freeze-toggle-btn"
-          onclick="toggleFreezeMode()"
-          class="flex flex-col items-center gap-1.5 group cursor-pointer"
-          title="Toggle Snowfall & Frost Intensity"
-        >
-          <span class="w-9 h-9 rounded-full border border-obsidian/30 bg-white/80 group-hover:bg-obsidian group-hover:text-white flex items-center justify-center text-xs text-glacialTeal transition shadow-sm">
-            ❄
-          </span>
-          <span id="freeze-toggle-label" class="text-[8px] tracking-[0.18em] text-slateInk uppercase text-center leading-tight">
-            GLACIER FX<br/>ACTIVE
-          </span>
+        <button id="freeze-toggle-btn" onclick="toggleFreezeMode()" class="flex flex-col items-center gap-1.5 group cursor-pointer" title="Toggle Snowfall & Frost Intensity">
+          <span class="w-9 h-9 rounded-full border border-obsidian/30 bg-white/80 group-hover:bg-obsidian group-hover:text-white flex items-center justify-center text-xs text-glacialTeal transition shadow-sm">❄</span>
+          <span id="freeze-toggle-label" class="text-[8px] tracking-[0.18em] text-slateInk uppercase text-center leading-tight">GLACIER FX<br/>ACTIVE</span>
         </button>
-
         <div class="w-5 h-[1px] bg-slateInk/20"></div>
-
-        <!-- Vertical Social & Concierge Icons -->
         <div class="flex flex-col items-center gap-3 text-obsidian/80">
-          <!-- WhatsApp -->
           <a href="https://wa.me/447848152250" target="_blank" rel="noopener" aria-label="WhatsApp Concierge" title="WhatsApp +44 7848 152250" class="hover:text-glacialTeal transition">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 21l1.65-3.8a9 9 0 113.4 2.9L3 21" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 10a.5.5 0 001 0V9a.5.5 0 00-1 0v1a5 5 0 005 5h1a.5.5 0 000-1h-1a.5.5 0 000 1" />
             </svg>
           </a>
-          <!-- Instagram -->
           <a href="#experience" aria-label="Lookbook & Shades" title="Frosted Shades" class="hover:text-blushDeep transition">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
               <rect width="16" height="16" x="4" y="4" rx="4" />
@@ -879,7 +750,6 @@
               <circle cx="16.5" cy="7.5" r="0.8" fill="currentColor" />
             </svg>
           </a>
-          <!-- Shopping Bag Quick Trigger -->
           <button onclick="openCart()" aria-label="Open Bag" title="Open Shopping Bag" class="relative hover:text-glacialTeal transition cursor-pointer">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -890,133 +760,132 @@
       </div>
     </aside>
 
-    <!-- 2. MAIN ORGANIC GLACIAL CONTENT CANVAS -->
+    <!-- MAIN CONTENT -->
     <main class="flex-1 min-w-0 relative">
 
-      <!-- ===================================================================
-           SECTION 1: HERO SECTION (Organic Asymmetric Glacial Split)
-      =================================================================== -->
-      <section id="home" class="relative min-h-[680px] lg:min-h-[760px] px-4 sm:px-8 lg:px-12 pt-5 pb-16 overflow-hidden">
+      <!-- HERO -->
+      <section id="home" class="relative min-h-[680px] lg:min-h-[760px] px-4 sm:px-8 lg:px-12 pt-5 pb-16 overflow-hidden isolate">
 
-        <!-- Right Background Glacial Peak & Frosted Studio Visual -->
-        <div class="pointer-events-none absolute top-0 right-0 w-full lg:w-[68%] h-[540px] lg:h-[660px] overflow-hidden opacity-90">
+        <div class="pointer-events-none absolute top-0 right-0 w-full lg:w-[70%] h-[540px] lg:h-[660px] overflow-hidden">
+          <div class="absolute -inset-10 bg-[radial-gradient(circle_at_70%_28%,rgba(255,255,255,.95),transparent_22%),radial-gradient(circle_at_74%_72%,rgba(244,171,191,.28),transparent_24%)] z-10"></div>
           <img
             src="./p (24).jpeg"
             onerror="this.src='https://placehold.co/1100x800/dbeafe/12171a?text=GLACIAL+CAPSULE'"
             alt="Glacial Studio Atmosphere"
-            class="w-full h-full object-cover object-center scale-105 filter saturate-[0.88] contrast-[1.03]"
+            class="w-full h-full object-cover object-center scale-105 saturate-[0.82] contrast-[1.08]"
           />
-          <!-- Soft Glacial Mist Mask Blending Image into Page -->
-          <div class="absolute inset-0 bg-gradient-to-r from-[#eef4f7] via-[#eef4f7]/75 to-transparent"></div>
-          <div class="absolute inset-0 bg-gradient-to-b from-[#e8f1f6]/60 via-transparent to-[#eef4f7]"></div>
-          <div class="absolute inset-0 bg-gradient-to-tr from-sky-200/20 via-transparent to-pink-200/25"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-[#eef4f7] via-[#eef4f7]/65 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-[#eef4f7]/30 via-transparent to-[#eef4f7]"></div>
+          <div class="absolute inset-0 bg-gradient-to-tr from-sky-200/10 via-transparent to-pink-200/20"></div>
         </div>
 
-        <!-- Top-Left Organic Water-Droplet / Ice-Lens Portrait Frame (AERIS Top-Left Bubble) -->
-        <div class="hidden md:block absolute top-0 left-0 w-[330px] xl:w-[390px] h-[440px] xl:h-[500px] overflow-hidden ice-lens-portrait z-10">
+        <div class="hidden md:block absolute top-5 left-0 w-[330px] xl:w-[390px] h-[440px] xl:h-[500px] overflow-hidden ice-lens-portrait z-10 shadow-[0_35px_80px_rgba(18,23,26,.14)]">
           <img
             src="./p (22).jpeg"
             onerror="this.src='https://placehold.co/700x900/d8e9ef/12171a?text=MIDNIGHT+DROP'"
             alt="The Faux Fur Collection Portrait"
-            class="w-full h-full object-cover object-top"
+            class="w-full h-full object-cover object-top scale-[1.03]"
           />
-          <!-- Specular Ice-Lens Rim Highlight -->
-          <div class="absolute inset-0 bg-gradient-to-tr from-sky-900/15 via-transparent to-white/40 pointer-events-none"></div>
-          <div class="absolute bottom-7 left-6 glacial-glass-strong rounded-full px-3.5 py-1.5 flex items-center gap-2 shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-glacialTeal"></span>
-            <span class="font-mono text-[10px] tracking-wider text-obsidian uppercase">CRUELTY-FREE CLOUD FUR</span>
+          <div class="absolute inset-0 bg-gradient-to-tr from-sky-950/20 via-transparent to-white/50"></div>
+          <div class="absolute top-5 left-5 glacial-glass-strong rounded-full px-3.5 py-2 flex items-center gap-2 shadow-lg">
+            <span class="relative flex w-2 h-2">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-blushDeep opacity-50"></span>
+              <span class="relative inline-flex w-2 h-2 rounded-full bg-blushDeep"></span>
+            </span>
+            <span class="font-mono text-[9px] tracking-[0.16em] text-obsidian uppercase">New winter edit</span>
+          </div>
+          <div class="absolute bottom-7 left-6 right-6 glacial-glass-strong rounded-[20px] px-4 py-3 flex items-center justify-between shadow-lg">
+            <span class="font-mono text-[9px] tracking-wider text-obsidian uppercase">Cruelty-free cloud fur</span>
+            <span class="text-glacialTeal text-lg leading-none">✦</span>
           </div>
         </div>
 
-        <!-- Top Header Row: Centered Monumental Brand Header + Top-Right Outlined Pill CTA -->
         <div class="relative z-20 flex flex-col sm:flex-row items-center justify-between gap-4 pt-1 pb-10 lg:pb-16">
           <div class="hidden sm:block w-48"></div>
-
-          <!-- Top-Center Monumental Condensed Brand Title (Matches "AERIS / WELLNESS RETREAT") -->
           <div class="text-center">
             <span class="block aeris-brand-wordmark text-2xl sm:text-3xl lg:text-[34px] text-obsidian leading-none">
               THE FAUX FUR
             </span>
             <span class="block text-[9px] sm:text-[10px] tracking-[0.42em] text-slateInk uppercase mt-2">
-              COLLECTION • LONDON UK
+              LONDON EDITION • EST. 2024
             </span>
           </div>
-
-          <!-- Top-Right Outlined Pill Buttons (Matches "BOOK YOUR RETREAT ->") -->
           <div class="flex items-center gap-2">
             <a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="hidden xl:inline-flex btn-aeris-outline px-4 py-2.5">
               <span>WA: +44 7848 152250</span>
             </a>
-            <button onclick="openCart()" class="btn-aeris-outline px-4 py-2.5 cursor-pointer">
+            <button onclick="openCart()" class="btn-aeris-outline px-4 py-2.5 cursor-pointer shadow-[0_10px_30px_rgba(18,23,26,.08)]">
               <span>SHOP BAG (<span id="header-bag-count">0</span>)</span>
               <span>→</span>
             </button>
           </div>
         </div>
 
-        <!-- Hero Center-Right Editorial Copy Block (Matches "BREATHE • RESET • ELEVATE / A HIGHER STATE OF WELLBEING") -->
         <div class="relative z-20 md:ml-[310px] xl:ml-[375px] mt-2 sm:mt-8 lg:mt-12 max-w-xl">
-          <p class="aeris-eyebrow text-obsidian/80 mb-3">
-            SOFT TO THE TOUCH &nbsp;•&nbsp; IMPOSSIBLE TO FORGET
-          </p>
+          <div class="inline-flex items-center gap-3 rounded-full border border-obsidian/10 bg-white/55 backdrop-blur-md px-3 py-1.5 mb-5 shadow-sm">
+            <span class="h-1.5 w-1.5 rounded-full bg-blushDeep"></span>
+            <p class="aeris-eyebrow text-[9px] tracking-[0.24em] text-obsidian/70">THE AFTERGLOW COLLECTION</p>
+          </div>
 
-          <h1 class="aeris-display text-6xl sm:text-7xl lg:text-[84px] text-obsidian">
-           THE RIGHT SPOT
+          <h1 class="aeris-display text-[58px] sm:text-[76px] lg:text-[92px] leading-[0.82] tracking-[-0.055em] text-obsidian">
+            <span class="block italic font-light text-slateInk">Made for</span>
+            <span class="relative block mt-3 font-bold">
+              THE AFTERGLOW
+              <span class="absolute -right-2 bottom-1 h-[12px] w-[58%] -z-10 bg-blushDeep/25 -skew-x-12"></span>
+            </span>
           </h1>
 
-          <p class="text-xs sm:text-[13px] text-slateInk leading-relaxed max-w-md mt-4">
-            Wrap yourself in pure, unapologetic indulgence. Ultra-plush, cruelty-free layers made for late-night drives, candlelit rooftops, and irresistible moments after midnight.
+          <p class="text-[12px] sm:text-[14px] text-slateInk leading-[1.8] max-w-[430px] mt-7 border-l-2 border-glacialTeal/40 pl-4">
+            Ultra-soft faux fur, sculpted boots, and little luxuries made to be noticed.
+            <span class="block mt-1 text-obsidian/85 font-semibold tracking-[0.02em]">Dress for entrances. Stay for the feeling.</span>
           </p>
 
-          <div class="flex flex-wrap items-center gap-3 mt-7">
-            <a href="#catalog" class="btn-aeris-dark px-6 py-3.5">
+          <div class="flex flex-wrap items-center gap-3 mt-8">
+            <a href="#catalog" class="group btn-aeris-dark px-6 py-4 shadow-[0_16px_35px_rgba(18,23,26,.16)]">
               <span>SHOP THE COLLECTION</span>
-              <span>→</span>
+              <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
-            <button onclick="openProductModal('jacket-boots-set')" class="btn-aeris-outline px-5 py-3.5 bg-white/80 cursor-pointer">
-              <span>THE £120 SET (SAVE £10)</span>
+            <button onclick="openProductModal('jacket-boots-set')" class="group btn-aeris-outline px-5 py-4 bg-white/85 backdrop-blur-md cursor-pointer">
+              <span>THE £120 SET</span>
+              <span class="ml-1 text-[10px] text-blushDeep font-bold">SAVE £10</span>
+              <span class="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
             </button>
           </div>
 
-          <!-- Mobile Portrait Card (Visible only on <md screens) -->
-          <div class="md:hidden mt-7 relative rounded-[32px] overflow-hidden border-2 border-white shadow-lg h-72">
+          <div class="md:hidden mt-7 relative rounded-[32px] overflow-hidden border-2 border-white shadow-[0_25px_55px_rgba(18,23,26,.16)] h-72">
             <img
               src="./p (9).jpeg"
               onerror="this.src='https://placehold.co/700x500/d8e9ef/12171a?text=THE+FAUX+FUR+COLLECTION'"
               alt="The Faux Fur Collection"
               class="w-full h-full object-cover"
             />
-            <div class="absolute bottom-3 left-3 glacial-glass-strong rounded-full px-3.5 py-1 text-[10px] font-mono text-obsidian">
+            <div class="absolute bottom-3 left-3 glacial-glass-strong rounded-full px-3.5 py-2 text-[9px] font-mono text-obsidian">
               ❄ FREE UK DELIVERY OVER £120
             </div>
           </div>
         </div>
 
-        <!-- Far-Right Vertical Micro-Badge (Matches "ALTITUDE 1,820 M" in AERIS) -->
-        <div class="hidden xl:flex flex-col items-start border-l border-obsidian/25 pl-3 py-1 absolute right-10 bottom-24 z-20">
-          <span class="font-mono text-[9px] tracking-[0.2em] text-slateInk uppercase">GLACIER INDEX</span>
-          <span class="font-mono text-[11px] font-semibold text-obsidian mt-0.5">-4°C READY</span>
-          <span class="font-mono text-[9px] text-blushDeep mt-0.5">FREE SHIP £120+</span>
+        <div class="hidden xl:flex items-center gap-3 absolute right-10 bottom-24 z-20 rounded-full border border-obsidian/10 bg-white/70 backdrop-blur-md px-3 py-2 shadow-sm">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full bg-obsidian text-white text-sm">✦</span>
+          <div class="border-l border-obsidian/10 pl-3 pr-1">
+            <span class="block font-mono text-[8px] tracking-[0.18em] text-slateInk uppercase">Winter 25 / 26</span>
+            <span class="block font-mono text-[10px] font-semibold text-obsidian mt-0.5">LIMITED EDITION</span>
+          </div>
         </div>
 
-        <!-- Wavy Glacial Snow-Drift SVG Divider at Bottom of Hero -->
         <svg class="pointer-events-none absolute bottom-0 left-0 right-0 w-full h-14 text-[#f1f6f9]" viewBox="0 0 1440 80" preserveAspectRatio="none" fill="currentColor" aria-hidden="true">
           <path d="M0,32 C260,84 480,0 760,36 C1040,72 1260,12 1440,34 L1440,80 L0,80 Z" />
         </svg>
       </section>
 
-      <!-- ===================================================================
-           SECTION 2: "OUR CAPSULE / WINTER DROP" — 4 WATER-DROPLET GLASS CARDS
-           (Mirrors AERIS "OUR PROGRAMS / TRANSFORMATIVE RETREATS" 4-Blob Row)
-      =================================================================== -->
-      <section id="capsule" class="relative px-4 sm:px-8 lg:px-12 py-12 lg:py-16">
+      <!-- COLLECTION INTRO -->
+      <section id="collection-intro" class="relative px-4 sm:px-8 lg:px-12 py-12 lg:py-16">
         <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-center">
 
-          <!-- Left Editorial Heading Block -->
           <div class="xl:col-span-3">
             <span class="aeris-eyebrow block mb-2">THE COLLECTION</span>
             <h2 class="aeris-display text-5xl sm:text-[54px] text-obsidian">
-              WINTER<br/>ROMANCE
+              WINTER<br/>GLOW
             </h2>
             <p class="text-xs text-slateInk leading-relaxed mt-3 max-w-[230px]">
               Ultra-soft jackets, statement boots, and romantic keepsakes designed to turn heads and draw people closer.
@@ -1027,12 +896,9 @@
             </div>
           </div>
 
-          <!-- 4 Organic Water-Droplet Translucent Ice Cards -->
           <div class="xl:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-            <!-- Droplet 01: Jackets -->
-            <div onclick="setCategory('jackets'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="droplet-card px-6 py-9 flex flex-col items-center text-center cursor-pointer">
-              <!-- Minimalist Coat Line Icon -->
+            <div onclick="setCategory('jackets'); document.getElementById('catalog')?.scrollIntoView({behavior:'smooth'})" class="droplet-card px-6 py-9 flex flex-col items-center text-center cursor-pointer">
               <svg class="w-7 h-7 text-obsidian/80 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 4l4 3 4-3 4 4-2 11H6L4 8l4-4z" />
                 <path stroke-linecap="round" d="M12 7v12" />
@@ -1047,9 +913,7 @@
               <span class="circle-arrow-btn mt-5">→</span>
             </div>
 
-            <!-- Droplet 02: Boots -->
-            <div onclick="setCategory('boots'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="droplet-card px-6 py-9 flex flex-col items-center text-center cursor-pointer">
-              <!-- Minimalist Boot / Snowflake Line Icon -->
+            <div onclick="setCategory('boots'); document.getElementById('catalog')?.scrollIntoView({behavior:'smooth'})" class="droplet-card px-6 py-9 flex flex-col items-center text-center cursor-pointer">
               <svg class="w-7 h-7 text-obsidian/80 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M7 4h6v8l5 2v4H6V4h1z" />
                 <path stroke-linecap="round" d="M6 15h12" />
@@ -1064,9 +928,7 @@
               <span class="circle-arrow-btn mt-5">→</span>
             </div>
 
-            <!-- Droplet 03: The Signature Set (Highlighted Deeper Glacial Teal Blob like AERIS "LONGEVITY PROGRAM") -->
             <div onclick="openProductModal('jacket-boots-set')" class="droplet-card px-6 py-9 flex flex-col items-center text-center cursor-pointer">
-              <!-- Minimalist Infinity / Pairing Icon -->
               <svg class="w-7 h-7 text-obsidian mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.133-8-12.739-8-4.585 0-4.585 8 0 8 5.606 0 7.644-8 12.74-8z" />
               </svg>
@@ -1080,9 +942,7 @@
               <span class="circle-arrow-btn mt-5 bg-white">→</span>
             </div>
 
-            <!-- Droplet 04: Accessories -->
-            <div onclick="setCategory('accessories'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="droplet-card px-6 py-9 flex flex-col items-center text-center cursor-pointer">
-              <!-- Minimalist Lotus / Crystal Icon -->
+            <div onclick="setCategory('accessories'); document.getElementById('catalog')?.scrollIntoView({behavior:'smooth'})" class="droplet-card px-6 py-9 flex flex-col items-center text-center cursor-pointer">
               <svg class="w-7 h-7 text-obsidian/80 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4c2.5 3.5 2.5 7.5 0 11-2.5-3.5-2.5-7.5 0-11z" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 15c3.5-2 7-1.5 9 1-2.5 2.5-6 2.5-9-1zM12 15c-3.5-2-7-1.5-9 1 2.5 2.5 6 2.5 9-1z" />
@@ -1098,178 +958,262 @@
             </div>
 
           </div>
+
+          <div class="xl:col-span-12 grid grid-cols-1 lg:grid-cols-3 gap-4 mt-2">
+            <div class="relative lg:col-span-2 min-h-[280px] sm:min-h-[360px] overflow-hidden rounded-[32px] bg-obsidian shadow-xl">
+              <video class="absolute inset-0 w-full h-full object-cover" src="p%20(1).mp4" autoplay muted loop playsinline controls aria-label="Winter faux fur collection campaign video"></video>
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-obsidian/80 via-obsidian/10 to-transparent"></div>
+              <div class="pointer-events-none absolute bottom-6 left-6 sm:bottom-8 sm:left-8 text-white">
+                <span class="font-mono text-[9px] tracking-[0.22em] uppercase text-white/80">A little winter magic</span>
+                <h3 class="aeris-display text-3xl sm:text-4xl mt-1">MADE FOR THE MOMENT</h3>
+              </div>
+              <span class="absolute top-5 right-5 rounded-full bg-white/80 backdrop-blur-md px-3 py-1.5 font-mono text-[9px] tracking-widest text-obsidian">WINTER 25 / 26</span>
+            </div>
+
+            <div class="grid grid-rows-2 gap-4">
+              <div class="flex flex-col justify-between rounded-[32px] bg-[#dcebef] p-6 sm:p-7 min-h-[150px]">
+                <span class="font-mono text-[9px] tracking-[0.2em] text-glacialTeal">01 / THE FEELING</span>
+                <div>
+                  <p class="aeris-display text-2xl text-obsidian">SOFTNESS,</p>
+                  <p class="aeris-display text-2xl text-glacialTeal">AFTER DARK.</p>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between rounded-[32px] bg-white/80 border border-white p-6 sm:p-7 min-h-[150px]">
+                <span class="font-mono text-[9px] tracking-[0.2em] text-blushDeep">02 / YOUR WINTER UNIFORM</span>
+                <p class="text-xs leading-relaxed text-slateInk max-w-[240px]">Cloud-soft layers, made for slow mornings, snowy streets, and everything after.</p>
+                <a href="#catalog" class="inline-flex items-center gap-2 text-[10px] font-mono tracking-widest text-obsidian">EXPLORE THE COLLECTION <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- ===================================================================
-           FULL INTERACTIVE 6-PIECE PRODUCT CATALOG GRID
-      =================================================================== -->
-      <section id="catalog" class="px-4 sm:px-8 lg:px-12 pb-16">
-        <div class="glacial-glass rounded-[38px] p-5 sm:p-8 lg:p-10">
-          <!-- Catalog Header & Filter Pills -->
-          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 pb-6 mb-8 border-b border-obsidian/10">
-            <div>
-              <span class="aeris-eyebrow block mb-1.5">THE FAUX FUR COLLECTION • 6 PIECES</span>
-              <h2 class="aeris-display text-4xl sm:text-5xl text-obsidian">
-                SHOP THE COLLECTION
+      <!-- CAPSULE / CATALOG -->
+      <section id="capsule" class="relative px-4 sm:px-8 lg:px-12 py-12 lg:py-16 max-w-[1440px] mx-auto overflow-hidden">
+
+        <div class="border border-ink bg-stoneBg mb-8 lg:mb-10 rounded-xl overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-ink">
+            <div class="md:col-span-5 flex items-center justify-between px-4 py-2.5 gap-2">
+              <div class="flex items-center gap-1.5 flex-wrap" id="capsule-filter-group">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-neutral-500 mr-1.5">FILTERS</span>
+                <button type="button" data-filter="all" class="filter-pill active px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider bg-ink text-stoneBg border border-ink transition">ALL</button>
+                <button type="button" data-filter="capsule01" class="filter-pill px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider bg-transparent text-ink border border-wire hover:border-ink transition">CAPSULE 01</button>
+                <button type="button" data-filter="limited" class="filter-pill px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider bg-transparent text-ink border border-wire hover:border-ink transition">LIMITED</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start mb-16 lg:mb-24">
+          <div class="lg:col-span-7 flex flex-col">
+            <div class="mb-4">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-neutral-500">ARCHIVE EDITION // AW—26</span>
+                <span class="font-mono text-[11px] uppercase tracking-widest text-ink">SERIES 001</span>
+              </div>
+              <h2 class="font-sans font-medium uppercase tracking-[-0.04em] text-[2.75rem] sm:text-6xl xl:text-[5.1rem] leading-[0.92] text-ink">
+                CAPSULE <span class="font-serif italic font-normal lowercase tracking-normal text-[3.1rem] sm:text-[4.2rem] xl:text-[5.5rem]">Collection</span>
               </h2>
             </div>
 
-            <div class="flex flex-wrap items-center gap-2" id="category-filter-bar">
-              <button onclick="setCategory('all')" data-cat="all" class="cat-pill active">All (6)</button>
-              <button onclick="setCategory('sets')" data-cat="sets" class="cat-pill">Sets (£120)</button>
-              <button onclick="setCategory('jackets')" data-cat="jackets" class="cat-pill">Jackets (£80)</button>
-              <button onclick="setCategory('boots')" data-cat="boots" class="cat-pill">Boots (£50)</button>
-              <button onclick="setCategory('accessories')" data-cat="accessories" class="cat-pill">Accessories</button>
+            <div class="relative mt-2 group">
+              <div class="relative border border-ink rounded-2xl overflow-hidden bg-stoneCard aspect-[16/10] sm:aspect-[16/9]">
+                <img
+                  src="./P (41).jpg"
+                  onerror="this.onerror=null;this.src='https://placehold.co/1200x700/eceae4/1a1a1a?text=CAPSULE+EDITORIAL+01';"
+                  alt="High-fashion editorial studio portrait"
+                  class="w-full h-full object-cover object-center grayscale contrast-110 group-hover:scale-[1.02] transition-transform duration-700"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                <div class="absolute top-3.5 left-3.5 bg-stoneBg/90 backdrop-blur-md border border-ink px-2.5 py-1 rounded-full font-mono text-[10px] uppercase tracking-wider">
+                  LOOK 01 — STUDIO MONOCHROME
+                </div>
+              </div>
+
+              <div class="absolute -bottom-5 right-3 sm:right-6 z-20 bg-white/80 backdrop-blur-xl border border-white/90 shadow-xl rounded-2xl px-4 py-2.5 flex items-center gap-2.5 transition-transform duration-300 hover:-translate-y-1">
+                <span class="text-sm font-medium tracking-tight text-ink">limited drop <span class="text-neutral-500">✦</span> 01</span>
+                <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-rose-500/10 text-rose-600 text-xs">♥</span>
+                <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-400/20 text-amber-700 text-xs">✦</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-10 mt-6 border-t border-wire">
+              <div class="flex items-start gap-3">
+                <span class="font-serif italic text-3xl leading-none text-ink">01</span>
+                <div>
+                  <p class="font-sans font-semibold text-xs uppercase tracking-wider text-ink">Curated Silhouettes</p>
+                  <p class="text-[11px] text-neutral-500 mt-0.5 leading-relaxed">Architectural draping & sheer tailoring</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-serif italic text-3xl leading-none text-ink">02</span>
+                <div>
+                  <p class="font-sans font-semibold text-xs uppercase tracking-wider text-ink">Limited Capsules</p>
+                  <p class="text-[11px] text-neutral-500 mt-0.5 leading-relaxed">Individually numbered small-batch runs</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-serif italic text-3xl leading-none text-ink">03</span>
+                <div>
+                  <p class="font-sans font-semibold text-xs uppercase tracking-wider text-ink">Express Delivery</p>
+                  <p class="text-[11px] text-neutral-500 mt-0.5 leading-relaxed">Complimentary global courier dispatch</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- 3-Column Frosted Product Grid -->
-          <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+          <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-12 gap-4 items-stretch">
+            <div class="sm:col-span-8 border border-ink bg-stoneBg rounded-2xl p-5 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <span class="font-mono text-[10px] uppercase tracking-widest text-neutral-500">PIECE NO. 001</span>
+                    <h3 class="font-serif font-semibold text-2xl sm:text-[26px] leading-tight text-ink mt-0.5">
+                      Silk &amp; Lace Noir Set
+                    </h3>
+                  </div>
+                  <button type="button" id="wishlist-btn" aria-label="Save to wishlist" class="w-8 h-8 rounded-full border border-wire flex items-center justify-center text-neutral-500 hover:border-ink hover:text-rose-600 transition">♡</button>
+                </div>
+
+                <div class="mt-2 pb-4 border-b border-wire flex items-baseline justify-between">
+                  <span class="font-sans font-semibold text-lg text-ink">$340.00</span>
+                  <span class="font-mono text-[10px] uppercase text-emerald-800 bg-emerald-900/10 px-2 py-0.5 rounded-full">IN STOCK</span>
+                </div>
+
+                <div class="py-3.5 border-b border-wire">
+                  <button type="button" id="desc-toggle-btn" class="w-full flex items-center justify-between text-left font-mono text-[11px] uppercase tracking-wider text-ink">
+                    <span>Description &amp; Fit</span>
+                    <span id="desc-toggle-icon" class="text-xs">−</span>
+                  </button>
+                  <p id="desc-content" class="mt-2 text-xs text-neutral-600 leading-relaxed">
+                    Crafted from featherweight mulberry silk satin and French Chantilly lace trim. Features boned corset seaming, adjustable sheer straps, and fluid bias-cut drape.
+                  </p>
+                </div>
+
+                <div class="py-4">
+                  <div class="flex items-center justify-between mb-2.5">
+                    <span class="font-mono text-[10px] uppercase tracking-wider text-neutral-500">SHADE</span>
+                    <span id="selected-color-label" class="font-mono text-[11px] uppercase font-bold text-ink">Noir</span>
+                  </div>
+                  <div class="flex items-center gap-2.5" id="spotlight-swatches">
+                    <button type="button" data-color="Nude" class="swatch-btn w-7 h-5 rounded-md bg-[#e5d5c5] border border-wire hover:border-ink transition" title="Nude"></button>
+                    <button type="button" data-color="Blush" class="swatch-btn w-7 h-5 rounded-md bg-[#d8a1a6] border border-wire hover:border-ink transition" title="Blush"></button>
+                    <button type="button" data-color="Mocha" class="swatch-btn w-7 h-5 rounded-md bg-[#846251] border border-wire hover:border-ink transition" title="Mocha"></button>
+                    <button type="button" data-color="Espresso" class="swatch-btn w-7 h-5 rounded-md bg-[#3c2722] border border-wire hover:border-ink transition" title="Espresso"></button>
+                    <button type="button" data-color="Noir" class="swatch-btn active w-7 h-5 rounded-md bg-[#1a1a1a] ring-2 ring-offset-2 ring-offset-stoneBg ring-ink transition" title="Noir"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm:col-span-4 relative rounded-2xl overflow-hidden border border-ink bg-stoneCard min-h-[200px]">
+              <img
+                src="./p (11).jpeg"
+                onerror="this.onerror=null;this.src='https://placehold.co/500x900/eceae4/1a1a1a?text=EDITORIAL';"
+                alt="Vertical editorial portrait"
+                class="absolute inset-0 w-full h-full object-cover grayscale contrast-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 bg-white/85 backdrop-blur-md border border-white px-2.5 py-1.5 rounded-lg">
+                <span class="block font-mono text-[9px] uppercase tracking-wider text-neutral-600">Editorial</span>
+                <span class="block text-[11px] font-medium text-ink leading-tight mt-0.5">Look 02 — Noir</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="catalog" class="scroll-mt-24">
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+            <div>
+              <span class="aeris-eyebrow block mb-1.5">SHOP THE DROP</span>
+              <h2 class="aeris-display text-4xl sm:text-5xl text-obsidian">THE CATALOGUE</h2>
+            </div>
+            <div id="category-filter-bar" class="flex flex-wrap items-center gap-2">
+              <button data-cat="all" class="cat-pill active">All</button>
+              <button data-cat="jackets" class="cat-pill">Jackets</button>
+              <button data-cat="boots" class="cat-pill">Boots</button>
+              <button data-cat="sets" class="cat-pill">Sets</button>
+              <button data-cat="accessories" class="cat-pill">Accessories</button>
+            </div>
+          </div>
+
+          <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
         </div>
       </section>
 
-      <!-- ===================================================================
-           SECTION 3: "THE EXPERIENCE / PIECES THAT TURN HEADS"
-           (Mirrors AERIS "THE EXPERIENCE / SPACES THAT HEAL" + 3 Stacked Pills)
-      =================================================================== -->
+      <!-- EXPERIENCE / LOOKBOOK -->
       <section id="experience" class="relative px-4 sm:px-8 lg:px-12 py-12 lg:py-16">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-
-          <!-- Left Large Organic-Rounded Showcase (7 Cols — Mirrors AERIS Waterfall Pool Frame) -->
-          <div class="lg:col-span-7 relative">
-            <div class="organic-showcase-frame overflow-hidden relative h-[360px] sm:h-[450px] bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div class="lg:col-span-7">
+            <div class="organic-showcase-frame overflow-hidden relative h-[320px] sm:h-[420px] lg:h-[520px]">
               <img
                 id="experience-main-img"
                 src="./p (11).jpeg"
                 onerror="this.src='https://placehold.co/1000x750/d8e9ef/12171a?text=THE+SIGNATURE+SET'"
-                alt="The Signature Jacket + Boots Set"
-                class="w-full h-full object-cover transition-all duration-500"
+                alt="Signature set lookbook"
+                class="w-full h-full object-cover"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-obsidian/55 via-transparent to-sky-100/15"></div>
-
-              <!-- Top-Left Frosted Offer Tag -->
-              <div class="absolute top-5 left-5 glacial-glass-strong rounded-full px-4 py-1.5 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-blushDeep"></span>
-                <span id="experience-caption" class="font-mono text-[10px] font-semibold tracking-wider text-obsidian uppercase">
-                  SIGNATURE SET • JACKET + BOOTS (£120)
-                </span>
-              </div>
-
-              <!-- Bottom-Left Floating ← → Gallery Arrows (Exact AERIS Placement) -->
-              <div class="absolute bottom-6 left-6 flex items-center gap-2.5">
-                <button onclick="cycleExperienceSlide(-1)" aria-label="Previous Look" class="circle-arrow-btn bg-white/85">
-                  ←
-                </button>
-                <button onclick="cycleExperienceSlide(1)" aria-label="Next Look" class="circle-arrow-btn bg-white/85">
-                  →
-                </button>
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-obsidian/10 to-transparent"></div>
+              <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-3">
+                <span id="experience-caption" class="glacial-glass-strong rounded-full px-4 py-2 font-mono text-[10px] tracking-wider text-obsidian uppercase">SIGNATURE SET • JACKET + BOOTS (£120)</span>
+                <div class="flex items-center gap-2">
+                  <button onclick="cycleExperienceSlide(-1)" aria-label="Previous look" class="circle-arrow-btn">←</button>
+                  <button onclick="cycleExperienceSlide(1)" aria-label="Next look" class="circle-arrow-btn">→</button>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Right Editorial Text + 3 Stacked Horizontal Capsule Pills (5 Cols) -->
-          <div class="lg:col-span-5 flex flex-col justify-between gap-7">
-            <div>
-              <span class="aeris-eyebrow block mb-2">THE EXPERIENCE</span>
-              <h2 class="aeris-display text-5xl sm:text-[54px] text-obsidian">
-                MADE TO BE<br/>REMEMBERED
-              </h2>
-              <p class="text-xs sm:text-[13px] text-slateInk leading-relaxed mt-3 max-w-sm">
-                Slip on the Cropped Faux Fur Jacket for instant glamour, pair it with the Plush Faux Fur Boots, or build the signature £120 set for a seductive head-to-toe winter fantasy.
-              </p>
+          <div class="lg:col-span-5">
+            <span class="aeris-eyebrow block mb-2">THE LOOKBOOK</span>
+            <h2 class="aeris-display text-5xl sm:text-[56px] text-obsidian">
+              FROSTED<br/>SHADES
+            </h2>
+            <p class="text-xs sm:text-[13px] text-slateInk leading-relaxed mt-3 max-w-sm">
+              Four shades. One obsession. Glacier White, Arctic Blue, Blush Frost, and Midnight Ice — designed to mix, match, and layer.
+            </p>
 
-              <div class="flex items-center gap-3 mt-5">
-                <button onclick="openProductModal('jacket-boots-set')" aria-label="Customize Set" class="circle-arrow-btn w-10 h-10 bg-white">
-                  →
-                </button>
-                <button onclick="openProductModal('jacket-boots-set')" class="text-[11px] font-mono uppercase tracking-widest text-obsidian hover:text-glacialTeal transition cursor-pointer">
-                  CUSTOMIZE £120 SET
-                </button>
-              </div>
-            </div>
-
-            <!-- 3 Stacked Horizontal Capsule Pills (Mirrors AERIS 3 Stacked Oval Room Thumbnails) -->
-            <div class="space-y-3.5 max-w-sm w-full ml-auto">
-              <button onclick="openProductModal('cropped-fur-jacket', 'Glacier White')" class="capsule-thumb-pill w-full h-20 relative overflow-hidden flex items-center justify-between px-5 text-left cursor-pointer group">
-                <img src="./p (4).jpeg" onerror="this.src='https://placehold.co/400x120/ffffff/12171a?text=GLACIER+WHITE'" alt="Glacier White" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute inset-0 bg-gradient-to-r from-white/92 via-white/75 to-sky-100/40"></div>
-                <div class="relative z-10">
-                  <span class="block font-mono text-[9px] tracking-widest text-glacialTeal uppercase">SHADE 01</span>
-                  <span class="block font-condensed text-lg tracking-wider text-obsidian uppercase">GLACIER WHITE</span>
-                </div>
-                <span class="relative z-10 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-xs text-obsidian shadow-sm">→</span>
+            <div class="mt-6 space-y-3">
+              <button onclick="cycleExperienceSlide(0)" class="capsule-thumb-pill w-full flex items-center gap-3 bg-white/70 px-3 py-2 text-left">
+                <img src="./p (11).jpeg" onerror="this.src='https://placehold.co/80x80/d8e9ef/12171a?text=SET'" alt="Signature set" class="w-10 h-10 rounded-full object-cover" />
+                <span class="text-xs font-medium text-obsidian">Signature Set — Jacket + Boots</span>
               </button>
-
-              <button onclick="openProductModal('cropped-fur-jacket', 'Arctic Blue')" class="capsule-thumb-pill w-full h-20 relative overflow-hidden flex items-center justify-between px-5 text-left cursor-pointer group">
-                <img src="./p (9).jpeg" onerror="this.src='https://placehold.co/400x120/d8eef4/12171a?text=ARCTIC+BLUE'" alt="Arctic Blue" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute inset-0 bg-gradient-to-r from-[#e5f3f7]/95 via-[#e5f3f7]/75 to-sky-200/40"></div>
-                <div class="relative z-10">
-                  <span class="block font-mono text-[9px] tracking-widest text-glacialTeal uppercase">SHADE 02</span>
-                  <span class="block font-condensed text-lg tracking-wider text-obsidian uppercase">ARCTIC BLUE</span>
-                </div>
-                <span class="relative z-10 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-xs text-obsidian shadow-sm">→</span>
+              <button onclick="cycleExperienceSlide(1)" class="capsule-thumb-pill w-full flex items-center gap-3 bg-white/70 px-3 py-2 text-left">
+                <img src="./p (4).jpeg" onerror="this.src='https://placehold.co/80x80/f8e4ec/12171a?text=JACKET'" alt="Cropped jacket" class="w-10 h-10 rounded-full object-cover" />
+                <span class="text-xs font-medium text-obsidian">Cropped Cloud Fur Jacket</span>
               </button>
-
-              <button onclick="openProductModal('cropped-fur-jacket', 'Blush Frost')" class="capsule-thumb-pill w-full h-20 relative overflow-hidden flex items-center justify-between px-5 text-left cursor-pointer group">
-                <img src="./p (11).jpeg" onerror="this.src='https://placehold.co/400x120/f8e4ec/12171a?text=BLUSH+FROST'" alt="Blush Frost" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute inset-0 bg-gradient-to-r from-[#faeaf0]/95 via-[#faeaf0]/78 to-pink-200/40"></div>
-                <div class="relative z-10">
-                  <span class="block font-mono text-[9px] tracking-widest text-blushDeep uppercase">SHADE 03 & 04</span>
-                  <span class="block font-condensed text-lg tracking-wider text-obsidian uppercase">BLUSH FROST & MIDNIGHT ICE</span>
-                </div>
-                <span class="relative z-10 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-xs text-obsidian shadow-sm">→</span>
+              <button onclick="cycleExperienceSlide(2)" class="capsule-thumb-pill w-full flex items-center gap-3 bg-white/70 px-3 py-2 text-left">
+                <img src="./p (9).jpeg" onerror="this.src='https://placehold.co/80x80/dcecf1/12171a?text=DROP'" alt="Midnight drop" class="w-10 h-10 rounded-full object-cover" />
+                <span class="text-xs font-medium text-obsidian">Midnight Drop 2025</span>
               </button>
             </div>
+
+            <a href="./shop.html" class="inline-flex btn-aeris-dark px-5 py-3 mt-6">
+              <span>SHOP ALL SHADES</span>
+              <span>→</span>
+            </a>
           </div>
-
         </div>
       </section>
 
-      <!-- ===================================================================
-           SECTION 4: "CLIENT STORIES / REAL OBSESSIONS"
-           (Mirrors AERIS "GUEST STORIES / REAL TRANSFORMATIONS" 3 Glass Cards)
-      =================================================================== -->
-      <section id="reviews" class="relative px-4 sm:px-8 lg:px-12 py-14">
-        <!-- Top Wavy Glacial Snow-Drift Divider -->
-        <svg class="pointer-events-none w-full h-8 text-white/70 mb-6" viewBox="0 0 1200 40" preserveAspectRatio="none" fill="none" aria-hidden="true">
-          <path d="M0,24 C320,4 580,38 920,16 C1060,8 1140,18 1200,22" stroke="url(#driftLine)" stroke-width="2" />
-          <defs>
-            <linearGradient id="driftLine" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#6ab7c9" stop-opacity="0.2"/>
-              <stop offset="50%" stop-color="#ffffff" stop-opacity="0.95"/>
-              <stop offset="100%" stop-color="#f2c6d4" stop-opacity="0.4"/>
-            </linearGradient>
-          </defs>
-        </svg>
-
-        <!-- Header Row with ← → Controls on Right -->
+      <!-- REVIEWS -->
+      <section id="reviews" class="relative px-4 sm:px-8 lg:px-12 py-12 lg:py-16">
         <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
           <div>
             <span class="aeris-eyebrow block mb-1.5">CLIENT STORIES</span>
-            <h2 class="aeris-display text-4xl sm:text-5xl text-obsidian">
-              REAL OBSESSIONS
-            </h2>
+            <h2 class="aeris-display text-4xl sm:text-5xl text-obsidian">REAL OBSESSIONS</h2>
           </div>
-
           <div class="flex items-center gap-2">
             <button onclick="rotateReviews(-1)" aria-label="Previous Reviews" class="circle-arrow-btn">←</button>
             <button onclick="rotateReviews(1)" aria-label="Next Reviews" class="circle-arrow-btn">→</button>
           </div>
         </div>
-
-        <!-- 3 Frosted Glass Testimonial Cards -->
         <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5"></div>
       </section>
 
-      <!-- ===================================================================
-           SECTION 5: "LIMITED WINTER DROP / ARE YOU READY TO ELEVATE?"
-           (Mirrors AERIS Bottom Split Showcase + Flowing Ice-Silk Ribbon)
-      =================================================================== -->
+      <!-- DELIVERY CTA -->
       <section id="delivery" class="relative px-4 sm:px-8 lg:px-12 pt-8 pb-20 overflow-hidden">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
-
-          <!-- Left Large Curved Showcase Visual (7 Cols) -->
           <div class="lg:col-span-7">
             <div class="rounded-[36px] rounded-tr-[140px] overflow-hidden border-2 border-white shadow-xl relative h-[320px] sm:h-[400px]">
               <img
@@ -1279,8 +1223,6 @@
                 class="w-full h-full object-cover"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-obsidian/65 via-obsidian/15 to-transparent"></div>
-
-              <!-- UK Delivery Telemetry Overlay -->
               <div class="absolute bottom-5 left-5 right-5 flex flex-wrap items-center justify-between gap-3">
                 <div class="glacial-glass-strong rounded-2xl px-4 py-2.5">
                   <span class="block font-mono text-[9px] tracking-widest text-glacialTeal uppercase">UK TRACKED SHIPPING</span>
@@ -1294,7 +1236,6 @@
             </div>
           </div>
 
-          <!-- Right Editorial CTA Block (5 Cols) -->
           <div class="lg:col-span-5">
             <span class="aeris-eyebrow block mb-2">WINTER ROMANCE, FOREVER</span>
             <h2 class="aeris-display text-5xl sm:text-[56px] text-obsidian">
@@ -1303,7 +1244,6 @@
             <p class="text-xs sm:text-[13px] text-slateInk leading-relaxed mt-3 max-w-sm">
               Shop ultra-soft cropped jackets (£80), plush boots (£50), the signature £120 set, cozy headwarmers (£16.99), and our one-of-a-kind Everlasting Fur Bouquet.
             </p>
-
             <div class="flex flex-wrap items-center gap-3 mt-6">
               <button onclick="openProductModal('jacket-boots-set')" class="btn-aeris-dark px-6 py-3.5 cursor-pointer">
                 <span>CUSTOMIZE £120 SET</span>
@@ -1314,10 +1254,8 @@
               </a>
             </div>
           </div>
-
         </div>
 
-        <!-- Flowing Translucent Cyan-Blue & Blush-Pink Ice-Silk Ribbon SVG (Mirrors AERIS Bottom-Right Glass Wave) -->
         <svg class="pointer-events-none absolute -bottom-6 -right-10 w-[440px] sm:w-[580px] h-[250px] opacity-85 z-0" viewBox="0 0 600 260" fill="none" aria-hidden="true">
           <path d="M90 250 C170 150, 290 190, 390 110 C470 46, 540 20, 610 10 L610 260 Z" fill="url(#iceRibbonGrad1)" />
           <path d="M160 255 C235 165, 340 200, 435 125 C505 70, 560 45, 615 35" stroke="url(#iceRibbonRim)" stroke-width="2.5" />
@@ -1337,13 +1275,9 @@
         </svg>
       </section>
 
-      <!-- ===================================================================
-           SECTION 6: ARCHITECTURAL MINIMALIST FOOTER (AERIS 5-Column Footer)
-      =================================================================== -->
+      <!-- FOOTER -->
       <footer class="border-t border-white bg-white/65 backdrop-blur-xl px-4 sm:px-8 lg:px-12 py-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 items-start">
-
-          <!-- Brand Emblem Column (3 Cols) -->
           <div class="lg:col-span-3 flex flex-col items-start">
             <div class="flex items-center gap-3">
               <svg class="w-11 h-7 text-obsidian" viewBox="0 0 56 36" fill="none">
@@ -1360,7 +1294,6 @@
             </p>
           </div>
 
-          <!-- Explore Links (2 Cols) -->
           <div class="lg:col-span-2 text-xs">
             <span class="block font-mono text-[10px] font-semibold tracking-widest text-obsidian uppercase mb-3">EXPLORE</span>
             <ul class="space-y-2 text-slateInk">
@@ -1370,7 +1303,6 @@
             </ul>
           </div>
 
-          <!-- Delivery Links (2 Cols) -->
           <div class="lg:col-span-2 text-xs">
             <span class="block font-mono text-[10px] font-semibold tracking-widest text-obsidian uppercase mb-3">DELIVERY</span>
             <ul class="space-y-2 text-slateInk">
@@ -1380,7 +1312,6 @@
             </ul>
           </div>
 
-          <!-- Concierge Links (2 Cols) -->
           <div class="lg:col-span-2 text-xs">
             <span class="block font-mono text-[10px] font-semibold tracking-widest text-obsidian uppercase mb-3">CONCIERGE</span>
             <ul class="space-y-2 text-slateInk">
@@ -1390,7 +1321,6 @@
             </ul>
           </div>
 
-          <!-- Stay Connected Newsletter Pill (3 Cols — Exact AERIS Right Input) -->
           <div class="lg:col-span-3">
             <span class="block font-mono text-[10px] font-semibold tracking-widest text-obsidian uppercase mb-3">STAY CONNECTED</span>
             <form onsubmit="handleNewsletterSubmit(event)" class="relative flex items-center bg-white/90 border border-obsidian/15 rounded-full p-1 shadow-sm">
@@ -1406,158 +1336,22 @@
               </button>
             </form>
           </div>
-
         </div>
       </footer>
 
     </main>
-  
-  <!-- =======================================================================
-       PRODUCT CUSTOMIZATION MODAL (Shade, UK Size & Set Builder)
-  ======================================================================= -->
-  <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-obsidian/45 backdrop-blur-md">
-    <div class="glacial-glass-strong rounded-[34px] max-w-3xl w-full p-5 sm:p-7 relative shadow-2xl border-2 border-white max-h-[92vh] overflow-y-auto">
-      <button onclick="closeProductModal()" aria-label="Close Modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white hover:bg-blushTint/40 text-obsidian flex items-center justify-center font-bold border border-white shadow-sm transition cursor-pointer">
-        ✕
-      </button>
-
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-        <!-- Product Image -->
-        <div class="md:col-span-5 relative rounded-[26px] overflow-hidden border-2 border-white shadow-md">
-          <img id="modal-img" src="" alt="" class="w-full h-64 md:h-80 object-cover" />
-          <span id="modal-badge" class="absolute top-3 left-3 bg-white/90 text-obsidian font-mono text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white shadow-sm"></span>
-        </div>
-
-        <!-- Product Configuration -->
-        <div class="md:col-span-7 flex flex-col justify-between">
-          <div>
-            <span id="modal-cat-tag" class="font-mono text-[10px] uppercase tracking-widest text-glacialTeal font-semibold"></span>
-            <h3 id="modal-title" class="aeris-display text-3xl sm:text-4xl text-obsidian mt-1"></h3>
-            <div class="flex items-baseline gap-2.5 mt-1.5">
-              <span id="modal-price" class="font-condensed text-3xl font-medium text-obsidian"></span>
-              <span id="modal-old-price" class="font-mono text-xs text-slateInk line-through hidden"></span>
-            </div>
-            <p id="modal-desc" class="text-xs text-slateInk mt-2 leading-relaxed"></p>
-
-            <!-- Primary Shade Selector -->
-            <div class="mt-4">
-              <div class="flex items-center justify-between text-[11px] font-mono mb-2">
-                <span id="modal-shade-label" class="text-slateInk uppercase">FROSTED SHADE</span>
-                <span id="modal-selected-shade" class="font-semibold text-obsidian">Glacier White</span>
-              </div>
-              <div id="modal-shade-options" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
-            </div>
-
-            <!-- Secondary Boots Shade Selector (For Set Customization) -->
-            <div id="modal-bundle-shade-section" class="mt-3 hidden">
-              <div class="flex items-center justify-between text-[11px] font-mono mb-2">
-                <span class="text-slateInk uppercase">BOOTS SHADE</span>
-                <span id="modal-selected-boot-shade" class="font-semibold text-blushDeep">Glacier White</span>
-              </div>
-              <div id="modal-bundle-shade-options" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
-            </div>
-
-            <!-- Primary Size Selector -->
-            <div id="modal-size-section" class="mt-4">
-              <div class="flex items-center justify-between text-[11px] font-mono mb-2">
-                <span id="modal-size-label" class="text-slateInk uppercase">SELECT SIZE</span>
-                <span class="text-blushDeep font-semibold">UK SIZING</span>
-              </div>
-              <div id="modal-size-options" class="flex flex-wrap gap-2"></div>
-            </div>
-
-            <!-- Extra Boot Size Selector for Bundle Set -->
-            <div id="modal-bundle-boot-section" class="mt-3 hidden">
-              <div class="flex items-center justify-between text-[11px] font-mono mb-1.5">
-                <span class="text-slateInk uppercase">BOOTS SIZE (UK)</span>
-                <span class="text-glacialTeal font-semibold">INCLUDED IN SET</span>
-              </div>
-              <div id="modal-bundle-boot-options" class="flex flex-wrap gap-2"></div>
-            </div>
-          </div>
-
-          <div class="mt-6 pt-4 border-t border-obsidian/10 flex items-center gap-3">
-            <button onclick="confirmAddToCart()" class="btn-aeris-dark w-full py-3.5 text-xs cursor-pointer">
-              <span>❄ ADD TO SHOPPING BAG</span>
-              <span id="modal-btn-price" class="font-mono text-blushTint"></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
-  <!-- =======================================================================
-       SLIDE-OUT SHOPPING BAG DRAWER (With £120 Free UK Shipping Bar & WhatsApp)
-  ======================================================================= -->
-  <div id="cart-overlay" onclick="closeCart()" class="fixed inset-0 z-50 hidden bg-obsidian/40 backdrop-blur-sm transition-opacity"></div>
-  <aside id="cart-drawer" class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-md glacial-glass-strong border-l-2 border-white shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between p-5 sm:p-6">
-    <!-- Drawer Header -->
-    <div>
-      <div class="flex items-center justify-between pb-4 border-b border-obsidian/10">
-        <div>
-          <span class="aeris-eyebrow block">MIDNIGHT DROP CHECKOUT</span>
-          <h3 class="aeris-display text-3xl text-obsidian mt-0.5">YOUR SHOPPING BAG</h3>
-        </div>
-        <button onclick="closeCart()" aria-label="Close Bag" class="w-9 h-9 rounded-full bg-white hover:bg-blushTint/40 text-obsidian flex items-center justify-center font-bold border border-white shadow-sm cursor-pointer">
-          ✕
-        </button>
-      </div>
-
-      <!-- Live £120 Free UK Shipping Progress Bar -->
-      <div class="mt-4 bg-white/85 border border-white rounded-2xl p-3.5 shadow-sm">
-        <div class="flex items-center justify-between text-[11px] font-mono mb-1.5">
-          <span id="shipping-status-text" class="text-obsidian font-medium">Add £120 for FREE UK shipping</span>
-          <span id="shipping-percent-text" class="text-glacialTeal font-bold">0%</span>
-        </div>
-        <div class="w-full h-2 rounded-full bg-sky-100 overflow-hidden">
-          <div id="shipping-progress-bar" class="h-full rounded-full bg-gradient-to-r from-glacialAqua via-glacialTeal to-blushDeep transition-all duration-300" style="width: 0%"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bag Items List -->
-    <div id="cart-items-list" class="flex-1 overflow-y-auto my-4 space-y-3 pr-1"></div>
-
-    <!-- Bag Summary & WhatsApp Checkout -->
-    <div class="pt-4 border-t border-obsidian/10 space-y-3">
-      <div class="space-y-1.5 text-xs font-mono">
-        <div class="flex justify-between text-slateInk">
-          <span>SUBTOTAL</span>
-          <span id="cart-subtotal" class="text-obsidian font-semibold">£0.00</span>
-        </div>
-        <div class="flex justify-between text-slateInk">
-          <span>UK TRACKED DELIVERY</span>
-          <span id="cart-shipping" class="text-obsidian font-semibold">£4.99</span>
-        </div>
-        <div class="flex justify-between text-sm font-bold text-obsidian pt-2 border-t border-obsidian/10">
-          <span>TOTAL</span>
-          <span id="cart-total" class="text-glacialTeal">£0.00</span>
-        </div>
-      </div>
-
-      <button onclick="checkoutViaWhatsApp()" class="btn-aeris-dark w-full py-3.5 text-xs cursor-pointer">
-        <span>SEND ORDER VIA WHATSAPP</span>
-        <span class="text-blushTint">↗</span>
-      </button>
-    </div>
-  </aside>
-
-  <!-- FROSTED TOAST NOTIFICATION -->
-  <div id="toast-notification" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300">
-    <div class="glacial-glass-strong px-5 py-2.5 rounded-full border-2 border-white shadow-xl flex items-center gap-2.5 text-xs font-medium text-obsidian">
-      <span class="text-glacialTeal">❄</span>
-      <span id="toast-message">Added to your bag</span>
-    </div>
+  <!-- TOAST -->
+  <div id="capsule-toast" class="fixed bottom-5 right-5 z-50 translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-obsidian text-white border border-obsidian px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 text-xs font-mono">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+    <span id="capsule-toast-msg">Added to Bag</span>
   </div>
 
-  <!-- =======================================================================
-       JAVASCRIPT: SNOWFALL CANVAS, CATALOG, SET BUILDER, REVIEWS & WHATSAPP
-  ======================================================================= -->
   <script>
-    /* -------------------------------------------------------------------------
-       1. SUBTLE AMBIENT SNOWFALL & CRYSTALLINE FROST CANVAS
-    ------------------------------------------------------------------------- */
+    /* ======================================================================
+       1. SNOWFALL
+    ====================================================================== */
     (function initSnowfall() {
       const canvas = document.getElementById('snow-canvas');
       if (!canvas) return;
@@ -1608,14 +1402,10 @@
         ctx.strokeStyle = color;
         ctx.lineWidth = 0.95;
         ctx.beginPath();
-        ctx.moveTo(-r * 1.4, 0);
-        ctx.lineTo(r * 1.4, 0);
-        ctx.moveTo(0, -r * 1.4);
-        ctx.lineTo(0, r * 1.4);
-        ctx.moveTo(-r, -r);
-        ctx.lineTo(r, r);
-        ctx.moveTo(r, -r);
-        ctx.lineTo(-r, r);
+        ctx.moveTo(-r * 1.4, 0); ctx.lineTo(r * 1.4, 0);
+        ctx.moveTo(0, -r * 1.4); ctx.lineTo(0, r * 1.4);
+        ctx.moveTo(-r, -r); ctx.lineTo(r, r);
+        ctx.moveTo(r, -r); ctx.lineTo(-r, r);
         ctx.stroke();
         ctx.restore();
       }
@@ -1629,10 +1419,7 @@
             f.y += f.speedY;
             f.x += f.speedX + Math.sin(f.sway) * 0.28;
 
-            if (f.y > height + 10) {
-              f.y = -10;
-              f.x = Math.random() * width;
-            }
+            if (f.y > height + 10) { f.y = -10; f.x = Math.random() * width; }
             if (f.x > width + 10) f.x = -10;
             if (f.x < -10) f.x = width + 10;
 
@@ -1666,6 +1453,9 @@
       document.body.classList.add('deep-freeze');
     })();
 
+    /* ======================================================================
+       2. MUSIC
+    ====================================================================== */
     function setRailMusicVolume(value) {
       const audio = document.getElementById('rail-music-audio');
       if (audio) audio.volume = Number(value);
@@ -1700,9 +1490,66 @@
       }
     }
 
-    /* -------------------------------------------------------------------------
-       2. PRODUCT DATA (6-PIECE CAPSULE WITH FROSTED SHADES & LOCAL ASSETS)
-    ------------------------------------------------------------------------- */
+    /* ======================================================================
+       3. CART (shared singleton, safely exposed)
+    ====================================================================== */
+    window.cart = window.cart || [];
+
+    function updateBagCounters() {
+      const count = cart.length;
+      ['mobile-bag-count', 'top-nav-bag-count', 'header-bag-count'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = count;
+      });
+      const dot = document.getElementById('rail-bag-dot');
+      if (dot) dot.classList.toggle('hidden', count === 0);
+    }
+
+    function openCart() {
+      if (cart.length === 0) {
+        showToast('Your bag is empty — start with the £120 set.');
+      } else {
+        showToast('Bag: ' + cart.length + ' item(s) — checkout coming soon.');
+      }
+    }
+
+    function addToCart(item) {
+      cart.push(item);
+      updateBagCounters();
+      showToast(item.title + ' added to bag');
+    }
+
+    /* ======================================================================
+       4. TOAST
+    ====================================================================== */
+    let toastTimer = null;
+    function showToast(msg) {
+      const toast = document.getElementById('capsule-toast');
+      const toastMsg = document.getElementById('capsule-toast-msg');
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3000);
+    }
+
+    /* ======================================================================
+       5. NEWSLETTER
+    ====================================================================== */
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email');
+      if (email && email.value) {
+        showToast('Welcome to the list — check your inbox for the winter edit.');
+        email.value = '';
+      }
+    }
+
+    /* ======================================================================
+       6. PRODUCT DATA
+    ====================================================================== */
     const SHADES = [
       { name: 'Glacier White', swatch: 'linear-gradient(135deg, #ffffff, #e2f1f6)' },
       { name: 'Arctic Blue', swatch: 'linear-gradient(135deg, #bae3ec, #6ab7c9)' },
@@ -1792,9 +1639,9 @@
       }
     ];
 
-    /* -------------------------------------------------------------------------
-       3. CATALOG RENDERING & FILTERING
-    ------------------------------------------------------------------------- */
+    /* ======================================================================
+       7. CATALOG RENDERING & FILTERING
+    ====================================================================== */
     let activeCategory = 'all';
 
     function renderCatalog() {
@@ -1805,13 +1652,18 @@
         ? PRODUCTS
         : PRODUCTS.filter(p => p.category === activeCategory);
 
+      if (filtered.length === 0) {
+        grid.innerHTML = '<p class="col-span-full text-center text-sm text-slateInk py-12">No pieces in this category yet — explore another.</p>';
+        return;
+      }
+
       grid.innerHTML = filtered.map(product => `
         <article class="bg-white/80 hover:bg-white rounded-[30px] p-3.5 border border-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div onclick="openProductModal('${product.id}')" class="relative rounded-[24px] overflow-hidden border border-white cursor-pointer mb-3.5">
               <img
                 src="${product.image}"
-                onerror="this.src='${product.fallback}'"
+                onerror="this.onerror=null;this.src='${product.fallback}'"
                 alt="${product.title}"
                 class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -1861,25 +1713,13 @@
       renderCatalog();
     }
 
-    /* -------------------------------------------------------------------------
-       4. EXPERIENCE GALLERY SWITCHER & CLIENT STORIES CAROUSEL
-    ------------------------------------------------------------------------- */
+    /* ======================================================================
+       8. EXPERIENCE GALLERY & REVIEWS
+    ====================================================================== */
     const EXPERIENCE_SLIDES = [
-      {
-        image: './p (11).jpeg',
-        fallback: 'https://placehold.co/1000x750/d8e9ef/12171a?text=THE+SIGNATURE+SET',
-        caption: 'SIGNATURE SET • JACKET + BOOTS (£120)'
-      },
-      {
-        image: './p (4).jpeg',
-        fallback: 'https://placehold.co/1000x750/f8e4ec/12171a?text=CROPPED+JACKET',
-        caption: 'CROPPED CLOUD FUR JACKET • £80'
-      },
-      {
-        image: './p (9).jpeg',
-        fallback: 'https://placehold.co/1000x750/dcecf1/12171a?text=MIDNIGHT+DROP',
-        caption: 'MIDNIGHT DROP 2025 • CRUELTY-FREE'
-      }
+      { image: './p (11).jpeg', fallback: 'https://placehold.co/1000x750/d8e9ef/12171a?text=THE+SIGNATURE+SET', caption: 'SIGNATURE SET • JACKET + BOOTS (£120)' },
+      { image: './p (4).jpeg', fallback: 'https://placehold.co/1000x750/f8e4ec/12171a?text=CROPPED+JACKET', caption: 'CROPPED CLOUD FUR JACKET • £80' },
+      { image: './p (9).jpeg', fallback: 'https://placehold.co/1000x750/dcecf1/12171a?text=MIDNIGHT+DROP', caption: 'MIDNIGHT DROP 2025 • CRUELTY-FREE' }
     ];
     let experienceIndex = 0;
 
@@ -1890,36 +1730,16 @@
       const cap = document.getElementById('experience-caption');
       if (img) {
         img.src = slide.image;
-        img.onerror = function () { this.src = slide.fallback; };
+        img.onerror = function () { this.onerror = null; this.src = slide.fallback; };
       }
       if (cap) cap.textContent = slide.caption;
     }
 
     const CLIENT_REVIEWS = [
-      {
-        name: 'Amara K.',
-        location: 'London',
-        avatar: './p (9).jpeg',
-        quote: 'The £120 Jacket + Boots set in Glacier White is unreal. Zero shedding, satin lining feels expensive, and it arrived in two days.'
-      },
-      {
-        name: 'Chloe M.',
-        location: 'Manchester',
-        avatar: './p (4).jpeg',
-        quote: 'Ordered the Blush Frost cropped jacket through WhatsApp—the plushness is like wearing a cloud. Everyone asked where I got it.'
-      },
-      {
-        name: 'Sienna R.',
-        location: 'Edinburgh',
-        avatar: './p (11).jpeg',
-        quote: 'Wore the Arctic Blue boots and jacket in -3°C weather and stayed completely warm. Best winter capsule purchase this year.'
-      },
-      {
-        name: 'Maya T.',
-        location: 'Birmingham',
-        avatar: './p (9).jpeg',
-        quote: 'Mixed Midnight Ice jacket with Glacier White boots in the bundle set. Saving £10 and getting free UK shipping was effortless.'
-      }
+      { name: 'Amara K.', location: 'London', avatar: './p (9).jpeg', quote: 'The £120 Jacket + Boots set in Glacier White is unreal. Zero shedding, satin lining feels expensive, and it arrived in two days.' },
+      { name: 'Chloe M.', location: 'Manchester', avatar: './p (4).jpeg', quote: 'Ordered the Blush Frost cropped jacket through WhatsApp—the plushness is like wearing a cloud. Everyone asked where I got it.' },
+      { name: 'Sienna R.', location: 'Edinburgh', avatar: './p (11).jpeg', quote: 'Wore the Arctic Blue boots and jacket in -3°C weather and stayed completely warm. Best winter capsule purchase this year.' },
+      { name: 'Maya T.', location: 'Birmingham', avatar: './p (9).jpeg', quote: 'Mixed Midnight Ice jacket with Glacier White boots in the bundle set. Saving £10 and getting free UK shipping was effortless.' }
     ];
     let reviewOffset = 0;
 
@@ -1935,7 +1755,7 @@
         <article class="glacial-glass rounded-[28px] p-6 flex items-start gap-4">
           <img
             src="${rev.avatar}"
-            onerror="this.src='https://placehold.co/120x120/d8e9ef/12171a?text=${rev.name[0]}'"
+            onerror="this.onerror=null;this.src='https://placehold.co/120x120/d8e9ef/12171a?text=${encodeURIComponent(rev.name[0])}'"
             alt="${rev.name}"
             class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm shrink-0 mt-1"
           />
@@ -1957,396 +1777,168 @@
       renderReviews();
     }
 
-    /* -------------------------------------------------------------------------
-       5. PRODUCT CUSTOMIZATION MODAL (Including Dual-Shade Set Builder)
-    ------------------------------------------------------------------------- */
-    let currentModalProduct = null;
-    let selectedShade = SHADES[0].name;
-    let selectedBootShade = SHADES[0].name;
-    let selectedSize = '';
-    let selectedBootSize = '';
+    /* ======================================================================
+       9. PRODUCT MODAL (lightweight, no external dependency)
+    ====================================================================== */
+    let modalEl = null;
 
-    function openProductModal(productId, preselectedShade) {
+    function ensureModal() {
+      if (modalEl) return modalEl;
+      modalEl = document.createElement('div');
+      modalEl.id = 'product-modal';
+      modalEl.className = 'fixed inset-0 z-[60] hidden items-center justify-center p-4';
+      modalEl.innerHTML = `
+        <div class="absolute inset-0 bg-obsidian/50 backdrop-blur-sm" onclick="closeProductModal()"></div>
+        <div class="relative glacial-glass-strong rounded-[32px] max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <button onclick="closeProductModal()" aria-label="Close" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 border border-obsidian/10 flex items-center justify-center text-obsidian hover:bg-white transition">✕</button>
+          <div id="modal-body"></div>
+        </div>
+      `;
+      document.body.appendChild(modalEl);
+      return modalEl;
+    }
+
+    function openProductModal(productId) {
       const product = PRODUCTS.find(p => p.id === productId);
       if (!product) return;
-
-      currentModalProduct = product;
-      selectedShade = preselectedShade || SHADES[0].name;
-      selectedBootShade = preselectedShade || SHADES[0].name;
-      selectedSize = product.sizes[0];
-      selectedBootSize = product.bootSizes ? product.bootSizes[1] : '';
-
-      document.getElementById('modal-img').src = product.image;
-      document.getElementById('modal-img').onerror = function () { this.src = product.fallback; };
-      document.getElementById('modal-badge').textContent = product.badge;
-      document.getElementById('modal-cat-tag').textContent = product.tag;
-      document.getElementById('modal-title').textContent = product.title;
-      document.getElementById('modal-price').textContent = `£${Number.isInteger(product.price) ? product.price : product.price.toFixed(2)}`;
-      document.getElementById('modal-btn-price').textContent = `• £${Number.isInteger(product.price) ? product.price : product.price.toFixed(2)}`;
-      document.getElementById('modal-desc').textContent = product.desc;
-
-      const oldPriceEl = document.getElementById('modal-old-price');
-      if (product.oldPrice) {
-        oldPriceEl.textContent = `£${product.oldPrice.toFixed(0)}`;
-        oldPriceEl.classList.remove('hidden');
-      } else {
-        oldPriceEl.classList.add('hidden');
-      }
-
-      renderModalOptions();
-
-      const modal = document.getElementById('product-modal');
+      const modal = ensureModal();
+      const body = modal.querySelector('#modal-body');
+      body.innerHTML = `
+        <span class="font-mono text-[10px] uppercase tracking-widest text-glacialTeal">${product.tag}</span>
+        <h3 id="modal-title" class="font-serif text-3xl font-semibold text-obsidian mt-1">${product.title}</h3>
+        <div class="flex items-baseline gap-3 mt-2">
+          <span class="font-condensed text-3xl text-obsidian">£${Number.isInteger(product.price) ? product.price : product.price.toFixed(2)}</span>
+          ${product.oldPrice ? `<span class="font-mono text-sm text-slateInk line-through">£${product.oldPrice.toFixed(0)}</span>` : ''}
+        </div>
+        <img src="${product.image}" onerror="this.onerror=null;this.src='${product.fallback}'" alt="${product.title}" class="w-full h-56 object-cover rounded-2xl border border-white mt-4" />
+        <p class="text-xs text-slateInk leading-relaxed mt-4">${product.desc}</p>
+        <div class="mt-5">
+          <span class="font-mono text-[10px] uppercase tracking-wider text-slateInk">Select size</span>
+          <div class="flex flex-wrap gap-2 mt-2">
+            ${product.sizes.map((s, i) => `<button type="button" data-size="${s}" class="size-btn px-3 py-1.5 rounded-full border border-obsidian/15 text-[11px] text-obsidian bg-white/70 hover:border-glacialTeal transition ${i === 0 ? 'ring-2 ring-glacialTeal' : ''}">${s}</button>`).join('')}
+          </div>
+        </div>
+        <div class="mt-5">
+          <span class="font-mono text-[10px] uppercase tracking-wider text-slateInk">Select shade</span>
+          <div class="flex items-center gap-2 mt-2">
+            ${SHADES.map((s, i) => `<button type="button" data-shade="${s.name}" title="${s.name}" class="shade-btn w-8 h-6 rounded-md border ${i === 0 ? 'ring-2 ring-obsidian' : 'border-white'} shadow-sm" style="background:${s.swatch}"></button>`).join('')}
+          </div>
+        </div>
+        <button type="button" onclick="confirmAddToCart('${product.id}', this)" class="btn-aeris-dark w-full mt-6 py-3.5 cursor-pointer">
+          <span>ADD TO BAG</span>
+          <span>→</span>
+        </button>
+      `;
       modal.classList.remove('hidden');
       modal.classList.add('flex');
+
+      let chosenSize = product.sizes[0];
+      let chosenShade = SHADES[0].name;
+      body.querySelectorAll('.size-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          body.querySelectorAll('.size-btn').forEach(b => b.classList.remove('ring-2', 'ring-glacialTeal'));
+          btn.classList.add('ring-2', 'ring-glacialTeal');
+          chosenSize = btn.dataset.size;
+        });
+      });
+      body.querySelectorAll('.shade-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          body.querySelectorAll('.shade-btn').forEach(b => b.classList.remove('ring-2', 'ring-obsidian'));
+          btn.classList.add('ring-2', 'ring-obsidian');
+          chosenShade = btn.dataset.shade;
+        });
+      });
+      modal.dataset.chosenSize = chosenSize;
+      modal.dataset.chosenShade = chosenShade;
     }
-
-    function renderModalOptions() {
-      const isSet = Boolean(currentModalProduct.bootSizes);
-      document.getElementById('modal-shade-label').textContent = isSet ? 'JACKET SHADE' : 'FROSTED SHADE';
-      document.getElementById('modal-selected-shade').textContent = selectedShade;
-
-      // Primary Shade Options
-      document.getElementById('modal-shade-options').innerHTML = SHADES.map(s => {
-        const active = s.name === selectedShade;
-        return `
-          <button type="button" onclick="selectShade('${s.name}')" class="p-2 rounded-xl border text-left flex items-center gap-2 transition cursor-pointer ${active ? 'bg-white border-glacialTeal shadow-sm ring-2 ring-blushTint/70' : 'bg-white/65 border-white hover:bg-white'}">
-            <span class="w-4 h-4 rounded-full border border-slate-200 shrink-0" style="background: ${s.swatch}"></span>
-            <span class="text-[11px] font-medium text-obsidian truncate">${s.name.split(' ')[0]}</span>
-          </button>
-        `;
-      }).join('');
-
-      // Secondary Boot Shade Options (for Set)
-      const bootShadeSec = document.getElementById('modal-bundle-shade-section');
-      if (isSet) {
-        bootShadeSec.classList.remove('hidden');
-        document.getElementById('modal-selected-boot-shade').textContent = selectedBootShade;
-        document.getElementById('modal-bundle-shade-options').innerHTML = SHADES.map(s => {
-          const active = s.name === selectedBootShade;
-          return `
-            <button type="button" onclick="selectBootShade('${s.name}')" class="p-2 rounded-xl border text-left flex items-center gap-2 transition cursor-pointer ${active ? 'bg-white border-blushDeep shadow-sm ring-2 ring-glacialAqua/50' : 'bg-white/65 border-white hover:bg-white'}">
-              <span class="w-4 h-4 rounded-full border border-slate-200 shrink-0" style="background: ${s.swatch}"></span>
-              <span class="text-[11px] font-medium text-obsidian truncate">${s.name.split(' ')[0]}</span>
-            </button>
-          `;
-        }).join('');
-      } else {
-        bootShadeSec.classList.add('hidden');
-      }
-
-      // Primary Sizes
-      document.getElementById('modal-size-label').textContent = isSet ? 'JACKET SIZE (UK)' : 'SELECT SIZE';
-      document.getElementById('modal-size-options').innerHTML = currentModalProduct.sizes.map(sz => {
-        const active = sz === selectedSize;
-        return `
-          <button type="button" onclick="selectSize('${sz}')" class="px-3 py-1.5 rounded-full font-mono text-[11px] border transition cursor-pointer ${active ? 'bg-obsidian text-white border-obsidian shadow-sm' : 'bg-white/75 text-obsidian border-white hover:bg-white'}">
-            ${sz}
-          </button>
-        `;
-      }).join('');
-
-      // Secondary Boot Size for Set
-      const bootSec = document.getElementById('modal-bundle-boot-section');
-      if (isSet) {
-        bootSec.classList.remove('hidden');
-        document.getElementById('modal-bundle-boot-options').innerHTML = currentModalProduct.bootSizes.map(bsz => {
-          const active = bsz === selectedBootSize;
-          return `
-            <button type="button" onclick="selectBootSize('${bsz}')" class="px-3 py-1.5 rounded-full font-mono text-[11px] border transition cursor-pointer ${active ? 'bg-glacialTeal text-white border-white shadow-sm' : 'bg-white/75 text-obsidian border-white hover:bg-white'}">
-              ${bsz}
-            </button>
-          `;
-        }).join('');
-      } else {
-        bootSec.classList.add('hidden');
-      }
-    }
-
-    function selectShade(shade) { selectedShade = shade; renderModalOptions(); }
-    function selectBootShade(shade) { selectedBootShade = shade; renderModalOptions(); }
-    function selectSize(sz) { selectedSize = sz; renderModalOptions(); }
-    function selectBootSize(bsz) { selectedBootSize = bsz; renderModalOptions(); }
 
     function closeProductModal() {
-      const modal = document.getElementById('product-modal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+      if (!modalEl) return;
+      modalEl.classList.add('hidden');
+      modalEl.classList.remove('flex');
     }
 
-    /* -------------------------------------------------------------------------
-       6. SHOPPING BAG DRAWER & DIRECT WHATSAPP CHECKOUT
-    ------------------------------------------------------------------------- */
-    let cart = [];
+    function confirmAddToCart(productId, btn) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+      const modal = document.getElementById('product-modal');
+      addToCart({
+        id: product.id,
+        title: product.title,
+        price: product.price,
+        size: modal?.dataset.chosenSize || product.sizes[0],
+        shade: modal?.dataset.chosenShade || SHADES[0].name
+      });
+      closeProductModal();
+    }
 
-    function confirmAddToCart() {
-      if (!currentModalProduct) return;
-      const variantLabel = currentModalProduct.bootSizes
-        ? `Jacket: ${selectedShade} (${selectedSize}) • Boots: ${selectedBootShade} (${selectedBootSize})`
-        : `${selectedShade} • ${selectedSize}`;
+    /* ======================================================================
+       10. INIT
+    ====================================================================== */
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCatalog();
+      renderReviews();
+      updateBagCounters();
 
-      const key = `${currentModalProduct.id}::${variantLabel}`;
-      const existing = cart.find(item => item.key === key);
+      document.querySelectorAll('#category-filter-bar .cat-pill').forEach(btn => {
+        btn.addEventListener('click', () => setCategory(btn.dataset.cat));
+      });
 
-      if (existing) {
-        existing.qty += 1;
-      } else {
-        cart.push({
-          key,
-          id: currentModalProduct.id,
-          title: currentModalProduct.title,
-          price: currentModalProduct.price,
-          image: currentModalProduct.image,
-          fallback: currentModalProduct.fallback,
-          variant: variantLabel,
-          qty: 1
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          // Filter pills map to catalog categories where sensible
+          const map = { all: 'all', capsule01: 'all', limited: 'accessories' };
+          setCategory(map[btn.dataset.filter] || 'all');
+        });
+      });
+
+      const wishlistBtn = document.getElementById('wishlist-btn');
+      if (wishlistBtn) {
+        wishlistBtn.addEventListener('click', () => {
+          const active = wishlistBtn.textContent.trim() === '♥';
+          wishlistBtn.textContent = active ? '♡' : '♥';
+          wishlistBtn.classList.toggle('text-rose-600', !active);
+          showToast(active ? 'Removed from wishlist' : 'Saved to wishlist');
         });
       }
 
-      closeProductModal();
-      updateCartUI();
-      showToast(`${currentModalProduct.title} added to bag`);
-      openCart();
-    }
-
-    function changeQty(key, delta) {
-      const idx = cart.findIndex(i => i.key === key);
-      if (idx === -1) return;
-      cart[idx].qty += delta;
-      if (cart[idx].qty <= 0) {
-        cart.splice(idx, 1);
-      }
-      updateCartUI();
-    }
-
-    function updateCartUI() {
-      const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
-      const desktopBadge = document.getElementById('header-bag-count');
-      const mobileBadge = document.getElementById('mobile-bag-count');
-      const topNavBadge = document.getElementById('top-nav-bag-count');
-      const railDot = document.getElementById('rail-bag-dot');
-
-      if (desktopBadge) desktopBadge.textContent = totalCount;
-      if (mobileBadge) mobileBadge.textContent = totalCount;
-      if (topNavBadge) topNavBadge.textContent = totalCount;
-      if (railDot) railDot.classList.toggle('hidden', totalCount === 0);
-
-      const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-      const freeShippingThreshold = 120;
-      const unlockedFree = subtotal >= freeShippingThreshold;
-      const shipping = subtotal === 0 ? 0 : (unlockedFree ? 0 : 4.99);
-      const total = subtotal + shipping;
-
-      const pct = Math.min(100, Math.round((subtotal / freeShippingThreshold) * 100));
-      document.getElementById('shipping-progress-bar').style.width = `${pct}%`;
-      document.getElementById('shipping-percent-text').textContent = unlockedFree ? 'FREE ✓' : `${pct}%`;
-      document.getElementById('shipping-status-text').textContent = unlockedFree
-        ? 'Unlocked FREE tracked UK shipping!'
-        : `Add £${(freeShippingThreshold - subtotal).toFixed(2)} for FREE UK shipping`;
-
-      document.getElementById('cart-subtotal').textContent = `£${subtotal.toFixed(2)}`;
-      document.getElementById('cart-shipping').textContent = subtotal === 0 ? '£0.00' : (unlockedFree ? 'FREE (£0.00)' : '£4.99');
-      document.getElementById('cart-total').textContent = `£${total.toFixed(2)}`;
-
-      const listEl = document.getElementById('cart-items-list');
-      if (cart.length === 0) {
-        listEl.innerHTML = `
-          <div class="bg-white/70 border border-white rounded-2xl p-8 text-center">
-            <span class="text-2xl text-glacialTeal">❄</span>
-            <p class="aeris-display text-2xl text-obsidian mt-2">YOUR BAG IS EMPTY</p>
-            <p class="text-xs text-slateInk mt-1">Explore our glacial jackets, boots & £120 sets.</p>
-          </div>
-        `;
-        return;
+      const descBtn = document.getElementById('desc-toggle-btn');
+      const descContent = document.getElementById('desc-content');
+      const descIcon = document.getElementById('desc-toggle-icon');
+      if (descBtn && descContent && descIcon) {
+        descBtn.addEventListener('click', () => {
+          const hidden = descContent.style.display === 'none';
+          descContent.style.display = hidden ? 'block' : 'none';
+          descIcon.textContent = hidden ? '−' : '+';
+        });
       }
 
-      listEl.innerHTML = cart.map(item => `
-        <div class="bg-white/90 border border-white rounded-2xl p-3 flex items-center gap-3 shadow-sm">
-          <img src="${item.image}" onerror="this.src='${item.fallback}'" alt="${item.title}" class="w-16 h-16 rounded-xl object-cover border border-white shrink-0" />
-          <div class="flex-1 min-w-0">
-            <h4 class="font-condensed text-lg tracking-wide text-obsidian uppercase leading-tight truncate">${item.title}</h4>
-            <p class="font-mono text-[10px] text-glacialTeal truncate mt-0.5">${item.variant}</p>
-            <div class="flex items-center justify-between mt-2">
-              <span class="font-mono text-xs font-bold text-obsidian">£${(item.price * item.qty).toFixed(2)}</span>
-              <div class="inline-flex items-center gap-2 bg-iceSurface border border-white rounded-full px-2 py-0.5">
-                <button onclick="changeQty('${item.key}', -1)" class="text-xs font-bold text-obsidian px-1 cursor-pointer">−</button>
-                <span class="font-mono text-[11px] font-semibold">${item.qty}</span>
-                <button onclick="changeQty('${item.key}', 1)" class="text-xs font-bold text-obsidian px-1 cursor-pointer">+</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function openCart() {
-      document.getElementById('cart-overlay').classList.remove('hidden');
-      document.getElementById('cart-drawer').classList.remove('translate-x-full');
-    }
-
-    function closeCart() {
-      document.getElementById('cart-overlay').classList.add('hidden');
-      document.getElementById('cart-drawer').classList.add('translate-x-full');
-    }
-
-    function checkoutViaWhatsApp() {
-      if (cart.length === 0) {
-        showToast('Add an item to your bag first');
-        return;
-      }
-
-      const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-      const shipping = subtotal >= 120 ? 0 : 4.99;
-      const total = subtotal + shipping;
-
-      const lines = [
-        '❄ *THE FAUX FUR COLLECTION — MIDNIGHT DROP ORDER*',
-        '----------------------------------',
-        ...cart.map((item, idx) => `${idx + 1}. *${item.title}* (x${item.qty})\n   _${item.variant}_ — £${(item.price * item.qty).toFixed(2)}`),
-        '----------------------------------',
-        `Subtotal: £${subtotal.toFixed(2)}`,
-        `UK Delivery: ${shipping === 0 ? 'FREE (£0.00)' : '£4.99'}`,
-        `*Total: £${total.toFixed(2)}*`,
-        '',
-        'Please confirm availability & payment link!'
-      ];
-
-      const url = `https://wa.me/447848152250?text=${encodeURIComponent(lines.join('\n'))}`;
-      window.open(url, '_blank', 'noopener');
-    }
-
-    function handleNewsletterSubmit(e) {
-      e.preventDefault();
-      const input = document.getElementById('newsletter-email');
-      if (input && input.value) {
-        showToast(`Subscribed ${input.value} to Midnight Drops`);
-        input.value = '';
-      }
-    }
-
-    function showToast(msg) {
-      const toast = document.getElementById('toast-notification');
-      document.getElementById('toast-message').textContent = msg;
-      toast.classList.remove('opacity-0');
-      clearTimeout(window._toastTimer);
-      window._toastTimer = setTimeout(() => {
-        toast.classList.add('opacity-0');
-      }, 2600);
-    }
-
-    /* -------------------------------------------------------------------------
-       7. LEFT RAIL SCROLL-SPY HIGHLIGHTING
-    ------------------------------------------------------------------------- */
-    window.addEventListener('scroll', () => {
-      const sections = ['home', 'capsule', 'catalog', 'experience', 'reviews', 'delivery'];
-      let current = 'home';
-      for (const id of sections) {
-        const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 240) {
-          current = id;
-        }
-      }
-      document.querySelectorAll('.rail-link').forEach(link => {
-        link.classList.toggle('active', link.dataset.section === current);
-      });
-    }, { passive: true });
-
-    // Curated, polished editorial copy throughout the storefront
-    const ELEGANT_COPY = {
-      'DRESSED TO THRILL.<br/>    BUILT FOR WINTER.': 'ELEVATED WINTER.<br/>    DISTINCTLY UNFORGETTABLE.',
-      'Wrap yourself in pure, unapologetic indulgence. Ultra-plush, cruelty-free layers made for late-night drives, candlelit rooftops, and irresistible moments after midnight.': 'Experience the art of winter dressing through exceptionally soft, cruelty-free layers—crafted for evenings of quiet glamour, rooftop celebrations, and memorable moments after dark.',
-      'SHOP THE COLLECTION': 'EXPLORE THE COLLECTION',
-      'THE £120 SET (SAVE £10)': 'THE SIGNATURE £120 SET',
-      'WINTER<br/>ROMANCE': 'WINTER, <br/>REIMAGINED',
-      'Ultra-soft jackets, statement boots, and romantic keepsakes designed to turn heads and draw people closer.': 'Discover exceptionally soft outerwear, sculptural boots, and considered finishing touches, created to lend every winter ensemble effortless distinction.',
-      'SHOP THE COLLECTION': 'DISCOVER THE COLLECTION',
-      'MADE TO BE<br/>REMEMBERED': 'DESIGNED TO <br/>BE REMEMBERED',
-      'Slip on the Cropped Faux Fur Jacket for instant glamour, pair it with the Plush Faux Fur Boots, or build the signature £120 set for a seductive head-to-toe winter fantasy.': 'Bring polished contrast to the season with our Cropped Faux Fur Jacket and Plush Faux Fur Boots, or compose the signature set as one beautifully considered winter look.',
-      'REAL OBSESSIONS': 'CLIENT NOTES',
-      'WINTER ROMANCE, FOREVER': 'WINTER, BEAUTIFULLY CONSIDERED',
-      'Dressed to thrill.<br/>Built for winter.': 'ELEVATED WINTER.<br/>DISTINCTLY YOURS.',
-      'Shop ultra-soft cropped jackets (£80), plush boots (£50), the signature £120 set, cozy headwarmers (£16.99), and our one-of-a-kind Everlasting Fur Bouquet.': 'Explore our cropped faux-fur jackets, sculptural boots, signature coordinating set, and thoughtfully selected winter accessories—each piece chosen for lasting style and exceptional softness.',
-      'DRESSED TO THRILL.<br/>BUILT FOR WINTER.': 'ELEVATED WINTER.<br/>DISTINCTLY YOURS.',
-      'SOFT TO THE TOUCH &nbsp;•&nbsp; IMPOSSIBLE TO FORGET': 'CONSIDERED DESIGN &nbsp;•&nbsp; EXCEPTIONAL SOFTNESS',
-      'YOUR SHOPPING BAG': 'YOUR EDITED SELECTION',
-      'MIDNIGHT DROP CHECKOUT': 'PRIVATE CHECKOUT',
-      'SEND ORDER VIA WHATSAPP': 'REQUEST YOUR ORDER VIA WHATSAPP',
-      'CUSTOMIZE £120 SET': 'CURATE THE SIGNATURE SET',
-      'SELECT & ADD': 'SELECT DETAILS',
-      'STAY CONNECTED': 'JOIN THE PRIVATE LIST'
-    };
-
-    document.title = 'THE FAUX FUR COLLECTION — Elevated Winter Style';
-
-    function applyElegantCopy(root) {
-      const elements = root.querySelectorAll('h1, h2, h3, p, button, span, a, li, option');
-      elements.forEach(element => {
-        if (element.children.length === 0) {
-          const original = element.textContent.trim();
-          const replacements = {
-            'SHOP THE COLLECTION': 'EXPLORE THE COLLECTION',
-            'THE £120 SET (SAVE £10)': 'THE SIGNATURE £120 SET',
-            'WINTER ROMANCE': 'WINTER, REIMAGINED',
-            'REAL OBSESSIONS': 'CLIENT NOTES',
-            'CUSTOMIZE £120 SET': 'CURATE THE SIGNATURE SET',
-            'SELECT & ADD': 'SELECT DETAILS',
-            'YOUR SHOPPING BAG': 'YOUR EDITED SELECTION',
-            'MIDNIGHT DROP CHECKOUT': 'PRIVATE CHECKOUT',
-            'SEND ORDER VIA WHATSAPP': 'REQUEST YOUR ORDER VIA WHATSAPP',
-            'STAY CONNECTED': 'JOIN THE PRIVATE LIST',
-            'CRUELTY-FREE CLOUD FUR': 'ETHICALLY CRAFTED CLOUD SOFTNESS',
-            'FREE UK SHIPPING OVER £120': 'COMPLIMENTARY UK DELIVERY OVER £120',
-            'FREE UK DELIVERY OVER £120': 'COMPLIMENTARY UK DELIVERY OVER £120',
-            'BESTSELLER': 'COLLECTION FAVOURITE'
-          };
-          if (replacements[original]) element.textContent = replacements[original];
-        }
+      const swatches = document.querySelectorAll('#spotlight-swatches .swatch-btn');
+      const colorLabel = document.getElementById('selected-color-label');
+      swatches.forEach(btn => {
+        btn.addEventListener('click', () => {
+          swatches.forEach(b => b.classList.remove('active', 'ring-2', 'ring-offset-2', 'ring-offset-stoneBg', 'ring-ink'));
+          btn.classList.add('active', 'ring-2', 'ring-offset-2', 'ring-offset-stoneBg', 'ring-ink');
+          if (colorLabel) colorLabel.textContent = btn.dataset.color;
+        });
       });
 
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.content = 'Discover elevated, cruelty-free faux-fur jackets, boots, coordinating sets, and considered winter accessories from The Faux Fur Collection.';
+      // Intersection observer for capsule pop animation
+      const capsule = document.getElementById('capsule');
+      if (capsule && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              capsule.classList.add('is-visible');
+              io.disconnect();
+            }
+          });
+        }, { threshold: 0.1 });
+        io.observe(capsule);
       }
-      document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]').forEach(meta => {
-        meta.content = 'Elevated cruelty-free faux fur, considered for memorable winter dressing.';
-      });
-    }
-
-    // Initialize Catalog, Reviews & Empty Bag State
-    renderCatalog();
-    renderReviews();
-    updateCartUI();
-    applyElegantCopy(document.body);
-
-    // Start music automatically (muted autoplay is browser-compatible).
-    // Restore sound on the visitor's first interaction, if the browser allows it.
-    (function initRailMusicAutoplay() {
-      const audio = document.getElementById('rail-music-audio');
-      const player = document.getElementById('rail-music-player');
-      const toggle = document.getElementById('rail-music-toggle');
-      const status = document.getElementById('rail-music-status');
-      if (!audio || !player || !toggle || !status) return;
-
-      audio.volume = Number(document.getElementById('rail-music-volume').value);
-
-      audio.play().then(() => {
-        player.classList.add('playing');
-        toggle.textContent = 'Ⅱ';
-        toggle.setAttribute('aria-label', 'Pause ambient music');
-        toggle.setAttribute('aria-pressed', 'true');
-        status.textContent = 'PLAYING';
-
-        const enableSound = () => {
-          audio.muted = false;
-          audio.play().catch(() => {});
-          document.removeEventListener('pointerdown', enableSound);
-          document.removeEventListener('keydown', enableSound);
-        };
-        document.addEventListener('pointerdown', enableSound, { once: true });
-        document.addEventListener('keydown', enableSound, { once: true });
-      }).catch(() => {
-        status.textContent = 'TAP PLAY';
-      });
-    })();
+    });
   </script>
 </body>
 </html>
