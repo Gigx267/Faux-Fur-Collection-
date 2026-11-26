@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop the Collection — THE FAUX FUR COLLECTION</title>
+  <meta name="description" content="Shop the full Faux Fur Collection: cropped jackets, plush boots, matching sets, headwarmers, and fur bouquets. Free UK delivery over £120." />
+  <meta name="theme-color" content="#12171a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312171a'/%3E%3Cpath d='M32 8l5.5 16.5L54 30l-16.5 5.5L32 52l-5.5-16.5L10 30l16.5-5.5L32 8z' fill='%236ab7c9'/%3E%3Ccircle cx='32' cy='30' r='6' fill='%23f2c6d4'/%3E%3C/svg%3E" type="image/svg+xml" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Six+Caps&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#12171a',
+            slateInk: '#4d5d66',
+            glacialTeal: '#2f8da3',
+            glacialAqua: '#6ab7c9',
+            iceSurface: '#eef4f7',
+            iceFrost: '#f7fafc',
+            blushTint: '#f2c6d4',
+            blushDeep: '#c8738e',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            condensed: ['Oswald', 'Impact', 'sans-serif'],
+            tall: ['"Six Caps"', 'Oswald', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --ice-bg: #edf3f6;
+      --rosewater: #fff5f8;
+      --powder-pink: #f7d9e4;
+      --petal-pink: #eca8bf;
+      --rose-pink: #d98dab;
+      --plum-pink: #a95e7d;
+      --pink-pearl: #fbecef;
+    }
+
+    body {
+      background-color: #eef4f7;
+      background-image:
+        radial-gradient(at 8% 4%, rgba(242, 198, 212, 0.48) 0px, transparent 35%),
+        radial-gradient(at 92% 9%, rgba(217, 141, 171, 0.28) 0px, transparent 42%),
+        radial-gradient(at 62% 30%, rgba(255, 245, 248, 0.96) 0px, transparent 34%),
+        radial-gradient(at 18% 72%, rgba(106, 183, 201, 0.24) 0px, transparent 48%),
+        radial-gradient(at 88% 82%, rgba(236, 168, 191, 0.34) 0px, transparent 44%),
+        linear-gradient(180deg, #edf4f7 0%, #fff9fb 34%, #f3f8fa 68%, #fff5f8 100%);
+      color: #12171a;
+      font-family: 'Inter', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    #screen-frost-vignette {
+      position: fixed;
+      inset: 0;
+      z-index: 42;
+      pointer-events: none;
+      box-shadow:
+        inset 0 0 42px rgba(255, 255, 255, 0.95),
+        inset 0 0 120px rgba(106, 183, 201, 0.14),
+        inset 0 0 155px rgba(217, 141, 171, 0.18),
+        inset 12px 0 70px rgba(247, 217, 228, 0.28),
+        inset -12px 0 70px rgba(236, 168, 191, 0.20);
+      transition: box-shadow 0.5s ease;
+    }
+    body.deep-freeze #screen-frost-vignette {
+      box-shadow:
+        inset 0 0 80px rgba(255, 255, 255, 0.95),
+        inset 0 0 150px rgba(106, 183, 201, 0.34),
+        inset 0 0 180px rgba(242, 198, 212, 0.25);
+    }
+
+    #snow-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 35;
+      pointer-events: none;
+    }
+
+    .aeris-display {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      line-height: 0.96;
+      text-transform: uppercase;
+      color: #12171a;
+    }
+    .aeris-brand-wordmark {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+    }
+    .aeris-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: #775664;
+      text-shadow: 0 1px 12px rgba(242, 198, 212, 0.48);
+    }
+
+    .glacial-glass {
+      background:
+        radial-gradient(circle at 92% 12%, rgba(217, 141, 171, 0.20), transparent 28%),
+        radial-gradient(circle at 8% 88%, rgba(247, 217, 228, 0.38), transparent 30%),
+        linear-gradient(140deg, rgba(255, 255, 255, 0.88), rgba(232, 244, 248, 0.66) 58%, rgba(251, 236, 239, 0.72));
+      backdrop-filter: blur(22px) saturate(145%);
+      -webkit-backdrop-filter: blur(22px) saturate(145%);
+      border: 1.5px solid rgba(255, 255, 255, 0.98);
+      box-shadow:
+        inset 0 2px 2px #ffffff,
+        inset 0 -7px 18px rgba(217, 141, 171, 0.12),
+        0 22px 48px -16px rgba(169, 94, 125, 0.14);
+    }
+
+    .btn-aeris-dark {
+      background: linear-gradient(135deg, #171a1c 0%, #2b1d24 58%, #9d6679 130%);
+      color: #ffffff;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow:
+        0 12px 28px -10px rgba(169, 94, 125, 0.40),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+    .btn-aeris-dark:hover {
+      background: linear-gradient(135deg, #12171a 0%, #5d7f89 55%, #b66d89 130%);
+      transform: translateY(-1.5px);
+      box-shadow:
+        0 16px 34px -8px rgba(169, 94, 125, 0.42),
+        0 0 22px rgba(242, 198, 212, 0.48);
+    }
+
+    .btn-aeris-outline {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
+      color: #12171a;
+      border: 1px solid rgba(18, 23, 26, 0.32);
+      border-radius: 9999px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.22s ease;
+    }
+    .btn-aeris-outline:hover {
+      background: #ffffff;
+      border-color: #d98dab;
+      box-shadow: 0 8px 22px -6px rgba(217, 141, 171, 0.38);
+    }
+
+    .cat-pill {
+      padding: 9px 18px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.65);
+      color: #4d5d66;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    .cat-pill.active {
+      background: linear-gradient(135deg, #171a1c 0%, #2b1d24 58%, #9d6679 130%);
+      color: #ffffff;
+      border-color: rgba(242, 198, 212, 0.62);
+      box-shadow:
+        0 12px 28px -10px rgba(169, 94, 125, 0.40),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+    .cat-pill:hover:not(.active) {
+      background: #ffffff;
+      color: #12171a;
+      border-color: #6ab7c9;
+    }
+
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: #eaf1f5; }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #6ab7c9, #d98dab);
+      border-radius: 9999px;
+    }
+
+    .top-nav-link {
+      position: relative;
+      color: #536570;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      transition: color .2s ease;
+    }
+    .top-nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: .16em;
+      bottom: -7px;
+      height: 1px;
+      background: linear-gradient(90deg, #6ab7c9, #d98dab);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .22s ease;
+    }
+    .top-nav-link:hover,
+    .top-nav-link:focus-visible { color: #12171a; }
+    .top-nav-link:hover::after,
+    .top-nav-link:focus-visible::after { transform: scaleX(1); }
+
+    .circle-arrow-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 9999px;
+      border: 1px solid rgba(18, 23, 26, 0.28);
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(8px);
+      color: #12171a;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      transition: all 0.22s ease;
+      cursor: pointer;
+    }
+    .circle-arrow-btn:hover {
+      background: linear-gradient(135deg, #12171a, #a95e7d);
+      color: #ffffff;
+      border-color: #d98dab;
+      transform: scale(1.06);
+    }
+
+    .product-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 250, 0.88) 58%, rgba(247, 217, 228, 0.58));
+      border: 1px solid rgba(255, 255, 255, 0.98);
+      border-radius: 28px;
+      transition: all 0.3s ease;
+    }
+    .product-card:hover {
+      border-color: rgba(236, 168, 191, 0.58);
+      box-shadow:
+        0 26px 48px -18px rgba(169, 94, 125, 0.24),
+        0 0 24px rgba(242, 198, 212, 0.24);
+      transform: translateY(-4px);
+    }
+
+    #capsule-toast {
+      transition: all 0.3s ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen selection:bg-blushTint/60 selection:text-obsidian">
+
+  <canvas id="snow-canvas" aria-hidden="true"></canvas>
+  <div id="screen-frost-vignette" aria-hidden="true"></div>
+
+  <!-- MOBILE TOP BAR -->
+  <header class="lg:hidden sticky top-0 z-40 glacial-glass px-4 py-3 flex items-center justify-between gap-3 border-b border-white">
+    <a href="./index.html" class="flex items-center gap-2.5">
+      <svg class="w-8 h-6 text-obsidian" viewBox="0 0 48 32" fill="none" stroke="currentColor" stroke-width="1.6">
+        <path d="M4 26 L16 10 L25 20 L34 7 L44 26" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 27 C14 23, 30 29, 46 25" stroke="#2f8da3" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <div class="leading-none">
+        <span class="block font-condensed text-base tracking-[0.22em] text-obsidian">THE FAUX FUR</span>
+        <span class="block text-[8px] tracking-[0.28em] text-slateInk uppercase mt-0.5">COLLECTION</span>
+      </div>
+    </a>
+    <div class="flex items-center gap-2">
+      <button onclick="toggleFreezeMode()" aria-label="Toggle Snowfall" class="w-8 h-8 rounded-full bg-white/80 border border-white flex items-center justify-center text-xs text-glacialTeal shadow-sm cursor-pointer">
+        ❄
+      </button>
+      <button onclick="openCart()" class="btn-aeris-dark px-3.5 py-2 text-[10px] cursor-pointer">
+        <span>BAG</span>
+        <span id="mobile-bag-count" class="bg-blushTint text-obsidian font-mono font-bold px-1.5 rounded-full">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HORIZONTAL NAVIGATION -->
+  <nav aria-label="Main page navigation" class="sticky top-[58px] lg:top-0 z-40 border-b border-white/80 bg-white/75 backdrop-blur-2xl shadow-[0_8px_30px_-24px_rgba(169,94,125,.55)]">
+    <div class="max-w-[1440px] mx-auto min-h-[58px] px-4 sm:px-7 lg:px-10 flex items-center justify-between gap-3">
+      <a href="./index.html" class="hidden sm:flex items-center gap-2.5 shrink-0 group" aria-label="The Faux Fur Collection home">
+        <span class="relative w-11 h-11 overflow-hidden rounded-[14px] border-2 border-white bg-white shadow-[0_8px_18px_-10px_rgba(18,56,68,.55)] rotate-[-2deg] group-hover:rotate-0 transition-transform duration-300">
+          <img src="./p (24).jpeg" alt="Faux fur collection feature" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/88x88/dcecf1/12171a?text=FUR'" />
+          <span class="absolute inset-0 bg-gradient-to-tr from-sky-900/15 via-transparent to-pink-100/35"></span>
+          <span class="absolute right-1 bottom-1 w-2 h-2 rounded-full bg-blushTint border border-white"></span>
+        </span>
+        <span class="leading-none"><span class="block font-condensed text-xs tracking-[0.18em] text-obsidian">THE FAUX FUR</span><span class="block text-[7px] tracking-[0.24em] text-slateInk uppercase mt-1">COLLECTION</span></span>
+      </a>
+      <div class="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 overflow-x-auto py-4">
+        <a class="top-nav-link" href="./index.html">Home</a>
+        <a class="top-nav-link" href="./about.html">About Us</a>
+        <a class="top-nav-link" href="./shop.html">Collection</a>
+        <a class="top-nav-link" href="./shop.html">Lookbook</a>
+        <a class="top-nav-link" href="./contact.html">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3 shrink-0">
+        <a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="text-[9px] tracking-[0.12em] text-slateInk hover:text-blushDeep transition uppercase">Concierge ↗</a>
+        <button onclick="openCart()" class="btn-aeris-dark px-4 py-2 text-[9px] cursor-pointer">Bag <span id="top-nav-bag-count" class="font-mono text-blushTint">0</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN SHELL -->
+  <div class="max-w-[1440px] mx-auto flex relative">
+
+    <!-- LEFT RAIL -->
+    <aside class="hidden lg:flex flex-col justify-between items-center w-[124px] shrink-0 sticky top-0 h-screen py-7 px-3 border-r border-white/80 bg-white/35 backdrop-blur-xl z-30">
+      <div id="rail-music-player" aria-label="Ambient music player">
+        <div class="rail-music-disc"><button id="rail-music-toggle" type="button" onclick="toggleRailMusic()" aria-label="Play ambient music" aria-pressed="false">▶</button></div>
+        <div class="music-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+        <p id="rail-music-status" class="font-mono text-[8px] tracking-wider text-obsidian uppercase mb-2">PAUSED</p>
+        <label class="sr-only" for="rail-music-volume">Music volume</label>
+        <input id="rail-music-volume" type="range" min="0" max="1" step="0.05" value="0.35" aria-label="Music volume" oninput="setRailMusicVolume(this.value)">
+        <audio id="rail-music-audio" loop autoplay muted preload="auto" src="./mm.mp3"></audio>
+      </div>
+
+      <nav aria-label="Section Navigation" class="relative flex flex-col gap-5 my-auto py-4">
+        <span class="absolute left-[4.5px] top-5 bottom-5 w-[1px] bg-slateInk/20 pointer-events-none"></span>
+        <a href="./index.html#home" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+          <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
+          <span class="rail-text">HOME</span>
+        </a>
+        <a href="./about.html" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+          <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
+          <span class="rail-text">About</span>
+        </a>
+        <a href="./shop.html" class="rail-link active flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+          <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
+          <span class="rail-text">Shop</span>
+        </a>
+        <a href="./reviews.html" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+          <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
+          <span class="rail-text">Reviews</span>
+        </a>
+        <a href="./contact.html" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+          <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
+          <span class="rail-text">Contact</span>
+        </a>
+      </nav>
+
+      <div class="flex flex-col items-center gap-4">
+        <button onclick="toggleFreezeMode()" class="flex flex-col items-center gap-1.5 group cursor-pointer" title="Toggle Snowfall & Frost Intensity">
+          <span class="w-9 h-9 rounded-full border border-obsidian/30 bg-white/80 group-hover:bg-obsidian group-hover:text-white flex items-center justify-center text-xs text-glacialTeal transition shadow-sm">❄</span>
+          <span id="freeze-toggle-label" class="text-[8px] tracking-[0.18em] text-slateInk uppercase text-center leading-tight">Snow<br/></span>
+        </button>
+        <div class="w-5 h-[1px] bg-slateInk/20"></div>
+        <div class="flex flex-col items-center gap-3 text-obsidian/80">
+          <a href="https://wa.me/447848152250" target="_blank" rel="noopener" aria-label="WhatsApp Concierge" title="WhatsApp +44 7848 152250" class="hover:text-glacialTeal transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 21l1.65-3.8a9 9 0 113.4 2.9L3 21" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 10a.5.5 0 001 0V9a.5.5 0 00-1 0v1a5 5 0 005 5h1a.5.5 0 000-1h-1a.5.5 0 000 1" />
+            </svg>
+          </a>
+          <a href="./index.html#experience" aria-label="Lookbook & Shades" title="Frosted Shades" class="hover:text-blushDeep transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+              <rect width="16" height="16" x="4" y="4" rx="4" />
+              <circle cx="12" cy="12" r="3.5" />
+              <circle cx="16.5" cy="7.5" r="0.8" fill="currentColor" />
+            </svg>
+          </a>
+          <button onclick="openCart()" aria-label="Open Bag" title="Open Shopping Bag" class="relative hover:text-glacialTeal transition cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span id="rail-bag-dot" class="hidden absolute -top-1 -right-1.5 w-2 h-2 rounded-full bg-blushDeep"></span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 min-w-0 relative">
+
+      <!-- SHOP HERO -->
+      <section class="relative px-4 sm:px-8 lg:px-12 pt-10 pb-6 lg:pt-14 lg:pb-8">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
+          <div>
+            <span class="aeris-eyebrow block mb-2">THE FULL EDIT • WINTER 25 / 26</span>
+            <h1 class="aeris-display text-5xl sm:text-6xl lg:text-[72px] text-obsidian leading-[0.9]">
+              SHOP THE<br/>COLLECTION
+            </h1>
+            <p class="text-xs sm:text-[13px] text-slateInk leading-relaxed mt-4 max-w-md">
+              Ultra-soft cropped jackets, plush boots, signature sets, and little luxuries. Every piece is cruelty-free, cloud-soft, and made to be noticed.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="glacial-glass rounded-full px-4 py-2.5 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span class="font-mono text-[10px] tracking-wider text-obsidian uppercase">Free UK delivery over £120</span>
+            </div>
+            <a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="btn-aeris-outline px-4 py-2.5">
+              <span>Concierge</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILTER BAR -->
+      <section class="px-4 sm:px-8 lg:px-12 pb-4">
+        <div class="glacial-glass rounded-2xl px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="font-mono text-[10px] uppercase tracking-widest text-slateInk mr-1">Filter</span>
+            <button data-cat="all" class="cat-pill active">All Pieces</button>
+            <button data-cat="jackets" class="cat-pill">Jackets</button>
+            <button data-cat="boots" class="cat-pill">Boots</button>
+            <button data-cat="sets" class="cat-pill">Sets</button>
+            <button data-cat="accessories" class="cat-pill">Accessories</button>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-mono text-[10px] uppercase tracking-widest text-slateInk" id="results-count">6 pieces</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCT GRID -->
+      <section class="px-4 sm:px-8 lg:px-12 pb-16 lg:pb-20">
+        <div id="shop-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-6"></div>
+        <div id="empty-state" class="hidden text-center py-20">
+          <span class="text-4xl block mb-3">❄</span>
+          <p class="text-sm text-slateInk">No pieces in this category yet — explore another edit.</p>
+        </div>
+      </section>
+
+      <!-- DELIVERY / CTA STRIP -->
+      <section class="px-4 sm:px-8 lg:px-12 pb-16">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="glacial-glass rounded-2xl px-5 py-4 flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-obsidian text-white flex items-center justify-center text-sm shrink-0">✦</span>
+            <div>
+              <span class="block font-mono text-[9px] tracking-widest text-glacialTeal uppercase">Cruelty-free</span>
+              <span class="block text-xs font-semibold text-obsidian">100% faux fur, 0% compromise</span>
+            </div>
+          </div>
+          <div class="glacial-glass rounded-2xl px-5 py-4 flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-obsidian text-white flex items-center justify-center text-sm shrink-0">↗</span>
+            <div>
+              <span class="block font-mono text-[9px] tracking-widest text-glacialTeal uppercase">UK Tracked</span>
+              <span class="block text-xs font-semibold text-obsidian">Free over £120 • £4.99 standard</span>
+            </div>
+          </div>
+          <div class="glacial-glass rounded-2xl px-5 py-4 flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-obsidian text-white flex items-center justify-center text-sm shrink-0">♡</span>
+            <div>
+              <span class="block font-mono text-[9px] tracking-widest text-glacialTeal uppercase">Bundle saving</span>
+              <span class="block text-xs font-semibold text-obsidian">£10 off jacket + boots set</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="border-t border-white bg-white/65 backdrop-blur-xl px-4 sm:px-8 lg:px-12 py-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-3 flex flex-col items-start">
+            <div class="flex items-center gap-3">
+              <svg class="w-11 h-7 text-obsidian" viewBox="0 0 56 36" fill="none">
+                <path d="M6 28 L19 11 L29 22 L39 8 L50 28" stroke="#12171a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 30 C16 25, 34 32, 53 27" stroke="#2f8da3" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <span class="block font-condensed text-base tracking-[0.24em] text-obsidian uppercase">THE FAUX FUR</span>
+                <span class="block text-[8px] tracking-[0.28em] text-slateInk uppercase">COLLECTION • UK</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-slateInk mt-3 leading-relaxed">
+              Soft to the touch. Impossible to forget. Ultra-plush faux fur for intimate winter moments.
+            </p>
+          </div>
+          <div class="lg:col-span-2 text-xs">
+            <span class="block font-mono text-[10px] font-semibold tracking-widest text-obsidian uppercase mb-3">EXPLORE</span>
+            <ul class="space-y-2 text-slateInk">
+              <li><a href="./shop.html" class="hover:text-obsidian transition">Full Collection</a></li>
+              <li><a href="./index.html#experience" class="hover:text-obsidian transition">The £120 Set</a></li>
+              <li><a href="./index.html#experience" class="hover:text-obsidian transition">Frosted Shades</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-2 text-xs">
+            <span class="block font-mono text-[10px] font-semibold tracking-widest text-obsidian uppercase mb-3">DELIVERY</span>
+            <ul class="space-y-2 text-slateInk">
+              <li><a href="#" class="hover:text-obsidian transition">Free Over £120</a></li>
+              <li><a href="#" class="hover:text-obsidian transition">Standard £4.99</a></li>
+              <li><a href="#" class="hover:text-obsidian transition">UK Tracked</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-2 text-xs">
+            <span class="block font-mono text-[10px] font-semibold tracking-widest text-obsidian uppercase mb-3">CONCIERGE</span>
+            <ul class="space-y-2 text-slateInk">
+              <li><a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="hover:text-glacialTeal transition">+44 7848 152250</a></li>
+              <li><a href="./reviews.html" class="hover:text-obsidian transition">Client Reviews</a></li>
+              <li><button onclick="openCart()" class="hover:text-obsidian transition cursor-pointer">Shopping Bag</button></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3">
+            <span class="block font-mono text-[10px] font-semibold tracking-widest text-obsidian uppercase mb-3">STAY CONNECTED</span>
+            <form onsubmit="handleNewsletterSubmit(event)" class="relative flex items-center bg-white/90 border border-obsidian/15 rounded-full p-1 shadow-sm">
+              <input id="newsletter-email" type="email" required placeholder="Enter your email for drops" class="w-full bg-transparent text-xs text-obsidian placeholder:text-slateInk/60 px-3.5 py-2 focus:outline-none" />
+              <button type="submit" aria-label="Subscribe" class="w-8 h-8 rounded-full bg-obsidian hover:bg-glacialTeal text-white flex items-center justify-center text-xs shrink-0 transition cursor-pointer">→</button>
+            </form>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- TOAST -->
+  <div id="capsule-toast" class="fixed bottom-5 right-5 z-50 translate-y-24 opacity-0 pointer-events-none bg-obsidian text-white border border-obsidian px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 text-xs font-mono">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+    <span id="capsule-toast-msg">Added to Bag</span>
+  </div>
+
+  <script>
+    /* ======================================================================
+       1. SNOWFALL
+    ====================================================================== */
+    (function initSnowfall() {
+      const canvas = document.getElementById('snow-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let frostActive = !prefersReduced;
+      let flakes = [];
+
+      const palette = [
+        'rgba(255, 255, 255, 0.92)',
+        'rgba(195, 231, 240, 0.85)',
+        'rgba(106, 183, 201, 0.65)',
+        'rgba(242, 198, 212, 0.72)'
+      ];
+
+      function createFlakes(count) {
+        flakes = [];
+        for (let i = 0; i < count; i++) {
+          flakes.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            r: Math.random() * 2.6 + 0.9,
+            speedY: Math.random() * 0.65 + 0.25,
+            speedX: (Math.random() - 0.5) * 0.35,
+            sway: Math.random() * Math.PI * 2,
+            swaySpeed: Math.random() * 0.012 + 0.004,
+            color: palette[Math.floor(Math.random() * palette.length)],
+            isCrystal: Math.random() > 0.82
+          });
+        }
+      }
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        createFlakes(frostActive ? (width < 640 ? 45 : 75) : 0);
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+
+      function drawCrystal(x, y, r, color) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 0.95;
+        ctx.beginPath();
+        ctx.moveTo(-r * 1.4, 0); ctx.lineTo(r * 1.4, 0);
+        ctx.moveTo(0, -r * 1.4); ctx.lineTo(0, r * 1.4);
+        ctx.moveTo(-r, -r); ctx.lineTo(r, r);
+        ctx.moveTo(r, -r); ctx.lineTo(-r, r);
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        if (frostActive) {
+          for (let i = 0; i < flakes.length; i++) {
+            const f = flakes[i];
+            f.sway += f.swaySpeed;
+            f.y += f.speedY;
+            f.x += f.speedX + Math.sin(f.sway) * 0.28;
+
+            if (f.y > height + 10) { f.y = -10; f.x = Math.random() * width; }
+            if (f.x > width + 10) f.x = -10;
+            if (f.x < -10) f.x = width + 10;
+
+            if (f.isCrystal) {
+              drawCrystal(f.x, f.y, f.r, f.color);
+            } else {
+              ctx.beginPath();
+              ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+              ctx.fillStyle = f.color;
+              ctx.fill();
+            }
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+
+      window.toggleFreezeMode = function () {
+        frostActive = !frostActive;
+        document.body.classList.toggle('deep-freeze', frostActive);
+        const label = document.getElementById('freeze-toggle-label');
+        if (label) {
+          label.innerHTML = frostActive ? 'GLACIER FX<br/>ACTIVE' : 'GLACIER FX<br/>CALM';
+        }
+        if (frostActive && flakes.length === 0) {
+          createFlakes(width < 640 ? 45 : 75);
+        }
+      };
+
+      document.body.classList.add('deep-freeze');
+    })();
+
+    /* ======================================================================
+       2. MUSIC
+    ====================================================================== */
+    function setRailMusicVolume(value) {
+      const audio = document.getElementById('rail-music-audio');
+      if (audio) audio.volume = Number(value);
+    }
+
+    function toggleRailMusic() {
+      const audio = document.getElementById('rail-music-audio');
+      const player = document.getElementById('rail-music-player');
+      const toggle = document.getElementById('rail-music-toggle');
+      const status = document.getElementById('rail-music-status');
+      if (!audio || !player || !toggle || !status) return;
+
+      if (audio.paused) {
+        audio.volume = Number(document.getElementById('rail-music-volume').value);
+        audio.muted = false;
+        audio.play().then(() => {
+          player.classList.add('playing');
+          toggle.textContent = 'Ⅱ';
+          toggle.setAttribute('aria-label', 'Pause ambient music');
+          toggle.setAttribute('aria-pressed', 'true');
+          status.textContent = 'PLAYING';
+        }).catch(() => {
+          status.textContent = 'UNAVAILABLE';
+        });
+      } else {
+        audio.pause();
+        player.classList.remove('playing');
+        toggle.textContent = '▶';
+        toggle.setAttribute('aria-label', 'Play ambient music');
+        toggle.setAttribute('aria-pressed', 'false');
+        status.textContent = 'PAUSED';
+      }
+    }
+
+    /* ======================================================================
+       3. CART
+    ====================================================================== */
+    window.cart = window.cart || [];
+
+    function updateBagCounters() {
+      const count = cart.length;
+      ['mobile-bag-count', 'top-nav-bag-count'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = count;
+      });
+      const dot = document.getElementById('rail-bag-dot');
+      if (dot) dot.classList.toggle('hidden', count === 0);
+    }
+
+    function openCart() {
+      if (cart.length === 0) {
+        showToast('Your bag is empty — start with the £120 set.');
+      } else {
+        showToast('Bag: ' + cart.length + ' item(s) — checkout coming soon.');
+      }
+    }
+
+    function addToCart(item) {
+      cart.push(item);
+      updateBagCounters();
+      showToast(item.title + ' added to bag');
+    }
+
+    /* ======================================================================
+       4. TOAST
+    ====================================================================== */
+    let toastTimer = null;
+    function showToast(msg) {
+      const toast = document.getElementById('capsule-toast');
+      const toastMsg = document.getElementById('capsule-toast-msg');
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3000);
+    }
+
+    /* ======================================================================
+       5. NEWSLETTER
+    ====================================================================== */
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email');
+      if (email && email.value) {
+        showToast('Welcome to the list — check your inbox for the winter edit.');
+        email.value = '';
+      }
+    }
+
+    /* ======================================================================
+       6. PRODUCT DATA
+    ====================================================================== */
+    const SHADES = [
+      { name: 'Glacier White', swatch: 'linear-gradient(135deg, #ffffff, #e2f1f6)' },
+      { name: 'Arctic Blue', swatch: 'linear-gradient(135deg, #bae3ec, #6ab7c9)' },
+      { name: 'Blush Frost', swatch: 'linear-gradient(135deg, #fae6ed, #f2c6d4)' },
+      { name: 'Midnight Ice', swatch: 'linear-gradient(135deg, #25333a, #12171a)' }
+    ];
+
+    const PRODUCTS = [
+      {
+        id: 'glacier-earmuffs',
+        category: 'accessories',
+        tag: 'ACCESSORIES • 03',
+        badge: 'NEW DROP',
+        title: 'Glacier Fur Earmuffs',
+        price: 24.99,
+        oldPrice: null,
+        image: './nq.jpg',
+        fallback: 'https://placehold.co/700x850/f8e4ec/12171a?text=GLACIER+EARMUFFS',
+        desc: 'Ultra-plush oversized faux fur earmuffs with a flexible velvet-wrapped band for zero-chill winter days.',
+        sizes: ['One Size']
+      },
+      {
+        id: 'jacket-boots-set',
+        category: 'sets',
+        tag: 'SIGNATURE BUNDLE • SAVE £10',
+        badge: 'FREE UK SHIPPING',
+        title: 'Jacket + Boots Set',
+        price: 120.00,
+        oldPrice: 130.00,
+        image: './p (41).jpg',
+        fallback: 'https://placehold.co/700x850/d8e9ef/12171a?text=JACKET+%2B+BOOTS+SET',
+        desc: 'Our signature sub-zero pairing. Mix & match any shade and UK size across one Cropped Faux Fur Jacket (£80) and one pair of Plush Faux Fur Boots (£50).',
+        sizes: ['XS / UK 6', 'S / UK 8', 'M / UK 10', 'L / UK 12'],
+        bootSizes: ['UK 4', 'UK 5', 'UK 6', 'UK 7', 'UK 8']
+      },
+      {
+        id: 'cropped-fur-jacket',
+        category: 'jackets',
+        tag: 'OUTERWEAR • 01',
+        badge: 'BESTSELLER',
+        title: 'Cropped Faux Fur Jacket',
+        price: 80.00,
+        oldPrice: null,
+        image: './p (42).jpg',
+        fallback: 'https://placehold.co/700x850/f8e4ec/12171a?text=CROPPED+FUR+JACKET',
+        desc: 'High-density cruelty-free cloud fur with a sculpted cropped silhouette, concealed hook closures, and a cool satin interior lining.',
+        sizes: ['XS / UK 6', 'S / UK 8', 'M / UK 10', 'L / UK 12']
+      },
+      {
+        id: 'plush-fur-boots',
+        category: 'boots',
+        tag: 'FOOTWEAR • 02',
+        badge: '-4°C LINED',
+        title: 'Plush Faux Fur Boots',
+        price: 50.00,
+        oldPrice: null,
+        image: './cd (3).jpg',
+        fallback: 'https://placehold.co/700x850/dcecf1/12171a?text=PLUSH+FUR+BOOTS',
+        desc: 'Statement snow-ready faux fur boots featuring a cushioned thermal footbed and translucent frosted grip outsole.',
+        sizes: ['UK 4', 'UK 5', 'UK 6', 'UK 7', 'UK 8']
+      },
+      {
+        id: 'frosted-tote-bag',
+        category: 'accessories',
+        tag: 'ACCESSORIES • 04',
+        badge: 'LIMITED',
+        title: 'Frosted Fur Tote Bag',
+        price: 39.99,
+        oldPrice: null,
+        image: './p (11).jpeg',
+        fallback: 'https://placehold.co/700x850/dcecf1/12171a?text=FROSTED+TOTE+BAG',
+        desc: 'Structured cloud-fur shoulder tote with magnetic clasp, inner zip pocket, and subtle silver frost hardware.',
+        sizes: ['One Size']
+      },
+      {
+        id: 'ice-silk-charm',
+        category: 'jackets',
+        tag: 'JACKETS • 05',
+        badge: 'ADD-ON',
+        title: 'Grey Jacket + Boots Set',
+        price: 9.99,
+        oldPrice: null,
+        image: './p (9).jpeg',
+        fallback: 'https://placehold.co/700x850/f8e4ec/12171a?text=ICE+POM+CHARM',
+        desc: 'Grey Jacket + Boots Set with a detachable ice silk charm for a frosted finish. Perfect for accessorizing your winter look.',
+        sizes: ['One Size']
+      }
+    ];
+
+    /* ======================================================================
+       7. SHOP RENDERING & FILTERING
+    ====================================================================== */
+    let activeCategory = 'all';
+
+    function renderShop() {
+      const grid = document.getElementById('shop-grid');
+      const emptyState = document.getElementById('empty-state');
+      const countEl = document.getElementById('results-count');
+      if (!grid) return;
+
+      const filtered = activeCategory === 'all'
+        ? PRODUCTS
+        : PRODUCTS.filter(p => p.category === activeCategory);
+
+      if (countEl) {
+        countEl.textContent = filtered.length + ' piece' + (filtered.length !== 1 ? 's' : '');
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+      if (emptyState) emptyState.classList.add('hidden');
+
+      grid.innerHTML = filtered.map(product => `
+        <article class="product-card p-4 flex flex-col justify-between group">
+          <div>
+            <div onclick="openProductModal('${product.id}')" class="relative rounded-[22px] overflow-hidden border border-white cursor-pointer mb-4">
+              <img
+                src="${product.image}"
+                onerror="this.onerror=null;this.src='${product.fallback}'"
+                alt="${product.title}"
+                class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian/35 via-transparent to-sky-100/10"></div>
+              <span class="absolute top-3 left-3 bg-white/92 backdrop-blur-md text-obsidian font-mono text-[9px] font-semibold tracking-wider px-3 py-1 rounded-full border border-white shadow-sm">
+                ${product.badge}
+              </span>
+              <span class="circle-arrow-btn absolute bottom-3 right-3 w-9 h-9 bg-white/90 group-hover:bg-obsidian group-hover:text-white">
+                +
+              </span>
+            </div>
+
+            <div class="px-1">
+              <span class="font-mono text-[10px] uppercase tracking-widest text-glacialTeal font-semibold">${product.tag}</span>
+              <div class="flex items-start justify-between gap-2 mt-1">
+                <h3 onclick="openProductModal('${product.id}')" class="aeris-display text-[22px] leading-tight tracking-wider text-obsidian cursor-pointer hover:text-glacialTeal transition">
+                  ${product.title}
+                </h3>
+                <div class="text-right shrink-0">
+                  ${product.oldPrice ? `<span class="block font-mono text-[11px] text-slateInk line-through">£${product.oldPrice.toFixed(0)}</span>` : ''}
+                  <span class="font-condensed text-2xl font-medium text-obsidian">£${Number.isInteger(product.price) ? product.price : product.price.toFixed(2)}</span>
+                </div>
+              </div>
+              <p class="text-xs text-slateInk mt-1.5 line-clamp-2 leading-relaxed">${product.desc}</p>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-obsidian/10 flex items-center justify-between gap-2 px-1">
+            <div class="flex items-center -space-x-1.5">
+              ${SHADES.map(s => `
+                <span title="${s.name}" class="w-4 h-4 rounded-full border border-white shadow-sm" style="background: ${s.swatch}"></span>
+              `).join('')}
+            </div>
+            <button onclick="openProductModal('${product.id}')" class="btn-aeris-dark px-4 py-2 text-[10px] cursor-pointer">
+              SELECT & ADD
+            </button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function setCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.cat === cat);
+      });
+      renderShop();
+    }
+
+    /* ======================================================================
+       8. PRODUCT MODAL
+    ====================================================================== */
+    let modalEl = null;
+
+    function ensureModal() {
+      if (modalEl) return modalEl;
+      modalEl = document.createElement('div');
+      modalEl.id = 'product-modal';
+      modalEl.className = 'fixed inset-0 z-[60] hidden items-center justify-center p-4';
+      modalEl.innerHTML = `
+        <div class="absolute inset-0 bg-obsidian/50 backdrop-blur-sm" onclick="closeProductModal()"></div>
+        <div class="relative glacial-glass-strong rounded-[32px] max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <button onclick="closeProductModal()" aria-label="Close" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 border border-obsidian/10 flex items-center justify-center text-obsidian hover:bg-white transition">✕</button>
+          <div id="modal-body"></div>
+        </div>
+      `;
+      document.body.appendChild(modalEl);
+      return modalEl;
+    }
+
+    function openProductModal(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+      const modal = ensureModal();
+      const body = modal.querySelector('#modal-body');
+      body.innerHTML = `
+        <span class="font-mono text-[10px] uppercase tracking-widest text-glacialTeal">${product.tag}</span>
+        <h3 id="modal-title" class="font-serif text-3xl font-semibold text-obsidian mt-1">${product.title}</h3>
+        <div class="flex items-baseline gap-3 mt-2">
+          <span class="font-condensed text-3xl text-obsidian">£${Number.isInteger(product.price) ? product.price : product.price.toFixed(2)}</span>
+          ${product.oldPrice ? `<span class="font-mono text-sm text-slateInk line-through">£${product.oldPrice.toFixed(0)}</span>` : ''}
+        </div>
+        <img src="${product.image}" onerror="this.onerror=null;this.src='${product.fallback}'" alt="${product.title}" class="w-full h-56 object-cover rounded-2xl border border-white mt-4" />
+        <p class="text-xs text-slateInk leading-relaxed mt-4">${product.desc}</p>
+        <div class="mt-5">
+          <span class="font-mono text-[10px] uppercase tracking-wider text-slateInk">Select size</span>
+          <div class="flex flex-wrap gap-2 mt-2">
+            ${product.sizes.map((s, i) => `<button type="button" data-size="${s}" class="size-btn px-3 py-1.5 rounded-full border border-obsidian/15 text-[11px] text-obsidian bg-white/70 hover:border-glacialTeal transition ${i === 0 ? 'ring-2 ring-glacialTeal' : ''}">${s}</button>`).join('')}
+          </div>
+        </div>
+        <div class="mt-5">
+          <span class="font-mono text-[10px] uppercase tracking-wider text-slateInk">Select shade</span>
+          <div class="flex items-center gap-2 mt-2">
+            ${SHADES.map((s, i) => `<button type="button" data-shade="${s.name}" title="${s.name}" class="shade-btn w-8 h-6 rounded-md border ${i === 0 ? 'ring-2 ring-obsidian' : 'border-white'} shadow-sm" style="background:${s.swatch}"></button>`).join('')}
+          </div>
+        </div>
+        <button type="button" onclick="confirmAddToCart('${product.id}', this)" class="btn-aeris-dark w-full mt-6 py-3.5 cursor-pointer">
+          <span>ADD TO BAG</span>
+          <span>→</span>
+        </button>
+      `;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      let chosenSize = product.sizes[0];
+      let chosenShade = SHADES[0].name;
+      body.querySelectorAll('.size-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          body.querySelectorAll('.size-btn').forEach(b => b.classList.remove('ring-2', 'ring-glacialTeal'));
+          btn.classList.add('ring-2', 'ring-glacialTeal');
+          chosenSize = btn.dataset.size;
+        });
+      });
+      body.querySelectorAll('.shade-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          body.querySelectorAll('.shade-btn').forEach(b => b.classList.remove('ring-2', 'ring-obsidian'));
+          btn.classList.add('ring-2', 'ring-obsidian');
+          chosenShade = btn.dataset.shade;
+        });
+      });
+      modal.dataset.chosenSize = chosenSize;
+      modal.dataset.chosenShade = chosenShade;
+    }
+
+    function closeProductModal() {
+      if (!modalEl) return;
+      modalEl.classList.add('hidden');
+      modalEl.classList.remove('flex');
+    }
+
+    function confirmAddToCart(productId, btn) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+      const modal = document.getElementById('product-modal');
+      addToCart({
+        id: product.id,
+        title: product.title,
+        price: product.price,
+        size: modal?.dataset.chosenSize || product.sizes[0],
+        shade: modal?.dataset.chosenShade || SHADES[0].name
+      });
+      closeProductModal();
+    }
+
+    /* ======================================================================
+       9. INIT
+    ====================================================================== */
+    document.addEventListener('DOMContentLoaded', () => {
+      renderShop();
+      updateBagCounters();
+
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.addEventListener('click', () => setCategory(btn.dataset.cat));
+      });
+    });
+  </script>
+</body>
+</html>
