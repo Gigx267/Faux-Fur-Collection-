@@ -236,6 +236,8 @@
     .top-nav-link:focus-visible { color: #12171a; }
     .top-nav-link:hover::after,
     .top-nav-link:focus-visible::after { transform: scaleX(1); }
+    .top-nav-link.active { color: #12171a; }
+    .top-nav-link.active::after { transform: scaleX(1); }
 
     .circle-arrow-btn {
       width: 34px;
@@ -273,8 +275,114 @@
       transform: translateY(-4px);
     }
 
-    #capsule-toast {
-      transition: all 0.3s ease;
+    .filter-pill {
+      padding: 7px 15px;
+      border-radius: 9999px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.65);
+      color: #4d5d66;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .filter-pill.active {
+      background: linear-gradient(135deg, #171a1c 0%, #2b1d24 58%, #9d6679 130%);
+      color: #ffffff;
+      border-color: rgba(242, 198, 212, 0.62);
+      box-shadow: 0 8px 20px -8px rgba(169, 94, 125, 0.40);
+    }
+    .filter-pill:hover:not(.active) {
+      background: #ffffff;
+      color: #12171a;
+      border-color: #6ab7c9;
+    }
+
+    #rail-music-player {
+      width: 100px;
+      padding: 10px 8px 9px;
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 50% 28%, rgba(255,255,255,.98) 0 12%, transparent 13%),
+        linear-gradient(155deg, rgba(255,255,255,.88), rgba(239,248,250,.72) 58%, rgba(248,226,234,.82));
+      box-shadow:
+        0 16px 34px -18px rgba(47,141,163,.38),
+        inset 0 1px 1px #fff,
+        inset 0 -8px 18px rgba(169,94,125,.08);
+      text-align: center;
+      transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+    }
+    #rail-music-player:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 38px -18px rgba(47,141,163,.48), inset 0 1px 1px #fff;
+    }
+    #rail-music-player .rail-music-disc {
+      width: 46px;
+      height: 46px;
+      margin: 0 auto 7px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background:
+        radial-gradient(circle, #fff 0 3px, rgba(255,255,255,.2) 4px 8px, transparent 9px),
+        repeating-radial-gradient(circle, transparent 0 5px, rgba(255,255,255,.11) 6px 7px),
+        conic-gradient(from 210deg, #2f8da3, #8fbac7, #b86a8b, #171a1c, #2f8da3);
+      box-shadow: 0 8px 18px rgba(47,141,163,.25), inset 0 0 12px rgba(255,255,255,.28);
+      transition: transform .5s ease;
+    }
+    #rail-music-player.playing .rail-music-disc { animation: railDiscTurn 12s linear infinite; }
+    @keyframes railDiscTurn { to { transform: rotate(360deg); } }
+    #rail-music-toggle {
+      width: 26px;
+      height: 26px;
+      border: 1px solid rgba(255,255,255,.82);
+      border-radius: 50%;
+      color: #fff;
+      background: rgba(18,23,26,.42);
+      backdrop-filter: blur(4px);
+      cursor: pointer;
+      font-size: 8px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s ease, background .2s ease;
+    }
+    #rail-music-toggle:hover { transform: scale(1.08); background: rgba(18,23,26,.68); }
+    #rail-music-player .music-bars { height: 10px; justify-content: center; margin: 0 auto 6px; display: flex; align-items: end; gap: 2px; }
+    #rail-music-player .music-bars span { width: 2px; height: 4px; border-radius: 999px; background: linear-gradient(to top,#2f8da3,#b86a8b); }
+    #rail-music-player.playing .music-bars span { animation: musicBar .65s ease-in-out infinite alternate; }
+    #rail-music-player.playing .music-bars span:nth-child(2) { animation-delay: -.25s; }
+    #rail-music-player.playing .music-bars span:nth-child(3) { animation-delay: -.45s; }
+    @keyframes musicBar { to { height: 10px; } }
+    #rail-music-status {
+      min-height: 10px;
+      margin-bottom: 7px !important;
+      font-size: 7px;
+      letter-spacing: .16em;
+      opacity: .72;
+    }
+    #rail-music-volume { width: 76px; height: 3px; accent-color: #a95e7d; cursor: pointer; }
+
+    .rail-link.active .rail-dot {
+      background: linear-gradient(135deg, #6ab7c9, #d98dab);
+      box-shadow: 0 0 0 4px rgba(217, 141, 171, 0.28), 0 0 14px rgba(242, 198, 212, 0.55);
+      transform: scale(1.25);
+    }
+    .rail-link.active .rail-text {
+      color: #12171a;
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      .top-nav-link { font-size: 9px; letter-spacing: .12em; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -304,9 +412,7 @@
       </div>
     </a>
     <div class="flex items-center gap-2">
-      <button onclick="toggleFreezeMode()" aria-label="Toggle Snowfall" class="w-8 h-8 rounded-full bg-white/80 border border-white flex items-center justify-center text-xs text-glacialTeal shadow-sm cursor-pointer">
-        ❄
-      </button>
+      <button onclick="toggleFreezeMode()" aria-label="Toggle Snowfall" class="w-8 h-8 rounded-full bg-white/80 border border-white flex items-center justify-center text-xs text-glacialTeal shadow-sm cursor-pointer">❄</button>
       <button onclick="openCart()" class="btn-aeris-dark px-3.5 py-2 text-[10px] cursor-pointer">
         <span>BAG</span>
         <span id="mobile-bag-count" class="bg-blushTint text-obsidian font-mono font-bold px-1.5 rounded-full">0</span>
@@ -328,8 +434,9 @@
       <div class="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 overflow-x-auto py-4">
         <a class="top-nav-link" href="./index.html">Home</a>
         <a class="top-nav-link" href="./about.html">About Us</a>
-        <a class="top-nav-link" href="./shop.html">Collection</a>
+        <a class="top-nav-link active" href="./shop.html" aria-current="page">Collection</a>
         <a class="top-nav-link" href="./shop.html">Lookbook</a>
+        <a class="top-nav-link" href="./reviews.html">Reviews</a>
         <a class="top-nav-link" href="./contact.html">Contact</a>
       </div>
       <div class="hidden lg:flex items-center gap-3 shrink-0">
@@ -355,7 +462,7 @@
 
       <nav aria-label="Section Navigation" class="relative flex flex-col gap-5 my-auto py-4">
         <span class="absolute left-[4.5px] top-5 bottom-5 w-[1px] bg-slateInk/20 pointer-events-none"></span>
-        <a href="./index.html#home" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./index.html" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
           <span class="rail-text">HOME</span>
         </a>
@@ -363,13 +470,13 @@
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
           <span class="rail-text">About</span>
         </a>
-        <a href="./shop.html" class="rail-link active flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./shop.html" class="rail-link active flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition" aria-current="page">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
           <span class="rail-text">Shop</span>
         </a>
         <a href="./reviews.html" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
-          <span class="rail-text">Reviews</span>
+          <span class="rail-text">REVIEWS</span>
         </a>
         <a href="./contact.html" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
@@ -378,9 +485,9 @@
       </nav>
 
       <div class="flex flex-col items-center gap-4">
-        <button onclick="toggleFreezeMode()" class="flex flex-col items-center gap-1.5 group cursor-pointer" title="Toggle Snowfall & Frost Intensity">
+        <button id="freeze-toggle-btn" onclick="toggleFreezeMode()" class="flex flex-col items-center gap-1.5 group cursor-pointer" title="Toggle Snowfall & Frost Intensity">
           <span class="w-9 h-9 rounded-full border border-obsidian/30 bg-white/80 group-hover:bg-obsidian group-hover:text-white flex items-center justify-center text-xs text-glacialTeal transition shadow-sm">❄</span>
-          <span id="freeze-toggle-label" class="text-[8px] tracking-[0.18em] text-slateInk uppercase text-center leading-tight">Snow<br/></span>
+          <span id="freeze-toggle-label" class="text-[8px] tracking-[0.18em] text-slateInk uppercase text-center leading-tight">GLACIER FX<br/>ACTIVE</span>
         </button>
         <div class="w-5 h-[1px] bg-slateInk/20"></div>
         <div class="flex flex-col items-center gap-3 text-obsidian/80">
@@ -436,7 +543,7 @@
       </section>
 
       <!-- FILTER BAR -->
-      <section class="px-4 sm:px-8 lg:px-12 pb-4">
+      <section class="px-4 sm:px-8 lg:px-12 pb-6">
         <div class="glacial-glass rounded-2xl px-4 py-3 flex flex-wrap items-center justify-between gap-3">
           <div class="flex flex-wrap items-center gap-2">
             <span class="font-mono text-[10px] uppercase tracking-widest text-slateInk mr-1">Filter</span>
@@ -780,7 +887,7 @@
         title: 'Jacket + Boots Set',
         price: 120.00,
         oldPrice: 130.00,
-        image: './p (41).jpg',
+        image: './xa.png',
         fallback: 'https://placehold.co/700x850/d8e9ef/12171a?text=JACKET+%2B+BOOTS+SET',
         desc: 'Our signature sub-zero pairing. Mix & match any shade and UK size across one Cropped Faux Fur Jacket (£80) and one pair of Plush Faux Fur Boots (£50).',
         sizes: ['XS / UK 6', 'S / UK 8', 'M / UK 10', 'L / UK 12'],
@@ -794,7 +901,7 @@
         title: 'Cropped Faux Fur Jacket',
         price: 80.00,
         oldPrice: null,
-        image: './p (42).jpg',
+        image: './xb.png',
         fallback: 'https://placehold.co/700x850/f8e4ec/12171a?text=CROPPED+FUR+JACKET',
         desc: 'High-density cruelty-free cloud fur with a sculpted cropped silhouette, concealed hook closures, and a cool satin interior lining.',
         sizes: ['XS / UK 6', 'S / UK 8', 'M / UK 10', 'L / UK 12']
