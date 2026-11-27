@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — The Faux Fur Collection</title>
-  <meta name="description" content="The story behind The Faux Fur Collection. Cruelty-free cloud fur, sculpted silhouettes, and the winter drop that started it all." />
+  <title>Contact — The Faux Fur Collection</title>
+  <meta name="description" content="Get in touch with The Faux Fur Collection. WhatsApp concierge, sizing help, delivery questions, and bespoke requests. London based, worldwide shipping." />
+  <meta name="theme-color" content="#12171a" />
+  <meta name="robots" content="index, follow" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312171a'/%3E%3Cpath d='M32 8l5.5 16.5L54 30l-16.5 5.5L32 52l-5.5-16.5L10 30l16.5-5.5L32 8z' fill='%236ab7c9'/%3E%3Ccircle cx='32' cy='30' r='6' fill='%23f2c6d4'/%3E%3C/svg%3E" type="image/svg+xml" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Six+Caps&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -28,6 +30,7 @@
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
             condensed: ['Oswald', 'Impact', 'sans-serif'],
+            tall: ['"Six Caps"', 'Oswald', 'sans-serif'],
             serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
           }
@@ -37,14 +40,17 @@
   </script>
   <style>
     :root {
+      --ice-bg: #edf3f6;
+      --glacial-cyan: rgba(106, 183, 201, 0.34);
+      --glacial-teal: rgba(47, 141, 163, 0.28);
+      --blush-accent: rgba(242, 198, 212, 0.36);
+      --glass-border: rgba(255, 255, 255, 0.94);
       --rosewater: #fff5f8;
       --powder-pink: #f7d9e4;
       --petal-pink: #eca8bf;
       --rose-pink: #d98dab;
       --plum-pink: #a95e7d;
       --pink-pearl: #fbecef;
-      --glacial-cyan: rgba(106, 183, 201, 0.34);
-      --glass-border: rgba(255, 255, 255, 0.94);
     }
 
     body {
@@ -74,6 +80,13 @@
         inset 12px 0 70px rgba(247, 217, 228, 0.28),
         inset -12px 0 70px rgba(236, 168, 191, 0.20);
       transition: box-shadow 0.5s ease;
+    }
+
+    body.deep-freeze #screen-frost-vignette {
+      box-shadow:
+        inset 0 0 80px rgba(255, 255, 255, 0.95),
+        inset 0 0 150px rgba(106, 183, 201, 0.34),
+        inset 0 0 180px rgba(242, 198, 212, 0.25);
     }
 
     #snow-canvas {
@@ -135,24 +148,6 @@
       box-shadow:
         inset 0 2px 1px #ffffff,
         0 24px 52px -14px rgba(18, 56, 68, 0.22);
-    }
-
-    .ice-lens-portrait {
-      border-radius: 0 0 240px 0 / 0 0 260px 0;
-      box-shadow:
-        inset -10px -10px 28px rgba(255, 255, 255, 0.92),
-        inset -3px -3px 12px rgba(106, 183, 201, 0.55),
-        18px 18px 48px -12px rgba(47, 141, 163, 0.22);
-      border-right: 3px solid rgba(255, 255, 255, 0.95);
-      border-bottom: 3px solid rgba(255, 255, 255, 0.95);
-    }
-
-    .organic-showcase-frame {
-      border-radius: 36px 140px 120px 36px / 36px 130px 140px 36px;
-      border: 2px solid rgba(255, 255, 255, 0.96);
-      box-shadow:
-        inset 0 2px 10px rgba(255, 255, 255, 0.8),
-        0 26px 56px -18px rgba(18, 56, 68, 0.24);
     }
 
     .btn-aeris-dark {
@@ -234,6 +229,34 @@
       font-weight: 600;
     }
 
+    .top-nav-link {
+      position: relative;
+      color: #536570;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      transition: color .2s ease;
+    }
+    .top-nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: .16em;
+      bottom: -7px;
+      height: 1px;
+      background: linear-gradient(90deg, #6ab7c9, #d98dab);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .22s ease;
+    }
+    .top-nav-link:hover,
+    .top-nav-link:focus-visible { color: #12171a; }
+    .top-nav-link:hover::after,
+    .top-nav-link:focus-visible::after { transform: scaleX(1); }
+    .top-nav-link.active { color: #12171a; }
+    .top-nav-link.active::after { transform: scaleX(1); }
+
     #rail-music-player {
       width: 100px;
       padding: 10px 8px 9px;
@@ -304,31 +327,104 @@
     }
     #rail-music-volume { width: 76px; height: 3px; accent-color: #a95e7d; cursor: pointer; }
 
-    .top-nav-link {
+    .contact-card {
       position: relative;
-      color: #536570;
-      font-size: 10px;
+      background:
+        radial-gradient(circle at 92% 12%, rgba(217, 141, 171, 0.18), transparent 28%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 248, 250, 0.82) 58%, rgba(247, 217, 228, 0.48));
+      border: 1.5px solid rgba(255, 255, 255, 0.98);
+      border-radius: 30px;
+      box-shadow: 0 18px 40px -18px rgba(169, 94, 125, 0.18);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 50px -18px rgba(169, 94, 125, 0.26), 0 0 22px rgba(242, 198, 212, 0.24);
+    }
+
+    .contact-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(18, 23, 26, 0.14);
+      border-radius: 14px;
+      padding: 12px 15px;
+      font-size: 13px;
+      color: #12171a;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+    .contact-input::placeholder { color: rgba(77, 93, 102, 0.55); }
+    .contact-input:focus {
+      outline: none;
+      background: #ffffff;
+      border-color: #6ab7c9;
+      box-shadow: 0 0 0 3px rgba(106, 183, 201, 0.18);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(18, 23, 26, 0.08);
+    }
+    .faq-q {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 0;
+      text-align: left;
+      font-size: 13px;
       font-weight: 500;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      transition: color .2s ease;
+      color: #12171a;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
     }
-    .top-nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: .16em;
-      bottom: -7px;
-      height: 1px;
-      background: linear-gradient(90deg, #6ab7c9, #d98dab);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform .22s ease;
+    .faq-q .faq-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 9999px;
+      border: 1px solid rgba(18, 23, 26, 0.16);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #2f8da3;
+      transition: all 0.25s ease;
     }
-    .top-nav-link:hover,
-    .top-nav-link:focus-visible { color: #12171a; }
-    .top-nav-link:hover::after,
-    .top-nav-link:focus-visible::after { transform: scaleX(1); }
+    .faq-item.open .faq-icon {
+      background: linear-gradient(135deg, #12171a, #a95e7d);
+      color: #fff;
+      border-color: transparent;
+      transform: rotate(45deg);
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.35s ease;
+      opacity: 0;
+      font-size: 12px;
+      line-height: 1.75;
+      color: #4d5d66;
+      padding: 0;
+    }
+    .faq-item.open .faq-a {
+      max-height: 240px;
+      opacity: 1;
+      padding: 0 0 16px;
+    }
+
+    .hours-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px dashed rgba(18, 23, 26, 0.09);
+      font-size: 12px;
+    }
+    .hours-row:last-child { border-bottom: 0; }
+    .hours-row .day { color: #4d5d66; }
+    .hours-row .time { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #12171a; }
 
     ::-webkit-scrollbar { width: 5px; height: 5px; }
     ::-webkit-scrollbar-track { background: #eaf1f5; }
@@ -347,46 +443,6 @@
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
       }
-    }
-
-    .about-value-card {
-      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
-    }
-    .about-value-card:hover {
-      transform: translateY(-6px);
-      box-shadow:
-        inset 0 4px 8px #ffffff,
-        inset 0 -10px 22px rgba(106, 183, 201, 0.25),
-        0 28px 52px -14px rgba(18, 56, 68, 0.20),
-        0 0 24px rgba(242, 198, 212, 0.35);
-    }
-
-    #about-story::before,
-    #about-values::before,
-    #about-cta::before {
-      content: "";
-      position: absolute;
-      pointer-events: none;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 1px solid rgba(217, 141, 171, 0.16);
-      box-shadow:
-        0 0 0 18px rgba(247, 217, 228, 0.08),
-        0 0 0 38px rgba(255, 255, 255, 0.12);
-      filter: blur(0.2px);
-    }
-    #about-story { position: relative; }
-    #about-story::before { right: 2%; top: 8%; }
-    #about-values { position: relative; }
-    #about-values::before { left: -105px; bottom: 4%; }
-    #about-cta { position: relative; }
-    #about-cta::before { right: -125px; top: 25%; }
-
-    @media (max-width: 767px) {
-      #about-story::before,
-      #about-values::before,
-      #about-cta::before { width: 110px; height: 110px; }
     }
   </style>
 </head>
@@ -409,10 +465,10 @@
     </a>
     <div class="flex items-center gap-2">
       <button onclick="toggleFreezeMode()" aria-label="Toggle Snowfall" class="w-8 h-8 rounded-full bg-white/80 border border-white flex items-center justify-center text-xs text-glacialTeal shadow-sm cursor-pointer">❄</button>
-      <button onclick="openCart()" class="btn-aeris-dark px-3.5 py-2 text-[10px] cursor-pointer">
-        <span>BAG</span>
-        <span id="mobile-bag-count" class="bg-blushTint text-obsidian font-mono font-bold px-1.5 rounded-full">0</span>
-      </button>
+      <a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="btn-aeris-dark px-3.5 py-2 text-[10px]">
+        <span>WA</span>
+        <span>↗</span>
+      </a>
     </div>
   </header>
 
@@ -429,22 +485,22 @@
       </a>
       <div class="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 overflow-x-auto py-4">
         <a class="top-nav-link" href="./index.html">Home</a>
-        <a class="top-nav-link" href="./About.html" aria-current="page" style="color:#12171a;font-weight:600;">About</a>
-        <a class="top-nav-link" href="./shop.html">Shop</a>
-        <a class="top-nav-link" href="./reviews.html">Reviews</a>
-        <a class="top-nav-link" href="./contact.html">Contact</a>
+        <a class="top-nav-link" href="./about.html">About Us</a>
+        <a class="top-nav-link" href="./shop.html">Collection</a>
+        <a class="top-nav-link" href="./shop.html">Lookbook</a>
+        <a class="top-nav-link active" href="./contact.html" aria-current="page">Contact</a>
       </div>
       <div class="hidden lg:flex items-center gap-3 shrink-0">
         <a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="text-[9px] tracking-[0.12em] text-slateInk hover:text-blushDeep transition uppercase">Concierge ↗</a>
-        <button onclick="openCart()" class="btn-aeris-dark px-4 py-2 text-[9px] cursor-pointer">Bag <span id="top-nav-bag-count" class="font-mono text-blushTint">0</span></button>
+        <a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="btn-aeris-dark px-4 py-2 text-[9px]">WhatsApp</a>
       </div>
     </div>
   </nav>
 
-  <!-- MAIN SHELL: LEFT RAIL + CONTENT -->
+  <!-- MAIN SHELL -->
   <div class="max-w-[1440px] mx-auto flex relative">
 
-    <!-- LEFT VERTICAL RAIL -->
+    <!-- LEFT RAIL -->
     <aside class="hidden lg:flex flex-col justify-between items-center w-[124px] shrink-0 sticky top-0 h-screen py-7 px-3 border-r border-white/80 bg-white/35 backdrop-blur-xl z-30">
       <div id="rail-music-player" aria-label="Ambient music player">
         <div class="rail-music-disc"><button id="rail-music-toggle" type="button" onclick="toggleRailMusic()" aria-label="Play ambient music" aria-pressed="false">▶</button></div>
@@ -457,23 +513,23 @@
 
       <nav aria-label="Section Navigation" class="relative flex flex-col gap-5 my-auto py-4">
         <span class="absolute left-[4.5px] top-5 bottom-5 w-[1px] bg-slateInk/20 pointer-events-none"></span>
-        <a href="./index.html" data-section="home" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./index.html" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
           <span class="rail-text">HOME</span>
         </a>
-        <a href="./About.html" data-section="capsule" class="rail-link active flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./about.html" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
           <span class="rail-text">About</span>
         </a>
-        <a href="./shop.html" data-section="catalog" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./shop.html" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
           <span class="rail-text">Shop</span>
         </a>
-        <a href="./reviews.html" data-section="reviews" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./reviews.html" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
           <span class="rail-text">REVIEWS</span>
         </a>
-        <a href="./contact.html" data-section="delivery" class="rail-link flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition">
+        <a href="./contact.html" class="rail-link active flex items-center gap-3 text-[9px] tracking-[0.2em] text-slateInk hover:text-obsidian uppercase transition" aria-current="page">
           <span class="rail-dot w-2.5 h-2.5 rounded-full bg-slateInk/35 border border-white transition-all relative z-10"></span>
           <span class="rail-text">Contact</span>
         </a>
@@ -492,19 +548,17 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 10a.5.5 0 001 0V9a.5.5 0 00-1 0v1a5 5 0 005 5h1a.5.5 0 000-1h-1a.5.5 0 000 1" />
             </svg>
           </a>
-          <a href="#about-story" aria-label="Story" title="Our Story" class="hover:text-blushDeep transition">
+          <a href="mailto:hello@thefauxfurcollection.co.uk" aria-label="Email us" title="Email hello@thefauxfurcollection.co.uk" class="hover:text-blushDeep transition">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-              <rect width="16" height="16" x="4" y="4" rx="4" />
-              <circle cx="12" cy="12" r="3.5" />
-              <circle cx="16.5" cy="7.5" r="0.8" fill="currentColor" />
+              <rect width="18" height="14" x="3" y="5" rx="3" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 7l8.5 6 8.5-6" />
             </svg>
           </a>
-          <button onclick="openCart()" aria-label="Open Bag" title="Open Shopping Bag" class="relative hover:text-glacialTeal transition cursor-pointer">
+          <a href="./shop.html" aria-label="Shop the collection" title="Shop the Collection" class="hover:text-glacialTeal transition">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
             </svg>
-            <span id="rail-bag-dot" class="hidden absolute -top-1 -right-1.5 w-2 h-2 rounded-full bg-blushDeep"></span>
-          </button>
+          </a>
         </div>
       </div>
     </aside>
@@ -512,278 +566,215 @@
     <!-- MAIN CONTENT -->
     <main class="flex-1 min-w-0 relative">
 
-      <!-- ===================================================================
-           SECTION 1: ABOUT HERO — asymmetric editorial intro
-      =================================================================== -->
-      <section id="about-hero" class="relative min-h-[600px] lg:min-h-[720px] px-4 sm:px-8 lg:px-12 pt-10 pb-16 overflow-hidden isolate">
-
-        <!-- Cinematic background image -->
-        <div class="pointer-events-none absolute top-0 right-0 w-full lg:w-[65%] h-[480px] lg:h-[600px] overflow-hidden">
-          <div class="absolute -inset-10 bg-[radial-gradient(circle_at_70%_28%,rgba(255,255,255,.95),transparent_22%),radial-gradient(circle_at_74%_72%,rgba(244,171,191,.28),transparent_24%)] z-10"></div>
-          <img
-            src="./p (22).jpeg"
-            onerror="this.src='https://placehold.co/1100x800/dbeafe/12171a?text=THE+STORY'"
-            alt="Faux fur collection editorial atmosphere"
-            class="w-full h-full object-cover object-center scale-105 saturate-[0.82] contrast-[1.08]"
-          />
-          <div class="absolute inset-0 bg-gradient-to-r from-[#eef4f7] via-[#eef4f7]/65 to-transparent"></div>
-          <div class="absolute inset-0 bg-gradient-to-b from-[#eef4f7]/30 via-transparent to-[#eef4f7]"></div>
-          <div class="absolute inset-0 bg-gradient-to-tr from-sky-200/10 via-transparent to-pink-200/20"></div>
-        </div>
-
-        <!-- Left portrait frame (lens shape) -->
-        <div class="hidden md:block absolute top-6 left-0 w-[300px] xl:w-[360px] h-[400px] xl:h-[470px] overflow-hidden ice-lens-portrait z-10 shadow-[0_35px_80px_rgba(18,23,26,.14)]">
-          <img
-            src="./p (24).jpeg"
-            onerror="this.src='https://placehold.co/700x900/d8e9ef/12171a?text=CLOUD+FUR'"
-            alt="Cloud fur close-up"
-            class="w-full h-full object-cover object-top scale-[1.03]"
-          />
-          <div class="absolute inset-0 bg-gradient-to-tr from-sky-950/20 via-transparent to-white/50"></div>
-          <div class="absolute top-5 left-5 glacial-glass-strong rounded-full px-3.5 py-2 flex items-center gap-2 shadow-lg">
-            <span class="relative flex w-2 h-2">
-              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-blushDeep opacity-50"></span>
-              <span class="relative inline-flex w-2 h-2 rounded-full bg-blushDeep"></span>
-            </span>
-            <span class="font-mono text-[9px] tracking-[0.16em] text-obsidian uppercase">Est. 2024 • London</span>
-          </div>
-          <div class="absolute bottom-7 left-6 right-6 glacial-glass-strong rounded-[20px] px-4 py-3 flex items-center justify-between shadow-lg">
-            <span class="font-mono text-[9px] tracking-wider text-obsidian uppercase">Cruelty-free cloud fur</span>
-            <span class="text-glacialTeal text-lg leading-none">✦</span>
-          </div>
-        </div>
-
-        <!-- Masthead -->
-        <div class="relative z-20 flex flex-col sm:flex-row items-center justify-between gap-4 pt-1 pb-8 lg:pb-12">
-          <div class="hidden sm:block w-48"></div>
-          <div class="text-center">
-            <span class="block aeris-brand-wordmark text-2xl sm:text-3xl lg:text-[34px] text-obsidian leading-none">THE FAUX FUR</span>
-            <span class="block text-[9px] sm:text-[10px] tracking-[0.42em] text-slateInk uppercase mt-2">LONDON EDITION • EST. 2024</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="hidden xl:inline-flex btn-aeris-outline px-4 py-2.5">
-              <span>WA: +44 7848 152250</span>
-            </a>
-            <button onclick="openCart()" class="btn-aeris-outline px-4 py-2.5 cursor-pointer shadow-[0_10px_30px_rgba(18,23,26,.08)]">
-              <span>SHOP BAG (<span id="header-bag-count">0</span>)</span>
-              <span>→</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Hero copy -->
-        <div class="relative z-20 md:ml-[280px] xl:ml-[340px] mt-2 sm:mt-8 lg:mt-16 max-w-xl">
+      <!-- HERO -->
+      <section class="relative px-4 sm:px-8 lg:px-12 pt-10 pb-4 overflow-hidden">
+        <div class="max-w-3xl">
           <div class="inline-flex items-center gap-3 rounded-full border border-obsidian/10 bg-white/55 backdrop-blur-md px-3 py-1.5 mb-5 shadow-sm">
-            <span class="h-1.5 w-1.5 rounded-full bg-blushDeep"></span>
-            <p class="aeris-eyebrow text-[9px] tracking-[0.24em] text-obsidian/70">OUR STORY</p>
+            <span class="h-1.5 w-1.5 rounded-full bg-blushDeep animate-pulse"></span>
+            <p class="aeris-eyebrow text-[9px] tracking-[0.24em] text-obsidian/70">CONCIERGE • LONDON • WORLDWIDE</p>
           </div>
-
-          <h1 class="aeris-display text-[58px] sm:text-[76px] lg:text-[92px] leading-[0.82] tracking-[-0.055em] text-obsidian">
-            <span class="block italic font-light text-slateInk">Made for</span>
-            <span class="relative block mt-3 font-bold">
-              THE FEELING
-              <span class="absolute -right-2 bottom-1 h-[12px] w-[58%] -z-10 bg-blushDeep/25 -skew-x-12"></span>
+          <h1 class="aeris-display text-[52px] sm:text-[70px] lg:text-[84px] leading-[0.84] tracking-[-0.05em] text-obsidian">
+            <span class="block italic font-light text-slateInk">Say</span>
+            <span class="relative block mt-2 font-bold">
+              HELLO
+              <span class="absolute -right-1 bottom-1 h-[10px] w-[56%] -z-10 bg-blushDeep/25 -skew-x-12"></span>
             </span>
           </h1>
-
-          <p class="text-[12px] sm:text-[14px] text-slateInk leading-[1.8] max-w-[430px] mt-7 border-l-2 border-glacialTeal/40 pl-4">
-            The Faux Fur Collection began with a simple obsession: cloud-soft texture, sculpted silhouettes, and winter pieces that feel like a warm embrace.
-            <span class="block mt-1 text-obsidian/85 font-semibold tracking-[0.02em]">Cruelty-free, uncompromisingly plush, and designed to be noticed.</span>
+          <p class="text-[12px] sm:text-[14px] text-slateInk leading-[1.8] max-w-[430px] mt-6 border-l-2 border-glacialTeal/40 pl-4">
+            Sizing questions, bespoke shade requests, order updates or just a note — we answer personally.
+            <span class="block mt-1 text-obsidian/85 font-semibold tracking-[0.02em]">WhatsApp is fastest. We usually reply within the hour.</span>
           </p>
-
-          <div class="flex flex-wrap items-center gap-3 mt-8">
-            <a href="#about-story" class="group btn-aeris-dark px-6 py-4 shadow-[0_16px_35px_rgba(18,23,26,.16)]">
-              <span>READ OUR STORY</span>
-              <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </a>
-            <a href="./shop.html" class="group btn-aeris-outline px-5 py-4 bg-white/85 backdrop-blur-md">
-              <span>SHOP THE COLLECTION</span>
-              <span class="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </a>
-          </div>
         </div>
-
-        <!-- Limited edition stamp -->
-        <div class="hidden xl:flex items-center gap-3 absolute right-10 bottom-24 z-20 rounded-full border border-obsidian/10 bg-white/70 backdrop-blur-md px-3 py-2 shadow-sm">
-          <span class="flex h-9 w-9 items-center justify-center rounded-full bg-obsidian text-white text-sm">✦</span>
-          <div class="border-l border-obsidian/10 pl-3 pr-1">
-            <span class="block font-mono text-[8px] tracking-[0.18em] text-slateInk uppercase">Winter 25 / 26</span>
-            <span class="block font-mono text-[10px] font-semibold text-obsidian mt-0.5">BEHIND THE FUR</span>
-          </div>
-        </div>
-
-        <svg class="pointer-events-none absolute bottom-0 left-0 right-0 w-full h-14 text-[#f1f6f9]" viewBox="0 0 1440 80" preserveAspectRatio="none" fill="currentColor" aria-hidden="true">
-          <path d="M0,32 C260,84 480,0 760,36 C1040,72 1260,12 1440,34 L1440,80 L0,80 Z" />
-        </svg>
       </section>
 
-      <!-- ===================================================================
-           SECTION 2: STORY — two-column editorial with glass card
-      =================================================================== -->
-      <section id="about-story" class="relative px-4 sm:px-8 lg:px-12 py-12 lg:py-20 overflow-hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+      <!-- CONTACT CHANNELS -->
+      <section class="relative px-4 sm:px-8 lg:px-12 py-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
 
-          <!-- Left big image -->
-          <div class="lg:col-span-6">
-            <div class="organic-showcase-frame overflow-hidden relative h-[320px] sm:h-[420px] lg:h-[520px]">
-              <img
-                src="./p (4).jpeg"
-                onerror="this.src='https://placehold.co/1000x750/d8e9ef/12171a?text=THE+ATELIER'"
-                alt="The Faux Fur Collection atelier"
-                class="w-full h-full object-cover"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-obsidian/50 via-obsidian/10 to-transparent"></div>
-              <div class="absolute bottom-5 left-5 glacial-glass-strong rounded-2xl px-4 py-2.5">
-                <span class="block font-mono text-[9px] tracking-widest text-glacialTeal uppercase">BEHIND THE SEAMS</span>
-                <span class="block text-xs font-semibold text-obsidian">London Atelier • Small-batch craft</span>
+          <a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="contact-card p-6 flex flex-col justify-between min-h-[172px] group">
+            <div class="flex items-start justify-between">
+              <span class="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-600/20 flex items-center justify-center text-emerald-700">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 21l1.65-3.8a9 9 0 113.4 2.9L3 21" />
+                </svg>
+              </span>
+              <span class="font-mono text-[9px] tracking-widest text-emerald-700 uppercase bg-emerald-500/10 px-2 py-0.5 rounded-full">FASTEST</span>
+            </div>
+            <div class="mt-4">
+              <span class="block font-mono text-[9px] uppercase tracking-[0.2em] text-slateInk">WhatsApp Concierge</span>
+              <span class="block font-condensed text-xl text-obsidian mt-1 tracking-wide">+44 7848 152250</span>
+              <span class="mt-2 inline-flex items-center gap-1 text-[10px] font-mono tracking-wider text-emerald-700 group-hover:gap-2 transition-all">CHAT NOW <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+
+          <a href="mailto:hello@thefauxfurcollection.co.uk" class="contact-card p-6 flex flex-col justify-between min-h-[172px] group">
+            <div class="flex items-start justify-between">
+              <span class="w-10 h-10 rounded-full bg-glacialAqua/15 border border-glacialTeal/20 flex items-center justify-center text-glacialTeal">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                  <rect width="18" height="14" x="3" y="5" rx="3" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 7l8.5 6 8.5-6" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-4">
+              <span class="block font-mono text-[9px] uppercase tracking-[0.2em] text-slateInk">Email</span>
+              <span class="block text-[13px] font-medium text-obsidian mt-1 break-all leading-snug">hello@thefauxfurcollection.co.uk</span>
+              <span class="mt-2 inline-flex items-center gap-1 text-[10px] font-mono tracking-wider text-glacialTeal group-hover:gap-2 transition-all">WRITE TO US <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+
+          <div class="contact-card p-6 flex flex-col justify-between min-h-[172px]">
+            <div class="flex items-start justify-between">
+              <span class="w-10 h-10 rounded-full bg-blushDeep/10 border border-blushDeep/20 flex items-center justify-center text-blushDeep">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-4">
+              <span class="block font-mono text-[9px] uppercase tracking-[0.2em] text-slateInk">Studio</span>
+              <span class="block text-[13px] font-medium text-obsidian mt-1 leading-snug">London, United Kingdom<br/><span class="text-slateInk text-[11px] font-normal">By appointment only</span></span>
+            </div>
+          </div>
+
+          <div class="contact-card p-6 flex flex-col justify-between min-h-[172px]">
+            <div class="flex items-start justify-between">
+              <span class="w-10 h-10 rounded-full bg-obsidian/5 border border-obsidian/15 flex items-center justify-center text-obsidian">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9" />
+                  <path stroke-linecap="round" d="M12 7v5l3 2" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-4">
+              <span class="block font-mono text-[9px] uppercase tracking-[0.2em] text-slateInk">Concierge Hours</span>
+              <div class="mt-1.5">
+                <div class="hours-row"><span class="day">Mon – Fri</span><span class="time">09:00 – 19:00</span></div>
+                <div class="hours-row"><span class="day">Saturday</span><span class="time">10:00 – 16:00</span></div>
+                <div class="hours-row"><span class="day">Sunday</span><span class="time">CLOSED</span></div>
               </div>
+              <span class="block mt-1 text-[9px] font-mono tracking-wider text-slateInk/70">GMT • LONDON TIME</span>
             </div>
-          </div>
-
-          <!-- Right narrative -->
-          <div class="lg:col-span-6">
-            <span class="aeris-eyebrow block mb-2">THE BEGINNING</span>
-            <h2 class="aeris-display text-5xl sm:text-[56px] text-obsidian">
-              A WINTER<br/>OBSESSION
-            </h2>
-            <p class="text-xs sm:text-[13px] text-slateInk leading-relaxed mt-4">
-              In 2024, we set out to create faux fur that felt as decadent as the real thing — without compromise. After months of sampling, we found our signature "cloud fur": a dense, feather-soft pile that holds its shape, resists shedding, and wraps you in warmth.
-            </p>
-            <p class="text-xs sm:text-[13px] text-slateInk leading-relaxed mt-3">
-              Every cropped jacket, plush boot, and headwarmer is cut and finished in small batches from our London studio. We work with a family-run atelier in the North of England, where each piece is individually checked, brushed, and hand-finished.
-            </p>
-            <p class="text-xs sm:text-[13px] text-slateInk leading-relaxed mt-3">
-              The result? Pieces that feel intimate, look bold, and are made to be kept — season after season.
-            </p>
-            <div class="flex items-center gap-4 mt-6">
-              <a href="#about-values" class="btn-aeris-dark px-5 py-3 cursor-pointer">
-                <span>OUR VALUES</span>
-                <span>→</span>
-              </a>
-              <a href="./shop.html" class="btn-aeris-outline px-5 py-3 bg-white/80">
-                <span>SHOP THE DROP</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================================================================
-           SECTION 3: VALUES — 3 glass cards with numbers
-      =================================================================== -->
-      <section id="about-values" class="relative px-4 sm:px-8 lg:px-12 py-12 lg:py-20 overflow-hidden">
-        <div class="text-center mb-10 lg:mb-14">
-          <span class="aeris-eyebrow block mb-2">WHAT WE STAND FOR</span>
-          <h2 class="aeris-display text-5xl sm:text-[56px] text-obsidian">
-            OUR PROMISES
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
-
-          <!-- Card 1 -->
-          <div class="about-value-card glacial-glass rounded-[36px] px-7 py-9 flex flex-col items-center text-center">
-            <span class="font-serif text-5xl italic leading-none text-glacialTeal mb-3">01</span>
-            <h3 class="aeris-display text-2xl tracking-wider text-obsidian">CRUELTY-FREE</h3>
-            <p class="text-[11px] text-slateInk leading-relaxed mt-2 max-w-[220px]">
-              Every fibre is 100% synthetic, ethically sourced, and kind to animals. No compromise on softness.
-            </p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="about-value-card glacial-glass rounded-[36px] px-7 py-9 flex flex-col items-center text-center">
-            <span class="font-serif text-5xl italic leading-none text-blushDeep mb-3">02</span>
-            <h3 class="aeris-display text-2xl tracking-wider text-obsidian">SMALL-BATCH</h3>
-            <p class="text-[11px] text-slateInk leading-relaxed mt-2 max-w-[220px]">
-              Limited runs, individually numbered. We produce only what we can perfect by hand.
-            </p>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="about-value-card glacial-glass rounded-[36px] px-7 py-9 flex flex-col items-center text-center">
-            <span class="font-serif text-5xl italic leading-none text-obsidian mb-3">03</span>
-            <h3 class="aeris-display text-2xl tracking-wider text-obsidian">MADE TO LAST</h3>
-            <p class="text-[11px] text-slateInk leading-relaxed mt-2 max-w-[220px]">
-              Reinforced seams, colour-fast fibres, and a care kit with every order. Winter after winter.
-            </p>
           </div>
 
         </div>
       </section>
 
-      <!-- ===================================================================
-           SECTION 4: CTA — bottom split with image + closing statement
-      =================================================================== -->
-      <section id="about-cta" class="relative px-4 sm:px-8 lg:px-12 pt-8 pb-20 overflow-hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+      <!-- FORM + FAQ -->
+      <section class="relative px-4 sm:px-8 lg:px-12 py-8 lg:py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
 
+          <!-- FORM -->
           <div class="lg:col-span-7">
-            <div class="rounded-[36px] rounded-tr-[140px] overflow-hidden border-2 border-white shadow-xl relative h-[300px] sm:h-[380px]">
-              <img
-                src="./p (11).jpeg"
-                onerror="this.src='https://placehold.co/1000x700/dcecf1/12171a?text=MIDNIGHT+DROP'"
-                alt="Midnight Drop editorial"
-                class="w-full h-full object-cover"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-obsidian/65 via-obsidian/15 to-transparent"></div>
-              <div class="absolute bottom-5 left-5 right-5 flex flex-wrap items-center justify-between gap-3">
-                <div class="glacial-glass-strong rounded-2xl px-4 py-2.5">
-                  <span class="block font-mono text-[9px] tracking-widest text-glacialTeal uppercase">THE £120 SET</span>
-                  <span class="block text-xs font-semibold text-obsidian">JACKET + BOOTS • SAVE £10</span>
+            <div class="glacial-glass-strong rounded-[32px] p-6 sm:p-9">
+              <span class="aeris-eyebrow block mb-1.5">SEND A NOTE</span>
+              <h2 class="aeris-display text-4xl sm:text-5xl text-obsidian">THE MESSAGE DESK</h2>
+              <p class="text-xs text-slateInk leading-relaxed mt-3 max-w-md">
+                Tell us what you need — sizing, a bespoke shade, a bundle mix, or an order in progress. We read every message.
+              </p>
+
+              <form id="contact-form" onsubmit="handleContactSubmit(event)" class="mt-6 space-y-4" novalidate>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="cf-name" class="block font-mono text-[10px] uppercase tracking-widest text-slateInk mb-1.5">Your name *</label>
+                    <input id="cf-name" name="name" type="text" required placeholder="e.g. Amara K." class="contact-input" />
+                  </div>
+                  <div>
+                    <label for="cf-email" class="block font-mono text-[10px] uppercase tracking-widest text-slateInk mb-1.5">Email *</label>
+                    <input id="cf-email" name="email" type="email" required placeholder="you@example.com" class="contact-input" />
+                  </div>
                 </div>
-                <div class="glacial-glass-strong rounded-2xl px-4 py-2.5">
-                  <span class="block font-mono text-[9px] tracking-widest text-blushDeep uppercase">FREE UK SHIPPING</span>
-                  <span class="block text-xs font-semibold text-obsidian">ON ORDERS OVER £120</span>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="cf-phone" class="block font-mono text-[10px] uppercase tracking-widest text-slateInk mb-1.5">Phone / WhatsApp</label>
+                    <input id="cf-phone" name="phone" type="tel" placeholder="+44 …" class="contact-input" />
+                  </div>
+                  <div>
+                    <label for="cf-topic" class="block font-mono text-[10px] uppercase tracking-widest text-slateInk mb-1.5">Topic *</label>
+                    <select id="cf-topic" name="topic" required class="contact-input appearance-none">
+                      <option value="" disabled selected>Choose a topic…</option>
+                      <option value="sizing">Sizing &amp; fit</option>
+                      <option value="order">Order / delivery</option>
+                      <option value="bespoke">Bespoke or custom set</option>
+                      <option value="returns">Returns &amp; exchanges</option>
+                      <option value="press">Press &amp; collaborations</option>
+                      <option value="other">Something else</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="cf-message" class="block font-mono text-[10px] uppercase tracking-widest text-slateInk mb-1.5">Message *</label>
+                  <textarea id="cf-message" name="message" rows="5" required placeholder="Tell us everything — shade, size, date you need it by…" class="contact-input resize-none"></textarea>
+                </div>
+
+                <label class="flex items-start gap-2.5 cursor-pointer select-none">
+                  <input id="cf-consent" name="consent" type="checkbox" class="mt-0.5 w-4 h-4 rounded border-obsidian/25 accent-blushDeep" />
+                  <span class="text-[11px] text-slateInk leading-relaxed">I agree to be contacted about this enquiry. No spam, ever.</span>
+                </label>
+
+                <div class="flex flex-wrap items-center gap-3 pt-1">
+                  <button type="submit" class="btn-aeris-dark px-6 py-3.5 cursor-pointer">
+                    <span>SEND MESSAGE</span>
+                    <span>→</span>
+                  </button>
+                  <a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="btn-aeris-outline px-5 py-3.5 bg-white/80">
+                    <span>OR WHATSAPP US</span>
+                  </a>
+                </div>
+                <p id="cf-error" class="hidden text-[11px] font-mono text-rose-700"></p>
+              </form>
+            </div>
+          </div>
+
+          <!-- FAQ + HOURS PANEL -->
+          <div class="lg:col-span-5 space-y-4">
+
+            <div class="glacial-glass rounded-[28px] p-6 sm:p-7">
+              <span class="aeris-eyebrow block mb-1">QUICK ANSWERS</span>
+              <h2 class="aeris-display text-3xl text-obsidian mb-2">BEFORE YOU ASK</h2>
+
+              <div class="divide-y divide-obsidian/5">
+                <div class="faq-item">
+                  <button type="button" class="faq-q" onclick="toggleFaq(this)">
+                    <span>How fast is delivery?</span>
+                    <span class="faq-icon">+</span>
+                  </button>
+                  <div class="faq-a">UK Tracked is 1–2 working days (£4.99, free over £120). Worldwide express is 3–5 working days. Every order ships with tracking and a little frost-sealed note.</div>
+                </div>
+                <div class="faq-item">
+                  <button type="button" class="faq-q" onclick="toggleFaq(this)">
+                    <span>How do I choose my size?</span>
+                    <span class="faq-icon">+</span>
+                  </button>
+                  <div class="faq-a">Our cropped jackets run true to UK sizing with a relaxed, layer-friendly fit. If you're between sizes, size up for a cocoon silhouette or down for a cropped frame. Boots are true to UK size. Still unsure? WhatsApp us your measurements and we'll pick for you.</div>
+                </div>
+                <div class="faq-item">
+                  <button type="button" class="faq-q" onclick="toggleFaq(this)">
+                    <span>What's your returns policy?</span>
+                    <span class="faq-icon">+</span>
+                  </button>
+                  <div class="faq-a">Unworn pieces can be returned within 30 days for a full refund or exchange. Bundle sets must be returned complete. Start a return via WhatsApp or email and we'll send a prepaid UK label.</div>
+                </div>
+                <div class="faq-item">
+                  <button type="button" class="faq-q" onclick="toggleFaq(this)">
+                    <span>Is the fur really cruelty-free?</span>
+                    <span class="faq-icon">+</span>
+                  </button>
+                  <div class="faq-a">Yes — every piece is 100% faux. Our cloud fur is a high-density synthetic blend engineered for softness and warmth, with zero animal materials anywhere in the collection.</div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="lg:col-span-5">
-            <span class="aeris-eyebrow block mb-2">READY WHEN YOU ARE</span>
-            <h2 class="aeris-display text-5xl sm:text-[56px] text-obsidian">
-              DRESSED TO<br/>THRILL.
-            </h2>
-            <p class="text-xs sm:text-[13px] text-slateInk leading-relaxed mt-3 max-w-sm">
-              Shop the Winter 25/26 drop — cropped jackets, plush boots, the signature set, and little luxuries made to be noticed.
-            </p>
-            <div class="flex flex-wrap items-center gap-3 mt-6">
-              <a href="./shop.html" class="btn-aeris-dark px-6 py-3.5">
-                <span>SHOP THE COLLECTION</span>
-                <span>→</span>
-              </a>
-              <a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="btn-aeris-outline px-5 py-3.5 bg-white/80">
-                <span>WA: +44 7848 152250</span>
-              </a>
-            </div>
           </div>
-
         </div>
-
-        <!-- Ribbon graphic -->
-        <svg class="pointer-events-none absolute -bottom-6 -right-10 w-[440px] sm:w-[580px] h-[250px] opacity-85 z-0" viewBox="0 0 600 260" fill="none" aria-hidden="true">
-          <path d="M90 250 C170 150, 290 190, 390 110 C470 46, 540 20, 610 10 L610 260 Z" fill="url(#iceRibbonGradAbout)" />
-          <path d="M160 255 C235 165, 340 200, 435 125 C505 70, 560 45, 615 35" stroke="url(#iceRibbonRimAbout)" stroke-width="2.5" />
-          <defs>
-            <linearGradient id="iceRibbonGradAbout" x1="120" y1="240" x2="580" y2="20" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#6ab7c9" stop-opacity="0.12"/>
-              <stop offset="52%" stop-color="#6ab7c9" stop-opacity="0.42"/>
-              <stop offset="85%" stop-color="#f2c6d4" stop-opacity="0.35"/>
-              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
-            </linearGradient>
-            <linearGradient id="iceRibbonRimAbout" x1="160" y1="255" x2="615" y2="35" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
-              <stop offset="50%" stop-color="#ffffff" stop-opacity="0.95"/>
-              <stop offset="100%" stop-color="#f2c6d4" stop-opacity="0.9"/>
-            </linearGradient>
-          </defs>
-        </svg>
       </section>
 
       <!-- FOOTER -->
       <footer class="border-t border-white bg-white/65 backdrop-blur-xl px-4 sm:px-8 lg:px-12 py-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 items-start">
-
           <div class="lg:col-span-3 flex flex-col items-start">
             <div class="flex items-center gap-3">
               <svg class="w-11 h-7 text-obsidian" viewBox="0 0 56 36" fill="none">
@@ -803,9 +794,9 @@
           <div class="lg:col-span-2 text-xs">
             <span class="block font-mono text-[10px] font-semibold tracking-widest text-obsidian uppercase mb-3">EXPLORE</span>
             <ul class="space-y-2 text-slateInk">
-              <li><a href="./shop.html" class="hover:text-obsidian transition">Shop All</a></li>
-              <li><a href="./About.html" class="hover:text-obsidian transition">Our Story</a></li>
-              <li><a href="./reviews.html" class="hover:text-obsidian transition">Client Reviews</a></li>
+              <li><a href="./shop.html" class="hover:text-obsidian transition">Collection</a></li>
+              <li><a href="./about.html" class="hover:text-obsidian transition">About Us</a></li>
+              <li><a href="./reviews.html" class="hover:text-obsidian transition">Reviews</a></li>
             </ul>
           </div>
 
@@ -822,8 +813,8 @@
             <span class="block font-mono text-[10px] font-semibold tracking-widest text-obsidian uppercase mb-3">CONCIERGE</span>
             <ul class="space-y-2 text-slateInk">
               <li><a href="https://wa.me/447848152250" target="_blank" rel="noopener" class="hover:text-glacialTeal transition">+44 7848 152250</a></li>
-              <li><a href="./reviews.html" class="hover:text-obsidian transition">Client Reviews</a></li>
-              <li><button onclick="openCart()" class="hover:text-obsidian transition cursor-pointer">Shopping Bag</button></li>
+              <li><a href="mailto:hello@thefauxfurcollection.co.uk" class="hover:text-obsidian transition break-all">hello@thefauxfurcollection.co.uk</a></li>
+              <li><a href="./contact.html" class="hover:text-obsidian transition">Contact Page</a></li>
             </ul>
           </div>
 
@@ -842,7 +833,6 @@
               </button>
             </form>
           </div>
-
         </div>
       </footer>
 
@@ -850,13 +840,15 @@
   </div>
 
   <!-- TOAST -->
-  <div id="capsule-toast" class="fixed bottom-5 right-5 z-50 translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-obsidian text-white border border-obsidian px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 text-xs font-mono">
-    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-    <span id="capsule-toast-msg">Added to Bag</span>
+  <div id="contact-toast" class="fixed bottom-5 right-5 z-50 translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-obsidian text-white border border-obsidian px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 text-xs font-mono max-w-[calc(100vw-40px)]">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+    <span id="contact-toast-msg">Message sent</span>
   </div>
 
   <script>
-    /* SNOWFALL */
+    /* ======================================================================
+       1. SNOWFALL
+    ====================================================================== */
     (function initSnowfall() {
       const canvas = document.getElementById('snow-canvas');
       if (!canvas) return;
@@ -958,7 +950,9 @@
       document.body.classList.add('deep-freeze');
     })();
 
-    /* MUSIC */
+    /* ======================================================================
+       2. MUSIC
+    ====================================================================== */
     function setRailMusicVolume(value) {
       const audio = document.getElementById('rail-music-audio');
       if (audio) audio.volume = Number(value);
@@ -993,28 +987,120 @@
       }
     }
 
-    /* CART (shared placeholder) */
-    let cart = [];
-    function openCart() {
-      if (cart.length === 0) {
-        showToast('Your bag is empty — start with the £120 set.');
-      } else {
-        showToast('Bag: ' + cart.length + ' item(s) — checkout coming soon.');
-      }
-    }
-
-    function showToast(msg) {
-      const toast = document.getElementById('capsule-toast');
-      const toastMsg = document.getElementById('capsule-toast-msg');
+    /* ======================================================================
+       3. TOAST
+    ====================================================================== */
+    let toastTimer = null;
+    function showToast(msg, isError) {
+      const toast = document.getElementById('contact-toast');
+      const toastMsg = document.getElementById('contact-toast-msg');
       if (!toast || !toastMsg) return;
       toastMsg.textContent = msg;
+      const dot = toast.querySelector('span');
+      if (dot) {
+        dot.classList.toggle('bg-emerald-400', !isError);
+        dot.classList.toggle('bg-rose-400', !!isError);
+        dot.classList.toggle('animate-pulse', !isError);
+      }
       toast.classList.remove('translate-y-24', 'opacity-0');
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => {
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
         toast.classList.add('translate-y-24', 'opacity-0');
-      }, 3000);
+      }, 3600);
     }
 
+    /* ======================================================================
+       4. FAQ ACCORDION
+    ====================================================================== */
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      const panel = item.parentElement;
+      panel.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+        if (openItem !== item) {
+          openItem.classList.remove('open');
+          const icon = openItem.querySelector('.faq-icon');
+          if (icon) icon.textContent = '+';
+        }
+      });
+      item.classList.toggle('open', !isOpen);
+      const icon = item.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '+';
+    }
+
+    /* ======================================================================
+       5. CONTACT FORM
+    ====================================================================== */
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const errorEl = document.getElementById('cf-error');
+      const name = document.getElementById('cf-name');
+      const email = document.getElementById('cf-email');
+      const topic = document.getElementById('cf-topic');
+      const message = document.getElementById('cf-message');
+      const consent = document.getElementById('cf-consent');
+
+      const errors = [];
+      if (!name.value.trim()) errors.push('name');
+      if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) errors.push('email');
+      if (!topic.value) errors.push('topic');
+      if (!message.value.trim() || message.value.trim().length < 8) errors.push('message');
+      if (consent && !consent.checked) errors.push('consent');
+
+      [name, email, topic, message].forEach(function (el) {
+        if (el) el.style.borderColor = '';
+      });
+
+      if (errors.length) {
+        errors.forEach(function (key) {
+          if (key === 'consent') return;
+          const el = document.getElementById('cf-' + key);
+          if (el) el.style.borderColor = 'rgba(190, 60, 90, 0.7)';
+        });
+        if (errorEl) {
+          errorEl.textContent = errors.includes('consent')
+            ? 'Please tick the consent box so we can reply.'
+            : 'Please complete the highlighted fields so we can get back to you.';
+          errorEl.classList.remove('hidden');
+        }
+        showToast('Please check the highlighted fields.', true);
+        return;
+      }
+
+      if (errorEl) errorEl.classList.add('hidden');
+
+      const payload = {
+        name: name.value.trim(),
+        email: email.value.trim(),
+        phone: document.getElementById('cf-phone') ? document.getElementById('cf-phone').value.trim() : '',
+        topic: topic.value,
+        message: message.value.trim()
+      };
+
+      // No backend here — compose a WhatsApp / mailto handoff instead.
+      const waText = encodeURIComponent(
+        'Hi The Faux Fur Collection!%0A%0A' +
+        'Name: ' + payload.name + '%0A' +
+        'Email: ' + payload.email + '%0A' +
+        (payload.phone ? 'Phone: ' + payload.phone + '%0A' : '') +
+        'Topic: ' + payload.topic + '%0A%0A' +
+        payload.message
+      );
+
+      showToast('Message ready — opening WhatsApp to send it to us.');
+      form.reset();
+      [name, email, topic, message].forEach(function (el) { if (el) el.style.borderColor = ''; });
+
+      setTimeout(function () {
+        window.open('https://wa.me/447848152250?text=' + waText, '_blank', 'noopener');
+      }, 650);
+    }
+
+    /* ======================================================================
+       6. NEWSLETTER
+    ====================================================================== */
     function handleNewsletterSubmit(e) {
       e.preventDefault();
       const email = document.getElementById('newsletter-email');
@@ -1024,15 +1110,20 @@
       }
     }
 
-    // Update bag counters on load
-    document.addEventListener('DOMContentLoaded', () => {
-      const count = cart.length;
-      ['mobile-bag-count', 'top-nav-bag-count', 'header-bag-count'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.textContent = count;
-      });
-      const dot = document.getElementById('rail-bag-dot');
-      if (dot) dot.classList.toggle('hidden', count === 0);
+    /* ======================================================================
+       7. INIT
+    ====================================================================== */
+    document.addEventListener('DOMContentLoaded', function () {
+      // Prefill topic from URL param, e.g. contact.html?topic=sizing
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const topic = params.get('topic');
+        const select = document.getElementById('cf-topic');
+        if (topic && select) {
+          const match = Array.from(select.options).find(function (o) { return o.value === topic; });
+          if (match) select.value = topic;
+        }
+      } catch (err) { /* no-op */ }
     });
   </script>
 </body>
